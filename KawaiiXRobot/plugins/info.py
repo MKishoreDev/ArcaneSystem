@@ -3,9 +3,9 @@ import os
 from pyrogram import filters
 from pyrogram.types import Message
 
-from Cringe import DEVS, bot
-from Cringe.utils.sections import section
-from Cringe.utils.dbfunctions import is_gbanned_user
+from KawaiiXRobot import DEVS, bot
+from KawaiiXRobot.utils.sections import section
+from KawaiiXRobot.utils.dbfunctions import is_gbanned_user
 
 async def get_user_info(user, already=False):
     if not already:
