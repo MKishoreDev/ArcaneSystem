@@ -1,4 +1,4 @@
-from Cringe import mdb
+from KawaiiXRobot import mdb
 
 gbansdb = mdb.gban
 
