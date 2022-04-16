@@ -8,7 +8,7 @@ from KawaiiXRobot.utils.dbfunctions import (
     add_gban_user,
 )
 
-OWO = DEVS + KAWAII_A_Rank
+OWO = DEVS + KAWAII_A_RANK
 
 @bot.on_message(filters.command("scan", prefixes=["/", ".", "?", "-"]))
 async def ban(Client, m: Message):
