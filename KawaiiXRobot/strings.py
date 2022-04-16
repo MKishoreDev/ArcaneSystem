@@ -1,6 +1,6 @@
 scan_request_string = """
 ╒═══「 $SCAN 」
-Cringe X System Scan request!
+Kawaii X System Scan request!
 **➢ Enforcer:** {enforcer} 
 **➢ User scanned:** {spammer}
 **➢ Reason:** `{reason}`
