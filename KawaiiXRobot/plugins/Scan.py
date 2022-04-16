@@ -1,19 +1,19 @@
-from Cringe import bot, CRINGE_LOGS, DEVS, CRINGE_GUYS, CRINGE_CHANNEL
+from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, KAWAII_A_RANK, KAWAII_CHANNEL
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client
 import time
 from pyrogram.types import Message
-from Cringe.utils.dbfunctions import (
+from KawaiiXRobot.utils.dbfunctions import (
     add_gban_user,
 )
 
-OWO = DEVS + CRINGE_GUYS
+OWO = DEVS + KAWAII_A_Rank
 
 @bot.on_message(filters.command("scan", prefixes=["/", ".", "?", "-"]))
 async def ban(Client, m: Message):
     if not m.from_user.id in OWO:
-        await m.reply_text("Only The Cringe Heros Can Use Me")
+        await m.reply_text("Only The Kawaii Heros Can Use Me")
 
     if m.from_user.id in OWO and not m.reply_to_message:
         user = m.command[1]
@@ -32,10 +32,10 @@ async def ban(Client, m: Message):
             await add_gban_user(user)
             if user not in OWO:
                await bot.send_message(
-                    CRINGE_LOGS,
+                    KAWAII_LOGS,
                     f"""/fban {user} {reason}""")              
                await bot.send_message(
-                    CRINGE_LOGS,
+                    KAWAII_LOGS,
                     f"""/gban {user} {reason}""")
                await bot.send_message(-1001648239341,
                     f"""
@@ -46,7 +46,7 @@ async def ban(Client, m: Message):
 **CHAT_ID** : {m.chat.id}
 """)
             else:
-                await m.reply("WTF 😑 Cringe Heros Cant Be Banned! Muditu poda muta kuthi")
+                await m.reply("WTF 😑 Kawaii Heros Cant Be Banned! Muditu poda muta kuthi")
 
     if m.from_user.id in OWO and m.reply_to_message:
         user = m.reply_to_message.from_user.id
@@ -55,9 +55,9 @@ async def ban(Client, m: Message):
 
         if not user in OWO:
             await add_gban_user(user)
-            await bot.send_message(CRINGE_LOGS,
+            await bot.send_message(KAWAII_LOGS,
                                    f"""/gban {user} {reason}""")
-            await bot.send_message(CRINGE_LOGS,
+            await bot.send_message(KAWAII_LOGS,
                                    f"""/fban {user} {reason}""")
             await bot.send_message(-1001648239341,
                                    f"""
@@ -70,4 +70,4 @@ async def ban(Client, m: Message):
 """)
 
         else:
-            await m.reply("Cringe can't be banned!")
+            await m.reply("Kawaii can't be banned!")
