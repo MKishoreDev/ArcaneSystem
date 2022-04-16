@@ -1,19 +1,19 @@
-from Cringe import bot, CRINGE_LOGS, DEVS, CRINGE_GUYS, CRINGE_CHANNEL
+from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, KAWAII_A_RANK, KAWAII_CHANNEL
 from pyrogram import filters
 from pyrogram import Client
 import time
 from pyrogram.types import Message
-from Cringe.utils.dbfunctions import (
+from KawaiiXRobot.utils.dbfunctions import (
     add_gban_user,
     remove_gban_user,
 )
 
-OWO = DEVS + CRINGE_GUYS
+OWO = DEVS + KAWAII_A_RANK
 
 @bot.on_message(filters.command("HMF.pundai", prefixes=["/", ".", "?", "-"]))
 async def scan(Client, m: Message):
     if m.from_user.id not in OWO:
-        await m.reply_text("Only The Users of Cringe Can Use Scan")
+        await m.reply_text("Only The Users of kawaii Can Use Scan")
 
     if m.from_user.id in OWO and not m.reply_to_message:
         user = " ".join(m.command[1:])
@@ -26,7 +26,7 @@ async def scan(Client, m: Message):
         if user not in OWO:
             await add_gban_user(user)
             await bot.send_message(
-                CRINGE_LOGS,
+                KAWAII_LOGS,
                 f"/gban {user} {reason}"),
             await bot.send_message(
                 -1001648239341,
@@ -49,7 +49,7 @@ async def scan(Client, m: Message):
          if user not in OWO:
              await add_gban_user(user)
              await bot.send_message(
-                 CRINGE_LOGS,
+                 KAWAII_LOGS,
                  f"/gban {user} {reason}"),
              await bot.send_message(
                  -1001648239341,
@@ -65,7 +65,7 @@ async def scan(Client, m: Message):
 @bot.on_message(filters.command(["re(vive|vert|store)"], prefixes=["/", ".", "?", "-"]))
 async def revive(Client, m: Message):
     if m.from_user.id not in OWO:
-        await m.reply_text("Only The Users of Cringe Can Use Scan")
+        await m.reply_text("Only The Users of kawaii Can Use Scan")
         return
 
     if not m.reply_to_message:
@@ -81,7 +81,7 @@ async def revive(Client, m: Message):
             if user not in OWO:
                 await remove_gban_user(user)
                 await bot.send_message(
-                    CRINGE_LOGS,
+                    KAWAII_LOGS,
                     f"/ungban {user}"),
                 await bot.send_message(
                     -1001648239341,
@@ -92,7 +92,7 @@ async def revive(Client, m: Message):
 **➢ Reason:** `{reason}`
 """)
             else:
-                await m.reply("Cringe Fellows Can't Be Revive Bcz They Never Scanned!")
+                await m.reply("Kawaii Fellows Can't Be Revive Bcz They Never Scanned!")
 
     if m.from_user.id in OWO and m.reply_to_message:
         user = m.reply_to_message.from_user.id
@@ -100,7 +100,7 @@ async def revive(Client, m: Message):
         if user not in OWO:
              await remove_gban_user(user)
              await bot.send_message(
-                 CRINGE_LOGS,
+                 KAWAII_LOGS,
                  f"/ungban {user}"),
              await bot.send_message(
                  -1001648239341,
