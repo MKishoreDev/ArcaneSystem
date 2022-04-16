@@ -1,4 +1,4 @@
-from Cringe import bot
+from KawaiiXRobot import bot
 import logging
 
 logging.basicConfig(
