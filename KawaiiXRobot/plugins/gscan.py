@@ -1,5 +1,5 @@
-from Cringe import bot, CRINGE_LOGS, DEVS, CRINGE_GUYS, CRINGE_CHANNEL
-from Cringe.utils import *
+from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, KAWAII_A_RANK, KAWAII_CHANNEL
+from KawaiiXRobot.utils import *
 from pyrogram import filters
 from pyrogram.errors import FloodWait
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
@@ -11,7 +11,7 @@ from pyrogram.types import Message
 @bot.on_message(filters.command("gscan", prefixes=["/", ".", "?", "-"]))
 async def gscan(bot: Client, m: Message):
     if m.from_user.id not in DEVS:
-        await m.reply_text("Only Vampire of the Blue moon Can Use Me")
+        await m.reply_text("Only KAWAII Can Use Me")
 
     if m.from_user.id in DEVS:
         i = await m.reply_text("Scanning...")
@@ -37,7 +37,7 @@ async def gscan(bot: Client, m: Message):
                                    url="https://t.me/SylviorusReport"),
                            ]]
                 await bot.send_message(
-                    LOGS,
+                    KAWAII_LOGS,
                     f"""
 #BANNED
 
