@@ -1,7 +1,7 @@
 import time
-from Cringe import bot as app
-from Cringe import bot, DEVS
-from Cringe import StartTime
+from KawaiiXRobot import bot as app
+from KawaiiXRobot import bot, DEVS
+from KawaiiXRobot import StartTime
 from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 import sys, traceback, io
@@ -86,7 +86,7 @@ async def eval(client, message):
         await status_message.delete()
 
     else:
-        await message.reply("This Is A Cringe User's Restricted Command.You Don't Have Access To Use This.")
+        await message.reply("This Is A kawaii User's Restricted Command.You Don't Have Access To Use This.")
 
 
 async def aexec(code, client, message):
@@ -104,7 +104,7 @@ def sh(_, m):
             f"<b>SHELL</b>: <code>{code}</code>\n\n<b>OUTPUT</b>:\n<code>{x}</code>",
             parse_mode="html")
     else:
-        m.reply("This Is A Cringe User's Restricted Command.You Don't Have Access To Use This.")
+        m.reply("This Is A Kawaii User's Restricted Command.You Don't Have Access To Use This.")
 
 @bot.on_message(
     filters.command("logs", prefixes=['.', '/', ';', ','
@@ -133,7 +133,7 @@ def sendfilecallback(_, query: CallbackQuery):
         query.message.reply_document("logs.txt")
 
     else:
-        query.answer("This Is A Cringe User's Restricted Command.You Don't Have Access To Use This.")
+        query.answer("This Is A Kawaii User's Restricted Command.You Don't Have Access To Use This.")
 
 @app.on_message(filters.command("ping", prefixes=['/', '.', '?', '-']))
 async def ping(_, m):
