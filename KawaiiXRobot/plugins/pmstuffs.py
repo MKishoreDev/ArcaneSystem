@@ -8,12 +8,12 @@ Kawaii = """
 <b>An Advanced System To Make Telegram Safe</b>
 <b>Checkout The</b> `/help`
 """
-hehe = "https://telegra.ph/file/51f6b8109b0731db41394.mp4"
+hehe = "https://telegra.ph/file/39daf97898a10f039e6b3.jpg"
 
 @bot.on_message(filters.command(["start"], ['/', ".", "?"]))
 async def start(client, message):
     buttons = [[
-        InlineKeyboardButton("Dev", url="https://t.me/HMF_OWNER_1"),
+        InlineKeyboardButton("Support", url="https://t.me/PlayBoysDXD"),
     ]]
     await message.reply_video(hehe, caption=Kawaii.format(message.from_user.mention),
                              reply_markup=InlineKeyboardMarkup(buttons))
