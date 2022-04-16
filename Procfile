@@ -1,1 +1,1 @@
-worker: python3 -m Cringe
+worker: python3 -m KawaiiXRobot 
