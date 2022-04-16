@@ -1,0 +1,11 @@
+pyrogram
+tgcrypto
+pymongo
+dnspython
+motor
+requests
+aiofiles
+asyncio
+vanitas
+pillow
+aiohttp
