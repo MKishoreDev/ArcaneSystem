@@ -1,0 +1,13 @@
+version: "1.0"
+services:
+   anon:
+    build: .
+    environment:
+     APP_ID:   
+     APP_HASH: 
+     MONGO_URI: 
+     BOT_TOKEN: 
+     DEVS:
+     KAWAII_LOGS: 
+     KAWAII_CHANNEL:
+
