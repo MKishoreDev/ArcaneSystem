@@ -15,6 +15,16 @@ DEVS = os.environ.get("DEVS", None)
 Inspector = os.environ.get("Inspector", None)
 Enforcer = os.environ.get("Enforcer", None)
 
+DEVS = [
+ 5175767264, 1989750989
+]
+Inspector = [
+ 1057561033, 5163504846,
+]
+Enforcer = [
+ 1891633746, 5163504846, 1491497760
+]
+
 
 bot = Client("KawaiiXRobot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN, plugins=dict(root="{}/plugins".format(__name__)))
 db = DATABASE(MONGO_URI)
