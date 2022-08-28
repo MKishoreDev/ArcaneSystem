@@ -5,6 +5,8 @@ from pyrogram import filters
 from config import DEVS, Inspector, Enforcer 
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 
+HMF = DEVS + Inspector + Enforcer 
+
 SCAN_IMG = (
       "https://telegra.ph/file/9332b113ddb8555bf6ffe.jpg",
       "https://telegra.ph/file/357a3279b2960dd79a549.jpg",
@@ -36,6 +38,8 @@ async def status(bot, m: Message):
 
     else:
         status = "civilian"
+
+    if m.from_user.id in HMF:
     dev_text = f"""
 ╒═══「 Cringe X System  」
 ➖➖➖➖➖➖➖➖➖
