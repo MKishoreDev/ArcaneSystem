@@ -29,7 +29,7 @@ async def status(bot, m: Message):
 ╘══「 You are a Kawaii authorized user! 」
 """
 
-        await m.reply_photo("https://wallpaperaccess.com/full/6766185.jpg",
+        await m.reply_photo("https://telegra.ph/file/ddd825c338fa668a4252d.jpg",
                             caption=text,
                             parse_mode="markdown")
 
