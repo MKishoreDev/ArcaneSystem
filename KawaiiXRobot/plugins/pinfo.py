@@ -23,7 +23,7 @@ async def status(bot, m: Message):
         text = f"""
 ╒═══「 Cringe X System  」
 ➖➖➖➖➖➖➖➖➖
-➣ NAME: {name}
+➣ NAME: {m.from_user.first_name}
 ➢ RANK: {status}
 ➖➖➖➖➖➖➖➖➖
 ╘══「 You are a Kawaii authorized user! 」
