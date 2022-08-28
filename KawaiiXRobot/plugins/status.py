@@ -69,6 +69,6 @@ def setstatus(_, m: Message):
     role = m.text.replace(m.text.split(" ")[0], "")
     if not role == "":
         db.add_role(m.from_user.id, role)
-        m.reply("Done!")
+        m.reply("Dᴏɴᴇ!")
     else:
-        m.reply("Usage : /setrole role")
+        m.reply("Usᴀɢᴇ : /setrole ʀᴏʟᴇ")
