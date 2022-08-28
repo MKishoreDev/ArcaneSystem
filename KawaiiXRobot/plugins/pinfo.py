@@ -40,7 +40,6 @@ buttons = [
     ],
 ]
 
-
         await m.reply_photo("https://telegra.ph/file/ddd825c338fa668a4252d.jpg",
                 caption=dev_text.format(m.from_user.mention),                   
                 reply_markup=InlineKeyboardMarkup(buttons))
