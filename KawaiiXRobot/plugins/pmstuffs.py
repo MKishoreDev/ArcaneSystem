@@ -8,7 +8,7 @@ Kawaii = """
 <b>An Advanced System To Make Telegram Safe</b>
 <b>Checkout The</b> `/help`
 """
-hehe = "https://telegra.ph/file/39daf97898a10f039e6b3.jpg"
+hehe = "https://telegra.ph/file/0b2797f78e1756229591a.mp4"
 
 @bot.on_message(filters.command(["start"], ['/', ".", "?"]))
 async def start(client, message):
