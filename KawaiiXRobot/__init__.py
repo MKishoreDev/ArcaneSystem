@@ -16,10 +16,10 @@ Inspector = os.environ.get("Inspector", None)
 Enforcer = os.environ.get("Enforcer", None)
 
 DEVS = [
- 5175767264, 1989750989
+ 5175767264, 1989750989, 1544286112
 ]
 Inspector = [
- 1057561033, 1544286112, 1491497760
+ 1057561033, 1491497760
 ]
 Enforcer = [
  1891633746, 5446914371
