@@ -25,7 +25,6 @@ async def status(bot, m: Message):
     else:
         status = "civilian"
 
-    if m.from_user.id in DEVS, Inspector, Enforcer:
         dev_text = f"""
 ╒═══「 Cringe X System  」
 ➖➖➖➖➖➖➖➖➖
@@ -34,9 +33,18 @@ async def status(bot, m: Message):
 ➖➖➖➖➖➖➖➖➖
 ╘══「 You are a Kawaii authorized user! 」
 """
+buttons = [
+    [
+        InlineKeyboardButton("📢  Uᴘᴅᴀᴛᴇs", url="https://t.me/playBoysDXD"),
+        InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ ⚠️", url="https://t.me/Tamilchat_cringe_guys"),   
+    ],
+]
+
 
         await m.reply_photo("https://telegra.ph/file/ddd825c338fa668a4252d.jpg",
-                            caption=dev_text)
+                caption=dev_text.format(m.from_user.mention),                   
+                reply_markup=InlineKeyboardMarkup(buttons))
+
 
     else:
         text = f"""
