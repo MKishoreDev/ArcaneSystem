@@ -53,8 +53,12 @@ async def status(bot, m: Message):
 
     else:
         text = f"""
-**Welcome {m.from_user.first_name}**,
-**Status** : **{status}**
+╒═══「 Cringe X System  」
+➖➖➖➖➖➖➖➖➖
+➣ **Welcome {m.from_user.first_name}**,
+➣ **Status** : **{status}**
+➖➖➖➖➖➖➖➖➖
+╘══「 You Are a Member Of Cringe Guys ! 」
 """
 
         await m.reply(text, reply_markup=InlineKeyboardMarkup(buttons))
