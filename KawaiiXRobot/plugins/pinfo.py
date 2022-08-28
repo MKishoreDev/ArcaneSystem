@@ -3,7 +3,7 @@ import random
 from KawaiiXRobot import bot, db
 from pyrogram import filters
 from config import DEVS, Inspector, Enforcer 
-from pyrogram.types import Message
+from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 
 SCAN_IMG = (
       "https://telegra.ph/file/9332b113ddb8555bf6ffe.jpg",
