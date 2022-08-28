@@ -1,5 +1,4 @@
 import asyncio
-import random
 from KawaiiXRobot import bot, db
 from pyrogram import filters
 from config import DEVS, Inspector, Enforcer 
