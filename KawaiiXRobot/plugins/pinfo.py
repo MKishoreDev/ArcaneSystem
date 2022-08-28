@@ -25,8 +25,7 @@ async def status(bot, m: Message):
     else:
         status = "civilian"
 
-    if m.from_user.id in DEVS:
-        text = f"""
+        dev_text = f"""
 ╒═══「 Cringe X System  」
 ➖➖➖➖➖➖➖➖➖
 ➣ NAME: {m.from_user.first_name}
@@ -36,7 +35,7 @@ async def status(bot, m: Message):
 """
 
         await m.reply_photo("https://telegra.ph/file/ddd825c338fa668a4252d.jpg",
-                            caption=text)
+                            caption=dev_text)
 
     else:
         text = f"""
