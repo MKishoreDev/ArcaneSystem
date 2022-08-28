@@ -1,4 +1,4 @@
-from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, KAWAII_A_RANK, KAWAII_CHANNEL
+from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, Inspector, KAWAII_CHANNEL
 from KawaiiXRobot.utils import *
 from pyrogram import filters
 from pyrogram.errors import FloodWait
