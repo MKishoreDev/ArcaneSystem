@@ -3,8 +3,8 @@ services:
    anon:
     build: .
     environment:
-     APP_ID:   
-     APP_HASH: 
+     API_HASH:   
+     API_ID: 
      MONGO_URI: 
      BOT_TOKEN: 
      DEVS:
