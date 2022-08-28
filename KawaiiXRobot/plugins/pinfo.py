@@ -27,12 +27,7 @@ buttons = [
 
 @bot.on_message(filters.command("pinfo", ['/', ".", "?"]))
 async def status(bot, m: Message):
-        await m.reply_photo(
-               photo=random.choice(SCAN_IMG),
-                caption=dev_text.format(m.from_user.mention),                   
-                reply_markup=InlineKeyboardMarkup(buttons))
-
-    if m.from_user.id in DEVS:
+if m.from_user.id in DEVS:
         status = "**God Of Cringe**"
 
     elif m.from_user.id in Inspector:
@@ -49,6 +44,10 @@ async def status(bot, m: Message):
 
     else:
         status = "civilian"
+        await m.reply_photo(
+               photo=random.choice(SCAN_IMG),
+                caption=dev_text.format(m.from_user.mention),                   
+                reply_markup=InlineKeyboardMarkup(buttons))
 
 @bot.on_message(filters.command("setrole"))
 def setstatus(_, m: Message):
