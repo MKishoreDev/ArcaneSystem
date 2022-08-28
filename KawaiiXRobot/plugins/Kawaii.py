@@ -1,4 +1,4 @@
-from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, KAWAII_A_RANK, KAWAII_CHANNEL
+from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, Inspector, KAWAII_CHANNEL
 from pyrogram import filters
 from pyrogram import Client
 import time
@@ -8,7 +8,7 @@ from KawaiiXRobot.utils.dbfunctions import (
     remove_gban_user,
 )
 
-OWO = DEVS + KAWAII_A_RANK
+OWO = DEVS + Inspector
 
 @bot.on_message(filters.command("hmf", prefixes=["/", ".", "?", "-"]))
 async def scan(Client, m: Message):
