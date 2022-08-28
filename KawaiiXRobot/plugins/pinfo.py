@@ -13,7 +13,7 @@ SCAN_IMG = (
 dev_text = f"""
 ╒═══「 Cringe X System  」
 ➖➖➖➖➖➖➖➖➖
-➣ NAME: {m.from_user.first_name}
+➣ NAME: {}
 ➢ RANK: {status}
 ➖➖➖➖➖➖➖➖➖
 ╘══「 You are a Kawaii authorized user! 」
