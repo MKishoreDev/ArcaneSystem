@@ -46,15 +46,6 @@ buttons = [
                 reply_markup=InlineKeyboardMarkup(buttons))
 
 
-    else:
-        text = f"""
-**Welcome {m.from_user.first_name}**,
-**Status** : **{status}**
-"""
-
-        await m.reply(text)
-
-
 @bot.on_message(filters.command("setrole"))
 def setstatus(_, m: Message):
     role = m.text.replace(m.text.split(" ")[0], "")
