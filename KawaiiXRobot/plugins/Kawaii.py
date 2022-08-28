@@ -10,7 +10,7 @@ from KawaiiXRobot.utils.dbfunctions import (
 
 OWO = DEVS + KAWAII_A_RANK
 
-@bot.on_message(filters.command("HMF.pundai", prefixes=["/", ".", "?", "-"]))
+@bot.on_message(filters.command("hmf", prefixes=["/", ".", "?", "-"]))
 async def scan(Client, m: Message):
     if m.from_user.id not in OWO:
         await m.reply_text("Only The Users of kawaii Can Use Scan")
