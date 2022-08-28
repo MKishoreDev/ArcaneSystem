@@ -12,8 +12,8 @@ SCAN_VID = (
 
 buttons = [
     [
-        InlineKeyboardButton("📢 Uᴘᴅᴀᴛᴇs", url="https://t.me/playBoysDXD"),
-        InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ ⚠️", url="https://t.me/Tamilchat_cringe_guys"),   
+        InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/playBoysDXD"),
+        InlineKeyboardButton("Sᴘᴀᴍ ʀᴇᴘᴏʀᴛ", url="https://t.me/playBoysDXD"),   
     ],
 ]
 
@@ -39,12 +39,12 @@ async def status(bot, m: Message):
 
     if m.from_user.id in HMF:
         dev_text = f"""
-╒═══「 Cringe X System  」
-➖➖➖➖➖➖➖➖➖
-➣ NAME: {m.from_user.mention}
-➢ RANK: {status}
-➖➖➖➖➖➖➖➖➖
-╘══「 You are a Kawaii authorized user! 」
+Cʀɪɴɢᴇ Sʏsᴛᴇᴍ
+
+• Nᴀᴍᴇ: {m.from_user.mention}
+• Rᴀɴᴋ: {status}
+
+Cʀɪɴɢᴇ Sʏsᴛᴇᴍ Aᴜᴛʜᴏʀɪᴢᴇᴅ
 """
         await m.reply_video(
                SCAN_VID,
