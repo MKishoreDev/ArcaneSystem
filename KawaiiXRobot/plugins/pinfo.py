@@ -10,8 +10,20 @@ SCAN_IMG = (
       "https://telegra.ph/file/357a3279b2960dd79a549.jpg",
   )
 
-@bot.on_message(filters.command("pinfo", ['/', ".", "?"]))
-async def status(bot, m: Message):
+        dev_text = f"""
+╒═══「 Cringe X System  」
+➖➖➖➖➖➖➖➖➖
+➣ NAME: {m.from_user.first_name}
+➢ RANK: {status}
+➖➖➖➖➖➖➖➖➖
+╘══「 You are a Kawaii authorized user! 」
+"""
+buttons = [
+    [
+        InlineKeyboardButton("📢  Uᴘᴅᴀᴛᴇs", url="https://t.me/playBoysDXD"),
+        InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ ⚠️", url="https://t.me/Tamilchat_cringe_guys"),   
+    ],
+]
 
     if m.from_user.id in DEVS:
         status = "**God Of Cringe**"
@@ -31,21 +43,9 @@ async def status(bot, m: Message):
     else:
         status = "civilian"
 
-        dev_text = f"""
-╒═══「 Cringe X System  」
-➖➖➖➖➖➖➖➖➖
-➣ NAME: {m.from_user.first_name}
-➢ RANK: {status}
-➖➖➖➖➖➖➖➖➖
-╘══「 You are a Kawaii authorized user! 」
-"""
-buttons = [
-    [
-        InlineKeyboardButton("📢  Uᴘᴅᴀᴛᴇs", url="https://t.me/playBoysDXD"),
-        InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ ⚠️", url="https://t.me/Tamilchat_cringe_guys"),   
-    ],
-]
 
+@bot.on_message(filters.command("pinfo", ['/', ".", "?"]))
+async def status(bot, m: Message):
         await m.reply_photo(
                photo=random.choice(SCAN_IMG),
                 caption=dev_text.format(m.from_user.mention),                   
