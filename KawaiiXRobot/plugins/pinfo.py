@@ -19,14 +19,6 @@ buttons = [
 
 @bot.on_message(filters.command("pinfo", ['/', ".", "?"]))
 async def status(bot, m: Message):
-    dev_text = f"""
-╒═══「 Cringe X System  」
-➖➖➖➖➖➖➖➖➖
-➣ NAME: {m.from_user.mention}
-➢ RANK: {status}
-➖➖➖➖➖➖➖➖➖
-╘══「 You are a Kawaii authorized user! 」
-"""
     if m.from_user.id in DEVS:
         status = "**God Of Cringe**"
 
@@ -44,6 +36,14 @@ async def status(bot, m: Message):
 
     else:
         status = "civilian"
+    dev_text = f"""
+╒═══「 Cringe X System  」
+➖➖➖➖➖➖➖➖➖
+➣ NAME: {m.from_user.mention}
+➢ RANK: {status}
+➖➖➖➖➖➖➖➖➖
+╘══「 You are a Kawaii authorized user! 」
+"""
         await m.reply_photo(
                photo=random.choice(SCAN_IMG),
                 caption=dev_text,              
