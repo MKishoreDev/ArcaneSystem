@@ -6,8 +6,8 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 
 HMF = DEVS + Inspector + Enforcer 
 
-SCAN_VID = (
-      "https://telegra.ph/file/0b2797f78e1756229591a.mp4"
+SCAN_IMG = (
+      "https://telegra.ph/file/9e5724561661e86b06a25.jpg"
   )
 
 buttons = [
@@ -46,8 +46,8 @@ Cʀɪɴɢᴇ Sʏsᴛᴇᴍ
 
 Cʀɪɴɢᴇ Sʏsᴛᴇᴍ Aᴜᴛʜᴏʀɪᴢᴇᴅ
 """
-        await m.reply_video(
-               SCAN_VID,
+        await m.reply_photo(
+               SCAN_IMG,
                 caption=dev_text,              
                 reply_markup=InlineKeyboardMarkup(buttons))
 
