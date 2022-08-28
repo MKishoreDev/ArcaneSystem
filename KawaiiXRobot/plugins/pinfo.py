@@ -30,8 +30,7 @@ async def status(bot, m: Message):
 """
 
         await m.reply_photo("https://telegra.ph/file/ddd825c338fa668a4252d.jpg",
-                            caption=text,
-                            parse_mode="markdown")
+                            caption=text)
 
     else:
         text = f"""
@@ -39,7 +38,7 @@ async def status(bot, m: Message):
 **Status** : **{status}**
 """
 
-        await m.reply(text, parse_mode="markdown")
+        await m.reply(text)
 
 
 @bot.on_message(filters.command("setrole"))
