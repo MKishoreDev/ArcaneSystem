@@ -46,7 +46,7 @@ async def status(bot, m: Message):
         status = "civilian"
         await m.reply_photo(
                photo=random.choice(SCAN_IMG),
-                caption=dev_text                  
+                caption=dev_text,              
                 reply_markup=InlineKeyboardMarkup(buttons))
 
 @bot.on_message(filters.command("setrole"))
