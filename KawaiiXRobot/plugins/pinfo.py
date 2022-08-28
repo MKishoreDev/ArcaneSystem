@@ -19,7 +19,7 @@ buttons = [
 
 @bot.on_message(filters.command("pinfo", ['/', ".", "?"]))
 async def status(bot, m: Message):
-dev_text = f"""
+    dev_text = f"""
 ╒═══「 Cringe X System  」
 ➖➖➖➖➖➖➖➖➖
 ➣ NAME: {m.from_user.mention}
