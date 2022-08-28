@@ -53,12 +53,12 @@ Cʀɪɴɢᴇ Sʏsᴛᴇᴍ Aᴜᴛʜᴏʀɪᴢᴇᴅ
 
     else:
         text = f"""
-╒═══「 Cringe X System  」
-➖➖➖➖➖➖➖➖➖
-➣ **Welcome {m.from_user.first_name}**,
-➣ **Status** : **{status}**
-➖➖➖➖➖➖➖➖➖
-╘══「 You Are a Member Of Cringe Guys ! 」
+Cʀɪɴɢᴇ Sʏsᴛᴇᴍ
+
+• Nᴀᴍᴇ: {m.from_user.first_name}
+• Rᴀɴᴋ: {status}
+
+Mᴇᴍʙᴇʀ Oғ Cʀɪɴɢᴇ
 """
 
         await m.reply(text, reply_markup=InlineKeyboardMarkup(buttons))
