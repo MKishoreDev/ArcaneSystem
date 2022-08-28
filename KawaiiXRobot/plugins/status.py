@@ -1,7 +1,7 @@
 import asyncio
 import time
 
-from KawaiiXRobot import bot, db, DEVS, KAWAII_A_RANK, KAWAII_B_RANK
+from KawaiiXRobot import bot, db, DEVS, Inspector, Enforcer 
 from pyrogram import filters
 from pyrogram.types import Message
 
@@ -36,10 +36,10 @@ async def status(bot, m: Message):
     if m.from_user.id in DEVS:
         status = "**God Of Kawaii**"
 
-    if m.from_user.id in KAWAII_A_RANK:
+    if m.from_user.id in Inspector:
         status = "**A Rank of Kawaii**"
 
-    if m.from_user.id in KAWAII_B_RANK:
+    if m.from_user.id in Enforcer:
         status = "**B Rank of Kawaii**"
 
     elif db.get_role(m.from_user.id)['status'] != True:
