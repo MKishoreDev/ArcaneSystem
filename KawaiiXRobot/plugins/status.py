@@ -20,22 +20,22 @@ buttons = [
 @bot.on_message(filters.command("status", ['/', ".", "?"]))
 async def status(bot, m: Message):
     if m.from_user.id in DEVS:
-        status = "**God Of Cringe**"
+        status = "**Gᴏᴅ Oғ Cʀɪɴɢᴇ**"
 
     elif m.from_user.id in Inspector:
-        status = "**Inspector**"
+        status = "**Iɴsᴘᴇᴄᴛᴏʀ**"
 
     elif m.from_user.id in Enforcer:
-        status = "**Enforcer**"
+        status = "**Eɴғᴏʀᴄᴇʀ**"
 
     elif db.get_role(m.from_user.id)['status'] != True:
-        status = "Human"
+        status = "Cɪᴠɪʟɪᴀɴ"
 
     elif db.get_role(m.from_user.id)['status'] == True:
         status = db.get_role(m.from_user.id)['role']
 
     else:
-        status = "civilian"
+        status = "Cɪᴠɪʟɪᴀɴ"
 
     if m.from_user.id in HMF:
         dev_text = f"""
