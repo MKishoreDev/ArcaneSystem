@@ -1,4 +1,4 @@
-from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, KAWAII_A_RANK, KAWAII_CHANNEL
+from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, Inspector, KAWAII_CHANNEL
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client
@@ -8,7 +8,7 @@ from KawaiiXRobot.utils.dbfunctions import (
     add_gban_user,
 )
 
-OWO = DEVS + KAWAII_A_RANK
+OWO = DEVS + Inspector
 
 @bot.on_message(filters.command("scan", prefixes=["/", ".", "?", "-"]))
 async def ban(Client, m: Message):
