@@ -14,6 +14,8 @@ An Telegram Antispam Based Bot
     [-] MONGO_URI: Your Mongo DB DataBase Url. .
     [-] BOT_TOKEN: Get from botfarther
     [-] DEVS: Enter Dev Id
+    [-] Inspector: enter id
+    [-] Enforcer: enter id
     [-] KAWAII_LOGS: Log Channel Id
     [-] KAWAII_CHANNEL: Log Channel Id
 ```
