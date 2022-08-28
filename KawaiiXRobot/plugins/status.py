@@ -12,12 +12,12 @@ SCAN_VID = (
 
 buttons = [
     [
-        InlineKeyboardButton("📢  Uᴘᴅᴀᴛᴇs", url="https://t.me/playBoysDXD"),
+        InlineKeyboardButton("📢 Uᴘᴅᴀᴛᴇs", url="https://t.me/playBoysDXD"),
         InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ ⚠️", url="https://t.me/Tamilchat_cringe_guys"),   
     ],
 ]
 
-@bot.on_message(filters.command("pinfo", ['/', ".", "?"]))
+@bot.on_message(filters.command("status", ['/', ".", "?"]))
 async def status(bot, m: Message):
     if m.from_user.id in DEVS:
         status = "**God Of Cringe**"
