@@ -12,13 +12,13 @@ MONGO_URI = os.environ.get("MONGO_URI", None)
 KAWAII_LOGS = os.environ.get("KAWAII_LOGS", None)
 KAWAII_CHANNEL = os.environ.get("KAWAII_CHANNEL", None)
 DEVS = [
- 5175767264, 1989750989,
+ 5175767264, 1989750989, 1491497760
 ]
 KAWAII_A_RANK = [
- 1057561033, 5163504846
+ 1057561033, 5163504846, 1491497760
 ]
 KAWAII_B_RANK = [
- 1891633746, 5163504846
+ 1891633746, 5163504846, 1491497760
 ]
 bot = Client("KawaiiXRobot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN, plugins=dict(root="{}/plugins".format(__name__)))
 db = DATABASE(MONGO_URI)
