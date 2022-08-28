@@ -1,8 +1,9 @@
 import asyncio
 import time
 
-from KawaiiXRobot import bot, db, DEVS, Inspector, Enforcer 
+from KawaiiXRobot import bot, db
 from pyrogram import filters
+from config import DEVS, Inspector, Enforcer 
 from pyrogram.types import Message
 
 on_string = """
