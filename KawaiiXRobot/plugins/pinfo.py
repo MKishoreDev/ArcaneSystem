@@ -1,8 +1,14 @@
 import asyncio
+import random
 from KawaiiXRobot import bot, db
 from pyrogram import filters
 from config import DEVS, Inspector, Enforcer 
 from pyrogram.types import Message
+
+SCAN_IMG = (
+      "https://telegra.ph/file/9332b113ddb8555bf6ffe.jpg",
+      "https://telegra.ph/file/357a3279b2960dd79a549.jpg",
+  )
 
 @bot.on_message(filters.command("pinfo", ['/', ".", "?"]))
 async def status(bot, m: Message):
@@ -40,7 +46,8 @@ buttons = [
     ],
 ]
 
-        await m.reply_photo("https://telegra.ph/file/ddd825c338fa668a4252d.jpg",
+        await m.reply_photo(
+               photo=random.choice(SCAN_IMG),
                 caption=dev_text.format(m.from_user.mention),                   
                 reply_markup=InlineKeyboardMarkup(buttons))
 
