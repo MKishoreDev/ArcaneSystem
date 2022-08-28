@@ -9,9 +9,9 @@ An Telegram Antispam Based Bot
 ## Installing Vars 
 ```
 [+] You need to put in config.py:
-    [-] APP_ID:   You can get this value from https://my.telegram.org
-    [-] APP_HASH :   You can get this value from https://my.telegram.org
-    [-] MONGO_URI : Your Mongo DB DataBase Url. .
+    [-] API_ID:   You can get this value from https://my.telegram.org
+    [-] API_HASH:   You can get this value from https://my.telegram.org
+    [-] MONGO_URI: Your Mongo DB DataBase Url. .
     [-] BOT_TOKEN: Get from botfarther
     [-] DEVS: Enter Dev Id
     [-] KAWAII_LOGS: Log Channel Id
