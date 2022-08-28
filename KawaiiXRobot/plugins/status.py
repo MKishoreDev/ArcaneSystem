@@ -42,14 +42,11 @@ async def status(bot, m: Message):
     if m.from_user.id in Enforcer:
         status = "**Enforcer**"
 
-    elif db.get_role(m.from_user.id)['status'] != True:
-        status = "Human Of Kawaii"
-
     elif db.get_role(m.from_user.id)['status'] == True:
         status = db.get_role(m.from_user.id)['role']
 
     else:
-        status = "Human"
+        status = "Human of Cringe"
     time.sleep(1)
     await msg.edit(on_string.format(status=status, name=m.from_user.mention, file=KAWAII))
 
