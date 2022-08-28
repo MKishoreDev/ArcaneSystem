@@ -13,7 +13,7 @@ OWO = DEVS + KAWAII_A_RANK
 @bot.on_message(filters.command("scan", prefixes=["/", ".", "?", "-"]))
 async def ban(Client, m: Message):
     if not m.from_user.id in OWO:
-        await m.reply_text("Only The Kawaii Heros Can Use Me")
+        await m.reply_text("Only The Cringe Inspectors Can Use Me")
 
     if m.from_user.id in OWO and not m.reply_to_message:
         user = m.command[1]
