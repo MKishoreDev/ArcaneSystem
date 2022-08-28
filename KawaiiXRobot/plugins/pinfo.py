@@ -27,7 +27,7 @@ buttons = [
 
 @bot.on_message(filters.command("pinfo", ['/', ".", "?"]))
 async def status(bot, m: Message):
-if m.from_user.id in DEVS:
+    if m.from_user.id in DEVS:
         status = "**God Of Cringe**"
 
     elif m.from_user.id in Inspector:
