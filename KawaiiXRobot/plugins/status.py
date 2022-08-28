@@ -34,13 +34,13 @@ async def status(bot, m: Message):
     await msg.edit("✪VᴇRɪFɪᴇD✪")
     time.sleep(2)
     if m.from_user.id in DEVS:
-        status = "**God Of Kawaii**"
+        status = "**DEV - Inspector**"
 
     if m.from_user.id in Inspector:
-        status = "**A Rank of Kawaii**"
+        status = "**Inspector**"
 
     if m.from_user.id in Enforcer:
-        status = "**B Rank of Kawaii**"
+        status = "**Enforcer**"
 
     elif db.get_role(m.from_user.id)['status'] != True:
         status = "Human Of Kawaii"
