@@ -7,9 +7,8 @@ from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 
 HMF = DEVS + Inspector + Enforcer 
 
-SCAN_IMG = (
-      "https://telegra.ph/file/9332b113ddb8555bf6ffe.jpg",
-      "https://telegra.ph/file/357a3279b2960dd79a549.jpg",
+SCAN_VID = (
+      "https://telegra.ph/file/0b2797f78e1756229591a.mp4"
   )
 
 buttons = [
@@ -48,8 +47,8 @@ async def status(bot, m: Message):
 ➖➖➖➖➖➖➖➖➖
 ╘══「 You are a Kawaii authorized user! 」
 """
-        await m.reply_photo(
-               photo=random.choice(SCAN_IMG),
+        await m.reply_video(
+               SCAN_VID,
                 caption=dev_text,              
                 reply_markup=InlineKeyboardMarkup(buttons))
 
