@@ -40,7 +40,7 @@ async def status(bot, m: Message):
         status = "civilian"
 
     if m.from_user.id in HMF:
-    dev_text = f"""
+        dev_text = f"""
 ╒═══「 Cringe X System  」
 ➖➖➖➖➖➖➖➖➖
 ➣ NAME: {m.from_user.mention}
