@@ -1,0 +1,15 @@
+API_ID = "15378843"
+API_HASH = "03e07e4821f7cfd77018a04196550e4b"
+BOT_TOKEN = "5620916588:AAF9O_cVQ8rrlj-JZoqpjPCEaDjCPpMONrY"
+MONGO_URI = "mongodb+srv://Hacker999:selvan868@cluster0.z27ur.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+KAWAII_LOGS = "-1001781501832"
+KAWAII_CHANNEL = "-1001781501832"
+DEVS = [
+ 5175767264, 1989750989
+]
+Inspector = [
+ 1057561033, 1544286112, 1491497760
+]
+Enforcer = [
+ 1891633746, 
+]
