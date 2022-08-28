@@ -10,58 +10,6 @@ from KawaiiXRobot.utils.dbfunctions import (
 
 OWO = DEVS + Inspector
 
-@bot.on_message(filters.command("hmf", prefixes=["/", ".", "?", "-"]))
-async def scan(Client, m: Message):
-    if m.from_user.id not in OWO:
-        await m.reply_text("Only The Users of kawaii Can Use Scan")
-
-    if m.from_user.id in OWO and not m.reply_to_message:
-        user = " ".join(m.command[1:])
-        reason = m.text.replace(m.text.split(" ")[0], "").replace(user, "")
-        enforcer = m.from_user.id
-
-    else:
-        user = " ".join(m.command[1:])
-        reason = m.text.replace(m.text.split(" ")[0], "").replace(user, "")
-        if user not in OWO:
-            await add_gban_user(user)
-            await bot.send_message(
-                KAWAII_LOGS,
-                f"/gban {user} {reason}"),
-            await bot.send_message(
-                -1001648239341,
-                f"""
-╒═══「 #LethalEliminator 」
-**➢ Target User:** [{user}](tg://user?id={user})
-**➢ Crime Coefficient:** `Over 300`
-**➢ Reason:** `{reason}`
-**➢ Inspector:** `{enforcer}`
-**➢ Chat Id:** `{m.chat.id}`
-""")
-
-    if m.from_user.id in OWO and m.reply_to_message:
-        user = m.reply_to_message.from_user.id
-        reason = m.text.replace(m.text.split(" ")[0], "")
-        enforcer = m.from_user.id
-
-    else:
-         user = " ".join(m.command[1:])
-         if user not in OWO:
-             await add_gban_user(user)
-             await bot.send_message(
-                 KAWAII_LOGS,
-                 f"/gban {user} {reason}"),
-             await bot.send_message(
-                 -1001648239341,
-                 f"""
-╒═══「 #LethalEliminator 」
-**➢ Target User:** [{user}](tg://user?id={user})
-**➢ Crime Coefficient:** `Over 300`
-**➢ Reason:** `{reason}`
-**➢ Inspector:** `{enforcer}`
-**➢ Chat Id:** `{m.chat.id}`
-""")
-
 @bot.on_message(filters.command(["re(vive|vert|store)"], prefixes=["/", ".", "?", "-"]))
 async def revive(Client, m: Message):
     if m.from_user.id not in OWO:
