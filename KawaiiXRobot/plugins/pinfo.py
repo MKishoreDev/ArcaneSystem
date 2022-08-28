@@ -25,7 +25,7 @@ async def status(bot, m: Message):
     else:
         status = "civilian"
 
-if m.from_user.id in DEVS, Inspector, Enforcer:
+    if m.from_user.id in DEVS, Inspector, Enforcer:
         dev_text = f"""
 ╒═══「 Cringe X System  」
 ➖➖➖➖➖➖➖➖➖
