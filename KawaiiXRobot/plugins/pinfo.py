@@ -10,7 +10,7 @@ SCAN_IMG = (
       "https://telegra.ph/file/357a3279b2960dd79a549.jpg",
   )
 
-        dev_text = f"""
+dev_text = f"""
 ╒═══「 Cringe X System  」
 ➖➖➖➖➖➖➖➖➖
 ➣ NAME: {m.from_user.first_name}
