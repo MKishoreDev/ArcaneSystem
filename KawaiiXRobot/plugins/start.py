@@ -32,12 +32,7 @@ HMF_VID = "https://telegra.ph/file/65239f3043ca5161617df.mp4"
 
 @bot.on_message(filters.command(["start"], ['/', ".", "?"]))
 async def start(client, message):
-   if message.reply_to_message:
-        user = message.reply_to_message.from_user.id
-    elif not message.reply_to_message and len(message.command) != 1:
-        user = message.text.split(None, 1)[1]
-
-    m = await message.reply_text("Processing")
+    message = await message.reply_text("Processing")
     START_BUTTON = [
     [
         InlineKeyboardButton("Rᴇᴘᴏʀᴛ Eʀʀᴏʀ", url="https://t.me/+u-YFXF8x-Rw0M2Rl"),
