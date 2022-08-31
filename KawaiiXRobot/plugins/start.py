@@ -1,28 +1,23 @@
-import random
-from pyrogram import Client
-from pyrogram import filters
-from KawaiiXRobot import bot
-from random import shuffle
-from pyrogram.types import Message
-from pyrogram.errors import FloodWait
+import random 
+from pyrogram import filters, Client
 from pyrogram.types import Message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
-HMF_VID = (
-      "https://telegra.ph/file/65239f3043ca5161617df.mp4",
-  )
+from KawaiiXRobot import bot
 
 
 PM_START_TEXT = """
 **Hᴇʟʟᴏ!  Tʜᴇʀᴇ  I  Aᴍ  Cʀɪɴɢᴇ  °  Sʏsᴛᴇᴍ  Tʜᴇ  Jᴜᴅɢᴇᴍᴇɴᴛ  Eɴғᴏʀᴄɪɴɢ  Sʏsᴛᴇᴍ
-
 Iɴᴠᴀᴅᴇᴅ  Aɴᴀʟʏsɪs  Rᴇᴘᴏʀᴛ :-
  ➛ Usᴇʀ: 
  ➛ Iᴅ:
  ➛ Gʙᴀɴɴᴇᴅ
  ➛ Sᴛᴀᴛᴜs:**
 """
-buttons = [
+HMF_VID = "https://telegra.ph/file/65239f3043ca5161617df.mp4"
+
+@bot.on_message(filters.command(["start"], ['/', ".", "?"]))
+async def start(client, message):
+    START_BUTTON = [
     [
         InlineKeyboardButton("Rᴇᴘᴏʀᴛ Eʀʀᴏʀ", url="https://t.me/+u-YFXF8x-Rw0M2Rl"),
         InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/+u-YFXF8x-Rw0M2Rl"),
@@ -32,12 +27,12 @@ buttons = [
     ],
 ]
 
+    await message.reply_video(HMF_VID, caption=PM_START_TEXT.format(message.from_user.mention),
+                             reply_markup=InlineKeyboardMarkup(START_BUTTON))
 
-
-HELP = """
-Wᴇʟᴄᴏᴍᴇ  Tᴏ  Cʀɪɴɢᴇ  Hᴇʟᴘ  Sʏsᴛᴇᴍ,  Cʜᴇᴄᴋᴏᴜᴛ  Bᴇʟᴏᴡ  Bᴜᴛᴛᴏɴs  As  Pᴇʀ  Yᴏᴜʀ  Nᴇᴇᴅ.
-"""
-help_buttons = [
+@bot.on_message(filters.command(["help"], ['/', ".", "?"]))
+async def help(client, message):
+    HELP_BUTTON = [
             [
                 InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan"),
                 InlineKeyboardButton("Jᴜᴍʙʟᴇᴅ 🆎", callback_data="j_help"),
@@ -48,20 +43,8 @@ help_buttons = [
            ],
         ]
 
+    await message.reply_video(HMF_VID, caption=PM_START_TEXT.format(message.from_user.mention),
+                              reply_markup=InlineKeyboardMarkup(HELP_BUTTON))
 
-@bot.on_message(filters.command(["start"], ['/', ".", "?"]))
-async def start(client, message):
-             await message.reply_video(
-                HMF_VID,
-                caption=PM_START_TEXT.format(message.from_user.mention),                   
-                reply_markup=InlineKeyboardMarkup(buttons))
-
-@Client.on_message(filters.command("help"))
-async def help(client, message):
-             await message.reply_video(
-                HMF_VID,
-                caption=HELP.format(message.from_user.mention),                   
-                reply_markup=InlineKeyboardMarkup(help_buttons))
-
-
- 
+HELP_TEXT = """Wᴇʟᴄᴏᴍᴇ  Tᴏ  Cʀɪɴɢᴇ  Hᴇʟᴘ  Sʏsᴛᴇᴍ,  Cʜᴇᴄᴋᴏᴜᴛ  Bᴇʟᴏᴡ  Bᴜᴛᴛᴏɴs  As  Pᴇʀ  Yᴏᴜʀ  Nᴇᴇᴅ.""",
+                             
