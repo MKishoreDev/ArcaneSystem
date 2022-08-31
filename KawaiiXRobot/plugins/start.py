@@ -23,10 +23,10 @@ PM_START_TEXT = """
 `Hᴇʟʟᴏ! Tʜᴇʀᴇ I Aᴍ Cʀɪɴɢᴇ ° Sʏsᴛᴇᴍ Tʜᴇ Jᴜᴅɢᴇᴍᴇɴᴛ Eɴғᴏʀᴄɪɴɢ Sʏsᴛᴇᴍ `
 
 Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
- ➛ Usᴇʀ: mention
- ➛ Iᴅ: user_id
- ➛ Gʙᴀɴɴᴇᴅ: is_gbanned
- ➛ Sᴛᴀᴛᴜs: is_dev
+ ➛ Usᴇʀ: (mention)
+ ➛ Iᴅ: (user_id)
+ ➛ Gʙᴀɴɴᴇᴅ: (is_gbanned)
+ ➛ Sᴛᴀᴛᴜs: (is_dev)
 """
 HMF_VID = "https://telegra.ph/file/65239f3043ca5161617df.mp4"
 
