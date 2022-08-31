@@ -20,8 +20,8 @@ async def revive(_, message):
                 return await message.reply("give a user ID or name")
           user_id_text = message.text.split(None, 1)[1]
           user = bot.get_users(user_id_text)
-          await x.remove_gban_user(user.id)
-          await bot.send_message(-1001648239341,
+          await x.remove_gban_user(user_id_text)
+          await bot.send_message(-1001781501832,
                     text=f"""
 ╒═══「 #DestroyDecomposer 」
 **➢ Enforcer:** `{message.from_user.id}`
