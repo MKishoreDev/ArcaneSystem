@@ -36,15 +36,15 @@ async def help(client, message):
     HELP_BUTTON = [
             [
                 InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan"),
-                InlineKeyboardButton("Jᴜᴍʙʟᴇᴅ 🆎", callback_data="j_help"),
+                InlineKeyboardButton("Exᴛʀᴀ", callback_data="j_help"),
             ],
             [
-                InlineKeyboardButton("❮ Nᴇxᴛ", callback_data="p_help"),
-                InlineKeyboardButton("Nᴇxᴛ ❯", callback_data="j_help"),
+                InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="p_help"),
+                InlineKeyboardButton("Cʟᴏsᴇ", callback_data="j_help"),
            ],
         ]
 
-    await message.reply_video(HMF_VID, caption=PM_START_TEXT.format(message.from_user.mention),
+    await message.reply_video(HMF_VID, caption=HELP_TEXT.format(message.from_user.mention),
                               reply_markup=InlineKeyboardMarkup(HELP_BUTTON))
 
 HELP_TEXT = """Wᴇʟᴄᴏᴍᴇ  Tᴏ  Cʀɪɴɢᴇ  Hᴇʟᴘ  Sʏsᴛᴇᴍ,  Cʜᴇᴄᴋᴏᴜᴛ  Bᴇʟᴏᴡ  Bᴜᴛᴛᴏɴs  As  Pᴇʀ  Yᴏᴜʀ  Nᴇᴇᴅ.""",
