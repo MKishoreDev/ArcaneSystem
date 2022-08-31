@@ -6,7 +6,8 @@ from KawaiiXRobot.utils.dbfunctions import get_gbans_count
 async def list(client, message):
  try:
     gbans = await get_gbans_count()
+    data = await get_gbans_data()
     hehe = "https://telegra.ph/file/65239f3043ca5161617df.mp4"
-    await message.reply_video(hehe, caption="`{}` **Globally Scanned/Banned Users**".format(gbans))
+    await message.reply_video(hehe, caption="`{}` **Globally Scanned/Banned Users**\n\n`{}`rmat(gbans, data))
  except Exception:
     pass
