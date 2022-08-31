@@ -16,7 +16,7 @@ OWO = DEVS + Inspector
 async def revive(_, message):
           if message.from_user.id not in OWO
                 return await message("Only OWO user can use")
-          elif len(message.command) <2:
+          if len(message.command) <2:
                 return await message.reply("give a user ID or name")
           user_id_text = message.text.split(None, 1)[1]
           get = bot.get_users(user_id_text)
