@@ -29,7 +29,7 @@ async def revive(Client, m: Message):
                    return await m.reply_text("give me user ID or username")
             elif len(m.command) <3:
                    return await m.reply_text("give a reason to unscan")
-            user_ids = m.text.split(None, 1)]1]
+            user_ids = m.text.split(None, 1)[1]
             reason = m.text.split(None, 2)[2]
             user = bot.get_users(user_ids)
             user_id = user.id
