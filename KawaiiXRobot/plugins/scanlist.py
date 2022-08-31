@@ -4,6 +4,7 @@ from KawaiiXRobot.utils.dbfunctions import gbansdb
 
 @bot.on_message(filters.command(["scanlist"], ['/', ".", "?"]))
 async def list(client, message):
+try:
    total_num = len([i async for i in gbansdb.find({"user_id": {"$gt": 0}})])
    total_id =  ([i['user_id'] async for i in gbansdb.find({"user_id": {"$gt": 0}})])
    for x in total_id:
@@ -14,5 +15,7 @@ async def list(client, message):
            reply += "• {}".format(mention)
            hehe = "https://telegra.ph/file/65239f3043ca5161617df.mp4"
            await message.reply_video(hehe, caption="\n\n`{}`".format(gbans, data))
-       except Exception:
-           pass
+       except Exception as e:
+           print(e)
+except Exception as e:
+    print(e)
