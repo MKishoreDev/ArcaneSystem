@@ -26,13 +26,30 @@ Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
  ➛ Usᴇʀ: mention,
  ➛ Iᴅ: user_id,
  ➛ Gʙᴀɴɴᴇᴅ: is_gbanned,
- ➛ Sᴛᴀᴛᴜs: is_dev,
+ ➛ Sᴛᴀᴛᴜs: {status}
 """
 HMF_VID = "https://telegra.ph/file/65239f3043ca5161617df.mp4"
 
 @bot.on_message(filters.command(["start"], ['/', ".", "?"]))
 async def start(client, message):
-    message = await message.reply_text("Processing")
+    if m.from_user.id in DEVS:
+        status = "**Gᴏᴅ Oғ Cʀɪɴɢᴇ**"
+
+    elif m.from_user.id in Inspector:
+        status = "**Iɴsᴘᴇᴄᴛᴏʀ**"
+
+    elif m.from_user.id in Enforcer:
+        status = "**Eɴғᴏʀᴄᴇʀ**"
+
+    elif db.get_role(m.from_user.id)['status'] != True:
+        status = "Cɪᴠɪʟɪᴀɴ"
+
+    elif db.get_role(m.from_user.id)['status'] == True:
+        status = db.get_role(m.from_user.id)['role']
+
+    else:
+        status = "Cɪᴠɪʟɪᴀɴ"
+
     START_BUTTON = [
     [
         InlineKeyboardButton("Rᴇᴘᴏʀᴛ Eʀʀᴏʀ", url="https://t.me/+u-YFXF8x-Rw0M2Rl"),
