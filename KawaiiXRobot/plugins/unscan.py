@@ -15,7 +15,7 @@ OWO = DEVS + Inspector
 @bot.on_message(filters.command(["re(vive|vert|store)"], prefixes=["/", ".", "?", "-"]))
 async def revive(Client, m: Message):
             if m.from_user.id not in OWO:
-            return await m.reply_text("Only The Users of kawaii Can Use Scan")
+                  return await m.reply_text("Only The Users of kawaii Can Use Scan")
             elif len(m.command) <2:
                    return await m.reply_text("give me user ID or username")
             user_ids = m.text.split(None, 1)[1]
