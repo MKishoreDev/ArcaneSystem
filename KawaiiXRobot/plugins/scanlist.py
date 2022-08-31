@@ -1,6 +1,6 @@
 from pyrogram import filters, Client
 from KawaiiXRobot import bot
-from KawaiiXRobot.utils.dbfunctions import get_gbans_count
+from KawaiiXRobot.utils.dbfunctions import get_gbans_count, get_gbans_data
 
 @bot.on_message(filters.command(["scanlist"], ['/', ".", "?"]))
 async def list(client, message):
