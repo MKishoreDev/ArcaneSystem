@@ -1,6 +1,7 @@
 from KawaiiXRobot import bot
 import logging
 import glob
+import asyncio
 import importlib
 import sys
 from pathlib import Path
