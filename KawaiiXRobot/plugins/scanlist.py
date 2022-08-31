@@ -13,6 +13,6 @@ async def list(client, message):
            reply = "`{}` **Globally Scanned/Banned Users**".format(total_num)
            reply += "• {}".format(mention)
            hehe = "https://telegra.ph/file/65239f3043ca5161617df.mp4"
-           await message.reply_video(hehe, caption="\n\n`{}`".format(reply, mention))
+           await message.reply_video(hehe, caption=reply)
        except Exception as e:
            print(e)
