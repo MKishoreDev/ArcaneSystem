@@ -20,7 +20,6 @@ async def revive(_, message):
                        await message.reply(f"Kawai User: {message.from_user.id}\n target user: {message.reply_to_message.from_user.id}\n **UNBANNED**")  
           
           else:
-                await message.reply(f"{user.mention} he's not banned")
                 if message.from_user.id not in OWO:
                       return await message("Only OWO user can use")
                 elif len(message.command) <2:
