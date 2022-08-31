@@ -19,7 +19,6 @@ async def revive(Client, m: Message):
         return
 
     if not m.reply_to_message:
-        user = " ".join(m.command[1:])
         enforcer = m.from_user.id
         if not user.isdigit():
             await m.reply_text("User ID Must Be Integer")
