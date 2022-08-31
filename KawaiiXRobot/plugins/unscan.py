@@ -32,7 +32,7 @@ async def revive(Client, m: Message):
 """)
             else:
                 await m.reply("Kawaii Fellows Can't Be Revive Bcz They Never Scanned!")
-            if message.from_user.id in OWO and message.reply_to_message:
+                if message.from_user.id in OWO and message.reply_to_message:
                   enforcer = message.from_user.id
                   user = message.reply_to_message.from_user
                   await x.remove_gban_user(user.id)
