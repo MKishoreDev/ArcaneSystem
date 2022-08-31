@@ -10,9 +10,9 @@ async def list(client, message):
        try: 
            user = await bot.get_users(x)
            mention = "[" + user.first_name + "](tg://user?id=" + str(user.id) + ")"
-           reply = "`{}` **Globally Scanned/Banned Users**".format(total_num)
-           reply += "• {}\n".format(mention)
+           reply = "`{}` **Globally Scanned/Banned Users\n**".format(total_num)
+           reply += f"• {mention}\n"
            hehe = "https://telegra.ph/file/65239f3043ca5161617df.mp4"
            await message.reply_video(hehe, caption=reply)
-       except Exception as e:
-           print(e)
+       except Exception:
+           pass
