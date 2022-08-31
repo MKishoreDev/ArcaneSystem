@@ -1,13 +1,19 @@
 from pyrogram import filters, Client
 from KawaiiXRobot import bot
-from KawaiiXRobot.utils.dbfunctions import get_gbans_count, get_gbans_data
+from KawaiiXRobot.utils.dbfunctions import gbansdb
 
 @bot.on_message(filters.command(["scanlist"], ['/', ".", "?"]))
 async def list(client, message):
- try:
-    gbans = await get_gbans_count()
-    data = await get_gbans_data()
-    hehe = "https://telegra.ph/file/65239f3043ca5161617df.mp4"
-    await message.reply_video(hehe, caption="`{}` **Globally Scanned/Banned Users**\n\n`{}`".format(gbans, data))
- except Exception:
-    pass
+   total_num = len([i async for i in gbansdb.find({"user_id": {"$gt": 0}})])
+   total_id =  ([i['user_id'] async for i in gbansdb.find({"user_id": {"$gt": 0}})])
+   for x in total_id:
+       user = int(total_id)
+       try: 
+           user = await bot.get_users(user)
+           mention = "[" + user.first_name + "](tg://user?id=" + str(user.id) + ")"
+           reply = "`{}` **Globally Scanned/Banned Users**".format(total_num)
+           reply += "• {}".format(mention)
+           hehe = "https://telegra.ph/file/65239f3043ca5161617df.mp4"
+           await message.reply_video(hehe, caption="\n\n`{}`".format(gbans, data))
+       except Exception:
+           pass
