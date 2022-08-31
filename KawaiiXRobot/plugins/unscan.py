@@ -56,7 +56,7 @@ async def revive(Client, m: Message):
                   await bot.send_message(
                     KAWAII_LOGS,
                     f"/ungban {user}"),
-                await bot.send_message(
+                  await bot.send_message(
                     -1001648239341,
                     f"""
 ╒═══「 #DestroyDecomposer 」
