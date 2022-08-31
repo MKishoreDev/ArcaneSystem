@@ -32,7 +32,7 @@ HMF_VID = "https://telegra.ph/file/65239f3043ca5161617df.mp4"
 
 @bot.on_message(filters.command(["start"], ['/', ".", "?"]))
 async def start(client, message):
-    if m.from_user.id in DEVS:
+    if message.from_user.id in DEVS:
         status = "**Gᴏᴅ Oғ Cʀɪɴɢᴇ**"
 
     elif message.from_user.id in Inspector:
