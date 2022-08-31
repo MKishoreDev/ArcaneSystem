@@ -20,9 +20,9 @@ async def get_user_info(user, already=False):
     is_dev = user_id in DEVS
 
 PM_START_TEXT = """
-`Hᴇʟʟᴏ!  Tʜᴇʀᴇ  I  Aᴍ  Cʀɪɴɢᴇ  °  Sʏsᴛᴇᴍ  Tʜᴇ  Jᴜᴅɢᴇᴍᴇɴᴛ  Eɴғᴏʀᴄɪɴɢ  Sʏsᴛᴇᴍ `
+`Hᴇʟʟᴏ! Tʜᴇʀᴇ I Aᴍ Cʀɪɴɢᴇ ° Sʏsᴛᴇᴍ Tʜᴇ Jᴜᴅɢᴇᴍᴇɴᴛ Eɴғᴏʀᴄɪɴɢ Sʏsᴛᴇᴍ `
 
-Iɴᴠᴀᴅᴇᴅ  Aɴᴀʟʏsɪs  Rᴇᴘᴏʀᴛ :-
+Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
  ➛ Usᴇʀ: mention
  ➛ Iᴅ: user_id
  ➛ Gʙᴀɴɴᴇᴅ: is_gbanned
