@@ -15,22 +15,15 @@ OWO = DEVS + Inspector
 @bot.on_message(filters.command(["re(vive|vert|store)"], prefixes=["/", ".", "?", "-"]))
 async def revive(Client, m: Message):
             if m.from_user.id not in OWO:
-               await m.reply_text("Only The Users of kawaii Can Use Scan")
-               return
+               return await m.reply_text("Only The Users of kawaii Can Use Scan")
             elif len(m.command) <2:
                    return await m.reply_text("give me user ID or username")
-            elif len(m.command) <3:
-                   return await m.reply_text("give a reason to unscan")
             user_ids = m.text.split(None, 1)[1]
-            user = bot.get_users(user_ids)
-            user_id = user.id
-            enforcer = m.from_user.id
-            if user not in OWO:
-                await x.remove_gban_user(user_id)
-                await bot.send_message(
-                    KAWAII_LOGS,
-                    f"/ungban {user}"),
-                await bot.send_message(
+            get = bot.get_users(user_ids)
+            user_id = get.id
+            await x.remove_gban_user(user_id)
+            await bot.send_message(KAWAII_LOGS, f"/ungban {user}"),
+            await bot.send_message(
                     -1001648239341,
                     f"""
 ╒═══「 #DestroyDecomposer 」
@@ -52,5 +45,4 @@ async def revive(Client, m: Message):
 ╒═══「 #DestroyDecomposer 」
 **➢ Enforcer:** `{enforcer}`
 **➢ Target User:** [{user}](tg://user?id={user.id})
-**➢ Reason:** `duck to fuck`
 """)
