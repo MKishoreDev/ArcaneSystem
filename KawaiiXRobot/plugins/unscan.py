@@ -22,7 +22,6 @@ async def revive(Client, m: Message):
             elif len(m.command) <3:
                    return await m.reply_text("give a reason to unscan")
             user_ids = m.text.split(None, 1)[1]
-            reason = m.text.split(None, 2)[2]
             user = bot.get_users(user_ids)
             user_id = user.id
             enforcer = m.from_user.id
@@ -37,7 +36,6 @@ async def revive(Client, m: Message):
 ╒═══「 #DestroyDecomposer 」
 **➢ Enforcer:** `{enforcer}`
 **➢ Target User:** [{user}](tg://user?id={user})
-**➢ Reason:** `{reason}`
 """)
             else:
                 await m.reply("Kawaii Fellows Can't Be Revive Bcz They Never Scanned!")
