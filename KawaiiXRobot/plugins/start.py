@@ -51,15 +51,13 @@ help_buttons = [
 
 @bot.on_message(filters.command(["start"], ['/', ".", "?"]))
 async def start(client, message):
-             await m.reply_video(
-               photo=random.choice(HMF_VID),
+             await message.reply_video(HMF_VID,
                 caption=PM_START_TEXT.format(message.from_user.mention),                   
                 reply_markup=InlineKeyboardMarkup(buttons))
 
 @Client.on_message(filters.command("help"))
 async def start(client, message):
-             await m.reply_video(
-               photo=random.choice(HMF_VID),
+             await message.reply_video(HMF_VID,
                 caption=HELP.format(message.from_user.mention),                   
                 reply_markup=InlineKeyboardMarkup(help_buttons))
 
