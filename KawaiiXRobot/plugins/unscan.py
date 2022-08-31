@@ -14,9 +14,9 @@ OWO = DEVS + Inspector
 
 @bot.on_message(filters.command("revert"))
 async def revive(_, message):
-          if message.from_user.id not in OWO
+          if message.from_user.id not in OWO:
                 return await message("Only OWO user can use")
-          if len(message.command) <2:
+          elif len(message.command) <2:
                 return await message.reply("give a user ID or name")
           user_id_text = message.text.split(None, 1)[1]
           get = bot.get_users(user_id_text)
