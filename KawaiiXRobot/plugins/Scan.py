@@ -37,7 +37,7 @@ async def ban(Client, m: Message):
                await bot.send_message(
                     KAWAII_LOGS,
                     f"""/gban {user} {reason}""")
-               await bot.reply("Connection To Cringe All Bot... Successfully Scanned.")
+               await  m.reply_text("Connection To Cringe All Bot... Successfully Scanned.")
                await bot.send_message(-1001648239341,
                     f"""
 #BANNED
