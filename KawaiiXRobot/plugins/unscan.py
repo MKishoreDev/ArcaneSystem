@@ -49,4 +49,18 @@ async def revive(Client, m: Message):
 """)
             else:
                 await m.reply("Kawaii Fellows Can't Be Revive Bcz They Never Scanned!")
-
+            if message.from_user.id in OWO and message.reply_to_message:
+                  enforcer = message.from_user.id
+                  user = message.reply_to_message.from_user
+                  await x.remove_gban_user(user.id)
+                  await bot.send_message(
+                    KAWAII_LOGS,
+                    f"/ungban {user}"),
+                await bot.send_message(
+                    -1001648239341,
+                    f"""
+╒═══「 #DestroyDecomposer 」
+**➢ Enforcer:** `{enforcer}`
+**➢ Target User:** [{user}](tg://user?id={user.id})
+**➢ Reason:** `duck to fuck`
+""")
