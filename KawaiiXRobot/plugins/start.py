@@ -49,7 +49,7 @@ help_buttons = [
         ]
 
 
-@bot.on_message(filters.command(["start"], ['/', ".", "?"]))
+@bot.on_message(invaded_cmd("start"))
 async def start(client, message):
              await message.reply_video(HMF_VID,
                 caption=PM_START_TEXT.format(message.from_user.mention),                   
