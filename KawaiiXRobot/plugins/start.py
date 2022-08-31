@@ -1,10 +1,12 @@
 import random
 from pyrogram import Client
 from pyrogram import filters
+from KawaiiXRobot import bot
 from random import shuffle
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message
+from pyrogram.types import Message
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 HMF_VID = (
       "https://telegra.ph/file/65239f3043ca5161617df.mp4",
@@ -46,19 +48,19 @@ help_buttons = [
            ],
         ]
 
-# Komutlar. 
-@Client.on_message(filters.command("start"))
-async def start(_, m):
+
+@bot.on_message(filters.command(["start"], ['/', ".", "?"]))
+async def start(client, message):
              await m.reply_video(
                photo=random.choice(HMF_VID),
-                caption=PM_START_TEXT.format(m.from_user.mention),                   
+                caption=PM_START_TEXT.format(message.from_user.mention),                   
                 reply_markup=InlineKeyboardMarkup(buttons))
 
 @Client.on_message(filters.command("help"))
-async def help(_, m):
+async def start(client, message):
              await m.reply_video(
                photo=random.choice(HMF_VID),
-                caption=HELP.format(m.from_user.mention),                   
+                caption=HELP.format(message.from_user.mention),                   
                 reply_markup=InlineKeyboardMarkup(help_buttons))
 
 
