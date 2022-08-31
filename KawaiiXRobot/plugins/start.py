@@ -35,10 +35,10 @@ async def start(client, message):
     if m.from_user.id in DEVS:
         status = "**Gᴏᴅ Oғ Cʀɪɴɢᴇ**"
 
-    elif m.from_user.id in Inspector:
+    elif message.from_user.id in Inspector:
         status = "**Iɴsᴘᴇᴄᴛᴏʀ**"
 
-    elif m.from_user.id in Enforcer:
+    elif message.from_user.id in Enforcer:
         status = "**Eɴғᴏʀᴄᴇʀ**"
 
     elif db.get_role(m.from_user.id)['status'] != True:
