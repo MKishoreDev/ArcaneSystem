@@ -8,6 +8,6 @@ async def list(client, message):
     gbans = await get_gbans_count()
     data = await get_gbans_data()
     hehe = "https://telegra.ph/file/65239f3043ca5161617df.mp4"
-    await message.reply_video(hehe, caption="`{}` **Globally Scanned/Banned Users**\n\n`{}`rmat(gbans, data))
+    await message.reply_video(hehe, caption="`{}` **Globally Scanned/Banned Users**\n\n`{}`.format(gbans, data))
  except Exception:
     pass
