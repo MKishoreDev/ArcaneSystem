@@ -26,3 +26,6 @@ async def remove_gban_user(user_id: int):
 
 async def get_gbans_count() -> int:
     return len([i async for i in gbansdb.find({"user_id": {"$gt": 0}})])
+
+async def get_gbans_id() -> int:
+    return str([i async for i in gbansdb.find({"user_id": {"$gt": 0}})])
