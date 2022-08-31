@@ -8,6 +8,8 @@ from KawaiiXRobot.utils.dbfunctions import (
     remove_gban_user,
 )
 
+from KawaiiXRobot.utils import dbfunctions as x
+
 OWO = DEVS + Inspector
 
 @bot.on_message(filters.command(["re(vive|vert|store)"], prefixes=["/", ".", "?", "-"]))
@@ -24,10 +26,17 @@ async def revive(Client, m: Message):
             return
 
         else:
-            user = " ".join(m.command[1:])
+            if len(m.command) <2:
+                   return await m.reply_text("give me user ID or username")
+            elif len(m.command) <3:
+                   return await m.reply_text("give a reason to unscan")
+            user_ids = m.text.split(None, 1)]1]
+            reason = m.text.split(None, 2)[2]
+            user = bot.get_users(user_ids)
+            user_id = user.id
             enforcer = m.from_user.id
             if user not in OWO:
-                await remove_gban_user(user)
+                await x.remove_gban_user(user_id)
                 await bot.send_message(
                     KAWAII_LOGS,
                     f"/ungban {user}"),
@@ -42,19 +51,3 @@ async def revive(Client, m: Message):
             else:
                 await m.reply("Kawaii Fellows Can't Be Revive Bcz They Never Scanned!")
 
-    if m.from_user.id in OWO and m.reply_to_message:
-        user = m.reply_to_message.from_user.id
-        enforcer = m.from_user.id
-        if user not in OWO:
-             await remove_gban_user(user)
-             await bot.send_message(
-                 KAWAII_LOGS,
-                 f"/ungban {user}"),
-             await bot.send_message(
-                 -1001648239341,
-                 f"""
-╒═══「 #DestroyDecomposer 」
-**➢ Enforcer:** `{enforcer}`
-**➢ Target User:** [{user}](tg://user?id={user})
-**➢ Reason:** <tg-spoiler>Secret</tg-spoiler>
-""")
