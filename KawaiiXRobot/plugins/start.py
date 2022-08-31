@@ -58,7 +58,7 @@ async def help(client, message):
            ],
         ]
 
-    await message.reply_video(HMF_VID, caption=HELP_TEXT.format(message.from_user.mention),
+    await message.reply_video(HMF_VID, caption=HELP_TEXT,
                               reply_markup=InlineKeyboardMarkup(HELP_BUTTON))
 
 HELP_TEXT = """Wᴇʟᴄᴏᴍᴇ  Tᴏ  Cʀɪɴɢᴇ  Hᴇʟᴘ  Sʏsᴛᴇᴍ,  Cʜᴇᴄᴋᴏᴜᴛ  Bᴇʟᴏᴡ  Bᴜᴛᴛᴏɴs  As  Pᴇʀ  Yᴏᴜʀ  Nᴇᴇᴅ.""",
