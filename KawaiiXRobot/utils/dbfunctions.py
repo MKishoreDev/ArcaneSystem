@@ -30,6 +30,6 @@ async def get_gbans_count() -> int:
 async def get_gbans_id() -> int:
     return str([i async for i in gbansdb.find({"user_id": {"$gt": 0}})])
 
-async def get_gbans_data() -> int:
+async def get_gbans_id() -> int:
     async for i in gbansdb.find({"user_id": {"$gt": 0}})
           return str(i['user_id'])
