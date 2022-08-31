@@ -1,9 +1,5 @@
 import random 
 from pyrogram import filters, Client
-import asyncio
-from KawaiiXRobot import bot, db
-from pyrogram import filters
-from config import DEVS, Inspector, Enforcer 
 from pyrogram.types import Message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from KawaiiXRobot import bot
@@ -30,32 +26,13 @@ Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
  ➛ Usᴇʀ: mention,
  ➛ Iᴅ: user_id,
  ➛ Gʙᴀɴɴᴇᴅ: is_gbanned,
- ➛ Sᴛᴀᴛᴜs: {status}
+ ➛ Sᴛᴀᴛᴜs: is_dev,
 """
 HMF_VID = "https://telegra.ph/file/65239f3043ca5161617df.mp4"
 
 @bot.on_message(filters.command(["start"], ['/', ".", "?"]))
 async def start(client, message):
-    if message.from_user.id in DEVS:
-        status = "**Gᴏᴅ Oғ Cʀɪɴɢᴇ**"
-
-    elif message.from_user.id in Inspector:
-        status = "**Iɴsᴘᴇᴄᴛᴏʀ**"
-
-    elif message.from_user.id in Enforcer:
-        status = "**Eɴғᴏʀᴄᴇʀ**"
-
-    elif db.get_role(m.from_user.id)['status'] != True:
-        status = "Cɪᴠɪʟɪᴀɴ"
-
-    elif db.get_role(m.from_user.id)['status'] == True:
-        status = db.get_role(m.from_user.id)['role']
-
-    else:
-        status = "Cɪᴠɪʟɪᴀɴ"
-    await message.reply_video(HMF_VID, caption=PM_START_TEXT.format(message.from_user.mention),
-                             reply_markup=InlineKeyboardMarkup(START_BUTTON))
-
+    message = await message.reply_text("Processing")
     START_BUTTON = [
     [
         InlineKeyboardButton("Rᴇᴘᴏʀᴛ Eʀʀᴏʀ", url="https://t.me/+u-YFXF8x-Rw0M2Rl"),
@@ -66,7 +43,9 @@ async def start(client, message):
     ],
 ]
 
-    
+    await message.reply_video(HMF_VID, caption=PM_START_TEXT.format(message.from_user.mention),
+                             reply_markup=InlineKeyboardMarkup(START_BUTTON))
+
 @bot.on_message(filters.command(["help"], ['/', ".", "?"]))
 async def help(client, message):
     HELP_BUTTON = [
