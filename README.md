@@ -1,4 +1,3 @@
-[![BlueMoon](https://telegra.ph/file/5740005f5b16e749cd66d.jpg "KawaiiXRobot")](https://github.com/Thiruselvan999/KawaiiXSystem "KawaiiXRobot")
 
 
 # Kawaii X Robot 
