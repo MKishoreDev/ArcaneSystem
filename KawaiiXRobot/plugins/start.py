@@ -70,11 +70,10 @@ async def status(bot, m: Message):
         Start_text = f"""
 `Hᴇʟʟᴏ! Tʜᴇʀᴇ I Aᴍ Cʀɪɴɢᴇ ° Sʏsᴛᴇᴍ Tʜᴇ Jᴜᴅɢᴇᴍᴇɴᴛ Eɴғᴏʀᴄɪɴɢ Sʏsᴛᴇᴍ `
 Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
- ➛ Usᴇʀ: {}
+ ➛ Usᴇʀ: {mention}
  ➛ Iᴅ: {user_id}
  ➛ Gʙᴀɴɴᴇᴅ: {is_gbanned}
- ➛ Sᴛᴀᴛᴜs: {status}
-"""
+ ➛ Sᴛᴀᴛᴜs: {status}"""
         await m.reply_video(
                START_VID,
                 caption=Start_text,              
