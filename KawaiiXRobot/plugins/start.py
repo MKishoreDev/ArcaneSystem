@@ -3,7 +3,6 @@ from pyrogram import filters, Client
 from pyrogram.types import Message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from KawaiiXRobot import bot
-from KawaiiXRobot import status
 from KawaiiXRobot import DEVS, bot
 from KawaiiXRobot.utils.sections import section
 from KawaiiXRobot.utils.dbfunctions import is_gbanned_user
