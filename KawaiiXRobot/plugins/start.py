@@ -59,9 +59,10 @@ async def status(bot, m: Message):
     if m.from_user.id in HMF:
         Start_text = f"""
 `Hᴇʟʟᴏ! Tʜᴇʀᴇ I Aᴍ Cʀɪɴɢᴇ ° Sʏsᴛᴇᴍ Tʜᴇ Jᴜᴅɢᴇᴍᴇɴᴛ Eɴғᴏʀᴄɪɴɢ Sʏsᴛᴇᴍ `
+
 Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
- ➛ Usᴇʀ: [first_name],
- ➛ Iᴅ: user_id,
+ ➛ Usᴇʀ: {message.from_user.first_name}
+ ➛ Iᴅ: {message.from_user.id}
  ➛ Gʙᴀɴɴᴇᴅ: is_gbanned,
  ➛ Sᴛᴀᴛᴜs: {status}"""
         await m.reply_video(
