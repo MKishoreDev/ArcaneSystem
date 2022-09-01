@@ -23,7 +23,7 @@ PM_START_TEXT = """
 `Hᴇʟʟᴏ! Tʜᴇʀᴇ I Aᴍ Cʀɪɴɢᴇ ° Sʏsᴛᴇᴍ Tʜᴇ Jᴜᴅɢᴇᴍᴇɴᴛ Eɴғᴏʀᴄɪɴɢ Sʏsᴛᴇᴍ `
 
 Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
- ➛ Usᴇʀ: {mention}
+ ➛ Usᴇʀ: {}
  ➛ Iᴅ: {user_id}
  ➛ Gʙᴀɴɴᴇᴅ: {is_gbanned}
  ➛ Sᴛᴀᴛᴜs: {status}
