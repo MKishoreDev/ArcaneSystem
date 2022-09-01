@@ -1,4 +1,4 @@
-from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, Inspector, KAWAII_CHANNEL
+from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, Inspector, KAWAII_CHANNEL, ubot
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client
@@ -31,11 +31,11 @@ async def ban(Client, m: Message):
         else:
             await add_gban_user(user)
             if user not in OWO:
-               await bot.send_message(
-                    KAWAII_LOGS,
+               await ubot.send_message(
+                    -1001781501832,
                     f"""/fban {user} {reason}""")              
-               await bot.send_message(
-                    KAWAII_LOGS,
+               await ubot.send_message(
+                    -1001781501832,
                     f"""/gban {user} {reason}""")
                await  m.reply_text("Connection To Cringe All Bot... Successfully Scanned.")
                await bot.send_message(-1001648239341,
