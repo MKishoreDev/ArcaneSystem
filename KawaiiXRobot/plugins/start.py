@@ -81,7 +81,7 @@ async def help(client, message):
 
     HELP_BUTTON = [
             [
-                InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan_help"),
+                InlineKeyboardButton("Sᴄᴀɴ", callback_data="shelp"),
                 InlineKeyboardButton("Exᴛʀᴀ", callback_data="extra"),
             ],
             [
@@ -97,7 +97,7 @@ SCAN_HELP = """ ok
 add here 
 """
 
-@Client.on_callback_query(filters.regex("scan_help"))
+@Client.on_callback_query(filters.regex("shelp"))
 async def scanhelp(_, query: CallbackQuery):
     await query.edit_message_caption(SCAN_HELP,
        reply_markup=InlineKeyboardMarkup(
