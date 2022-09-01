@@ -21,7 +21,6 @@ async def get_user_info(user, already=False):
     mention = user.mention("Link")
     dc_id = user.dc_id
     photo_id = user.photo.big_file_id if user.photo else None
-    is_gbanned = await is_gbanned_user(user_id)
     is_dev = user_id in DEVS
 
 
@@ -38,6 +37,7 @@ buttons = [
 
 @bot.on_message(filters.command("start", ['/', ".", "?"]))
 async def status(bot, m: Message):
+    is_gbanned = await is_gbanned_user(m.from_user.id)
     if m.from_user.id in DEVS:
         status = "**Gᴏᴅ Oғ Cʀɪɴɢᴇ**"
 
