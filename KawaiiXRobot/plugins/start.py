@@ -67,7 +67,7 @@ async def status(bot, m: Message):
         status = "Cɪᴠɪʟɪᴀɴ"
 
     if m.from_user.id in HMF:
-        dev_text = f"""
+        Start_text = f"""
 `Hᴇʟʟᴏ! Tʜᴇʀᴇ I Aᴍ Cʀɪɴɢᴇ ° Sʏsᴛᴇᴍ Tʜᴇ Jᴜᴅɢᴇᴍᴇɴᴛ Eɴғᴏʀᴄɪɴɢ Sʏsᴛᴇᴍ `
 Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
  ➛ Usᴇʀ: {}
@@ -75,9 +75,9 @@ Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
  ➛ Gʙᴀɴɴᴇᴅ: {is_gbanned}
  ➛ Sᴛᴀᴛᴜs: {status}
 """
-        await m.reply_photo(
+        await m.reply_video(
                START_VID,
-                caption=dev_text,              
+                caption=Start_text,              
                 reply_markup=InlineKeyboardMarkup(buttons))
 
 
