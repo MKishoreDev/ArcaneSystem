@@ -1,4 +1,4 @@
-from KawaiiXRobot import bot, ubot
+from KawaiiXRobot import bot
 import logging
 import glob
 import asyncio
@@ -34,5 +34,5 @@ logging.basicConfig(
 
 if __name__ == "__main__":
     bot.run()
-     ubot.run()
+    
     
