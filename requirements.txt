@@ -10,3 +10,5 @@ asyncio
 vanitas
 pillow
 aiohttp
+python-telegram-bot
+opencv-python-headless
