@@ -61,8 +61,8 @@ async def status(bot, m: Message):
 `Hᴇʟʟᴏ! Tʜᴇʀᴇ I Aᴍ Cʀɪɴɢᴇ ° Sʏsᴛᴇᴍ Tʜᴇ Jᴜᴅɢᴇᴍᴇɴᴛ Eɴғᴏʀᴄɪɴɢ Sʏsᴛᴇᴍ `
 
 Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
- ➛ Usᴇʀ: {message.from_user.first_name}
- ➛ Iᴅ: {message.from_user.id}
+ ➛ Usᴇʀ: {m.from_user.first_name}
+ ➛ Iᴅ: {m.from_user.id}
  ➛ Gʙᴀɴɴᴇᴅ: is_gbanned,
  ➛ Sᴛᴀᴛᴜs: {status}"""
         await m.reply_video(
