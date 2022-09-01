@@ -81,7 +81,7 @@ async def help(client, message):
 
     HELP_BUTTON = [
             [
-                InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan"),
+                InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan_help"),
                 InlineKeyboardButton("Exᴛʀᴀ", callback_data="extra"),
             ],
             [
@@ -95,7 +95,7 @@ async def help(client, message):
 
 
 
-@Client.on_callback_query(filters.regex("scan"))
+@Client.on_callback_query(filters.regex("scan_help"))
 async def bstart(_, query):
     await query.message.edit(
         f"""How to scan 
