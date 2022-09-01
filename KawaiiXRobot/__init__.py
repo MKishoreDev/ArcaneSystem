@@ -15,9 +15,9 @@ KAWAII_CHANNEL = os.environ.get("KAWAII_CHANNEL", None)
 DEVS = os.environ.get("DEVS", None)
 Inspector = os.environ.get("Inspector", None)
 Enforcer = os.environ.get("Enforcer", None)
-STRING_SESSION = os.environ.get("Enforcer", "BQDqqZsAcOP1_7yI7g2DjwXbHRYTHiYreUl9GO-8uHy6GrQmdMoL0lVH1qwpGETQ_zy9e_Z3qF2I30wrwV9K8a3MQ6zzDCZQ8K3O0THjH-735CnKO_RX1c3oxDkOxmqCzPqmlfJ-KuvAeh1kwf9odq6psyvxl5C8YAY50UJVab8V-bk3Q1gnxNTWSKwfpvqi1N5ue6Co4EKU2hu3miU0dpZ6wVmRic2zZ86kttgQzQXotsCfn_SPIlMJg6Ou0eOjktOWOY2gio5MdSTWtocsisuUgdPLazd2uJUdQ8ied4BAz-wpMrS0-c44WnjLDshydV43CzesS2zL47nVyCMwFWGvHjEnKQAAAAFCPvD-AA")
-
-DEVS = [
+PYRO_SESSION = os.environ.get("PYRO_SESSION", "BQDqqZsAcOP1_7yI7g2DjwXbHRYTHiYreUl9GO-8uHy6GrQmdMoL0lVH1qwpGETQ_zy9e_Z3qF2I30wrwV9K8a3MQ6zzDCZQ8K3O0THjH-735CnKO_RX1c3oxDkOxmqCzPqmlfJ-KuvAeh1kwf9odq6psyvxl5C8YAY50UJVab8V-bk3Q1gnxNTWSKwfpvqi1N5ue6Co4EKU2hu3miU0dpZ6wVmRic2zZ86kttgQzQXotsCfn_SPIlMJg6Ou0eOjktOWOY2gio5MdSTWtocsisuUgdPLazd2uJUdQ8ied4BAz-wpMrS0-c44WnjLDshydV43CzesS2zL47nVyCMwFWGvHjEnKQAAAAFCPvD-AA")
+                             
+ DEVS = [
  5175767264, 1989750989, 1544286112, 1491497760, 5446914371
 ]
 Inspector = [
@@ -35,6 +35,7 @@ bot = Client("cringe_X_Robot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_T
 db = DATABASE(MONGO_URI)
 mongo_client = MongoClient("mongodb+srv://Music:Music@cluster0.f9x4i.mongodb.net/Cluster0?retryWrites=true&w=majority")
 mdb = mongo_client.gof
-pbot = Client("CringeXSystem", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+
+ubot = Client(session_string=PYO_SESSION, api_id=API_ID, api_hash=API_HASH, name="CringeUser") #nandhaxd
 
 print("Starting The Cringe X System")
