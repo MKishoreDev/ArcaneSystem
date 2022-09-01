@@ -4,6 +4,8 @@ from pyrogram import filters
 from pyrogram.types import Message
 from config import DEVS, Inspector, Enforcer 
 from KawaiiXRobot import bot
+from pyrogram import __version__ as pyro
+from pyrogram import Client
 from KawaiiXRobot.utils.sections import section
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from KawaiiXRobot.utils.dbfunctions import is_gbanned_user
