@@ -96,18 +96,14 @@ async def help(client, message):
 
 
 @Client.on_callback_query(filters.regex("scan_help"))
-async def bstart(_, query):
+async def scanhelp(_, query):
     await query.message.edit(
-        f"""How to scan 
-
+        text="""How to scan 
 👉🏻 1st case if scanning the user via replying to that user message,
 Use command /scan + flags checkout flags button.
-
 `E.g /scan -r threat -p https://telegra.ph/media`
-
 👉🏻 2nd case if scanning the user via "message link/username/user id"
 Use command /scan -id + flags checkout flags button.
-
 `E.g /scan -id 1234560914 -r threat -p https://telegra.ph/media`""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -120,6 +116,6 @@ Use command /scan -id + flags checkout flags button.
                 InlineKeyboardButton("Cʟᴏsᴇ", callback_data="back_start"),
                 ],
              ]
-         ),
-        disable_web_page_preview=True,
-    )
+         ))
+        
+    
