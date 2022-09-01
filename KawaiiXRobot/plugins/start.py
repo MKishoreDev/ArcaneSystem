@@ -5,6 +5,7 @@ from pyrogram.types import Message
 from config import DEVS, Inspector, Enforcer 
 from KawaiiXRobot import bot
 from KawaiiXRobot.utils.sections import section
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from KawaiiXRobot.utils.dbfunctions import is_gbanned_user
 
 HMF = DEVS + Inspector + Enforcer 
@@ -22,17 +23,6 @@ async def get_user_info(user, already=False):
     photo_id = user.photo.big_file_id if user.photo else None
     is_gbanned = await is_gbanned_user(user_id)
     is_dev = user_id in DEVS
-    body = {
-        "ID": user_id,
-        "DC": dc_id,
-        "Name": [first_name],
-        "Username": [("@" + username) if username else "Null"],
-        "Mention": [mention],
-        "Dev": is_dev,
-        "Gbanned": is_gbanned,
-    }
-    caption = section("User info", body)
-    return [caption]
 
 
 START_VID = (
@@ -70,9 +60,9 @@ async def status(bot, m: Message):
         Start_text = f"""
 `Hᴇʟʟᴏ! Tʜᴇʀᴇ I Aᴍ Cʀɪɴɢᴇ ° Sʏsᴛᴇᴍ Tʜᴇ Jᴜᴅɢᴇᴍᴇɴᴛ Eɴғᴏʀᴄɪɴɢ Sʏsᴛᴇᴍ `
 Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
- ➛ Usᴇʀ: {mention}
- ➛ Iᴅ: {user_id}
- ➛ Gʙᴀɴɴᴇᴅ: {is_gbanned}
+ ➛ Usᴇʀ: [first_name],
+ ➛ Iᴅ: user_id,
+ ➛ Gʙᴀɴɴᴇᴅ: is_gbanned,
  ➛ Sᴛᴀᴛᴜs: {status}"""
         await m.reply_video(
                START_VID,
