@@ -36,6 +36,6 @@ db = DATABASE(MONGO_URI)
 mongo_client = MongoClient("mongodb+srv://Music:Music@cluster0.f9x4i.mongodb.net/Cluster0?retryWrites=true&w=majority")
 mdb = mongo_client.gof
 
-ubot = Client(session_string=PYO_SESSION, api_id=API_ID, api_hash=API_HASH, name="CringeUser") #nandhaxd
+ubot = Client(session_string=PYRO_SESSION, api_id=API_ID, api_hash=API_HASH, name="CringeUser") #nandhaxd
 
 print("Starting The Cringe X System")
