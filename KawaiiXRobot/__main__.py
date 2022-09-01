@@ -35,5 +35,4 @@ logging.basicConfig(
 if __name__ == "__main__":
     ubot.run()
     bot.run()
-    with bot:
-        bot.send_message(-1001706620346, "**Restarted!**")
+    
