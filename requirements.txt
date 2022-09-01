@@ -3,6 +3,7 @@ tgcrypto
 pymongo
 dnspython
 motor
+pbot
 requests
 aiofiles
 asyncio
