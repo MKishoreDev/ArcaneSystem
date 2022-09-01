@@ -33,5 +33,6 @@ bot = Client("cringe_X_Robot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_T
 db = DATABASE(MONGO_URI)
 mongo_client = MongoClient("mongodb+srv://Music:Music@cluster0.f9x4i.mongodb.net/Cluster0?retryWrites=true&w=majority")
 mdb = mongo_client.gof
+pbot = Client("CringeXSystem", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 print("Starting The Cringe X System")
