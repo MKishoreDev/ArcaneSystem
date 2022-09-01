@@ -1,7 +1,7 @@
 import os
 
 from pyrogram import filters
-from pyrogram.types import Message
+from pyrogram.types import Message, CallbackQuery
 from config import DEVS, Inspector, Enforcer 
 from KawaiiXRobot import bot
 from pyrogram import Client
@@ -96,7 +96,7 @@ async def help(client, message):
 
 
 @Client.on_callback_query(filters.regex("scan_help"))
-async def scanhelp(_, query):
+async def scanhelp(_, query: CallbackQuery):
     await query.message.edit(
         text="""How to scan 
 👉🏻 1st case if scanning the user via replying to that user message,
