@@ -97,8 +97,8 @@ async def help(client, message):
 
 @Client.on_callback_query(filters.regex("scan_help"))
 async def scanhelp(_, query: CallbackQuery):
-    await query.message.edit_caption(
-        text="""How to scan 
+    await query.edit_message_caption(
+        """How to scan 
 👉🏻 1st case if scanning the user via replying to that user message,
 Use command /scan + flags checkout flags button.
 `E.g /scan -r threat -p https://telegra.ph/media`
