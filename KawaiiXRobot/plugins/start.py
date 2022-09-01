@@ -97,7 +97,7 @@ async def help(client, message):
 
 @Client.on_callback_query(filters.regex("scan"))
 async def bstart(_, query):
-    await query.edit_message_text(
+    await query.message.edit(
         f"""How to scan 
 
 👉🏻 1st case if scanning the user via replying to that user message,
