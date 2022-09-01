@@ -92,3 +92,33 @@ async def help(client, message):
     await message.reply_video(START_VID, caption=HELP_TEXT,
                               reply_markup=InlineKeyboardMarkup(HELP_BUTTON))
 
+
+
+@Client.on_callback_query(filters.regex("scan"))
+async def bstart(_, query: CallbackQuery):
+    await query.edit_message_text(
+        f"""How to scan 
+
+👉🏻 1st case if scanning the user via replying to that user message,
+Use command /scan + flags checkout flags button.
+
+`E.g /scan -r threat -p https://telegra.ph/media`
+
+👉🏻 2nd case if scanning the user via "message link/username/user id"
+Use command /scan -id + flags checkout flags button.
+
+`E.g /scan -id 1234560914 -r threat -p https://telegra.ph/media`""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan"),
+                InlineKeyboardButton("Exᴛʀᴀ", callback_data="extra"),
+            ],
+            [
+                InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes"),
+                InlineKeyboardButton("Cʟᴏsᴇ", callback_data="back_start"),
+                ],
+             ]
+         ),
+        disable_web_page_preview=True,
+    )
