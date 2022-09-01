@@ -31,8 +31,11 @@ START_VID = (
 buttons = [
     [
         InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/playBoysDXD"),
-        InlineKeyboardButton("Sᴘᴀᴍ ʀᴇᴘᴏʀᴛ", url="https://t.me/playBoysDXD"),   
+        InlineKeyboardButton("Sᴘᴀᴍ ʀᴇᴘᴏʀᴛ", url="https://t.me/playBoysDXD"),
     ],
+    [
+        InlineKeyboardButton(" Cᴏᴍᴍᴀɴᴅs  Aɴᴅ  Hᴇʟᴘ", callback_data="help"),   
+    ],   
 ]
 
 @bot.on_message(filters.command("start", ['/', ".", "?"]))
@@ -70,4 +73,22 @@ Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
                 caption=Start_text,              
                 reply_markup=InlineKeyboardMarkup(buttons))
 
+
+@bot.on_message(filters.command(["help"], ['/', ".", "?"]))
+async def help(client, message):
+    HELP_TEXT = """Wᴇʟᴄᴏᴍᴇ  Tᴏ  Cʀɪɴɢᴇ  Hᴇʟᴘ  Sʏsᴛᴇᴍ,  Cʜᴇᴄᴋᴏᴜᴛ  Bᴇʟᴏᴡ  Bᴜᴛᴛᴏɴs  As  Pᴇʀ  Yᴏᴜʀ  Nᴇᴇᴅ.""",
+
+    HELP_BUTTON = [
+            [
+                InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan"),
+                InlineKeyboardButton("Exᴛʀᴀ", callback_data="extra"),
+            ],
+            [
+                InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes"),
+                InlineKeyboardButton("Cʟᴏsᴇ", callback_data="back_start"),
+           ],
+        ]
+
+    await message.reply_video(HMF_VID, caption=HELP_TEXT,
+                              reply_markup=InlineKeyboardMarkup(HELP_BUTTON))
 
