@@ -89,6 +89,6 @@ async def help(client, message):
            ],
         ]
 
-    await message.reply_video(HMF_VID, caption=HELP_TEXT,
+    await message.reply_video(START_VID, caption=HELP_TEXT,
                               reply_markup=InlineKeyboardMarkup(HELP_BUTTON))
 
