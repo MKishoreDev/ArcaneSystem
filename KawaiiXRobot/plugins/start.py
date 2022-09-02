@@ -35,7 +35,7 @@ buttons = [
         InlineKeyboardButton("Sᴘᴀᴍ ʀᴇᴘᴏʀᴛ", url="https://t.me/playBoysDXD"),
     ],
     [
-        InlineKeyboardButton(" Cᴏᴍᴍᴀɴᴅs  Aɴᴅ  Hᴇʟᴘ", callback_data="help"),   
+        InlineKeyboardButton(" Cᴏᴍᴍᴀɴᴅs  Aɴᴅ  Hᴇʟᴘ", callback_data="back_help"),   
     ],   
 ]
 
@@ -179,4 +179,17 @@ async def helpback(_, query: CallbackQuery):
          ))
         
     
-
+@bot.on_callback_query(filters.regex("back_start"))
+async def startback(_, query: CallbackQuery):
+    await query.edit_message_caption("""Wᴇʟᴄᴏᴍᴇ  Tᴏ  Cʀɪɴɢᴇ  Hᴇʟᴘ  Sʏsᴛᴇᴍ,  Cʜᴇᴄᴋᴏᴜᴛ  Bᴇʟᴏᴡ  Bᴜᴛᴛᴏɴs  As  Pᴇʀ  Yᴏᴜʀ  Nᴇᴇᴅ.""",
+       reply_markup=InlineKeyboardMarkup(
+        [
+            [
+                InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan_help"),
+                InlineKeyboardButton("Exᴛʀᴀ", callback_data="extra"),
+            ],
+            [
+                InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes"),
+                InlineKeyboardButton("Cʟᴏsᴇ", callback_data="back_start"),
+           ],
+        ]
