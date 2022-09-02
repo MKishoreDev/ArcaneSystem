@@ -86,7 +86,7 @@ async def help(client, message):
             ],
             [
                 InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes"),
-                InlineKeyboardButton("Cʟᴏsᴇ", callback_data="back_start"),
+                InlineKeyboardButton("Cʟᴏsᴇ", callback_data="delete"),
            ],
         ]
 
@@ -173,7 +173,7 @@ async def helpback(_, query: CallbackQuery):
             ],
             [
                 InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes_help"),
-                InlineKeyboardButton("Cʟᴏsᴇ", callback_data="back_start"),
+                InlineKeyboardButton("Cʟᴏsᴇ", callback_data="delete"),
                 ],
              ]
          ))
@@ -198,3 +198,7 @@ Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
            ],
         ]
      ))
+
+@bot.on_callback_query(filters.regex("delete"))
+async def delete(_, query):
+    await query.message.delete()
