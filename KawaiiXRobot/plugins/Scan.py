@@ -17,10 +17,10 @@ async def scan(_, message):
         elif len(message.command) <2:
                   return await message.reply("give user ID")
         elif len(message.command) <3:
-                  return await message.reply("give reason to scan")
-        uid = message.text.split(None, 1)[1]
-        user = await bot.get_users(uid)
-        reason = message.text.split(None, 2)[2]
+                  await message.reply("give reason to scan")
+                  uid = message.text.split(None, 1)[1]
+                  user = await bot.get_users(uid)
+                  reason = message.text.split(None, 2)[2]
         elif user.id in OWO:
               return await message.reply("WTF you can't scan fight with another owo user")
         await add_gban_user(user.id)
