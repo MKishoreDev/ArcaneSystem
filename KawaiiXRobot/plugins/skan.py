@@ -12,7 +12,8 @@ OWO = DEVS + Inspector
 
 @bot.on_message(filters.command("skan", prefixes=["/", ".", "?", "-"]))
 async def ban(Client, m: Message):
-    if not m.from_user.id in OWO:
+   async with ubot.conversation(chat) as conv:
+     if not m.from_user.id in OWO:
         await m.reply_text("Only The Cringe Inspectors Can Use Me")
 
     if m.from_user.id in OWO and not m.reply_to_message:
@@ -31,10 +32,10 @@ async def ban(Client, m: Message):
         else:
             await add_gban_user(user)
             if user not in OWO:
-               await bot.send_message(
+               await ubot.send_message(
                     -1001781501832,
                     f"""/fban {user} {reason}""")              
-               await bot.send_message(
+               await ubot.send_message(
                     -1001781501832,
                     f"""/gban {user} {reason}""")
                await  m.reply_text("Connection To Cringe All Bot... Successfully Scanned.")
@@ -56,12 +57,12 @@ async def ban(Client, m: Message):
 
         if not user in OWO:
             await add_gban_user(user)
-            await bot.send_message(-1001781501832,
+            await ubot.send_message(-1001781501832,
                                    f"""/gban {user} {reason}""")
-            await bot.send_message(-1001781501832,
+            await ubot.send_message(-1001781501832,
                                    f"""/fban {user} {reason}""")
-            await bot.reply("Connection To Cringe All Bot... Successfully Scanned.")
-            await bot.send_message(-1001648239341,
+            await ubot.reply("Connection To Cringe All Bot... Successfully Scanned.")
+            await ubot.send_message(-1001648239341,
                                    f"""
 #BANNED
 **USER**: [{user}](tg://user?id={user})
