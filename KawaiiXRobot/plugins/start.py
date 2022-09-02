@@ -97,6 +97,7 @@ async def help(client, message):
 @bot.on_callback_query(filters.regex("scan_help"))
 async def scanhelp(_, query: CallbackQuery):
     await query.edit_message_caption("""How to scan 
+
 👉🏻 1st case if scanning the user via replying to that user message,
 Use command /scan + flags checkout flags button.
 
@@ -122,7 +123,7 @@ Use command /scan -id + flags checkout flags button.
     
 
 @bot.on_callback_query(filters.regex("bancodes_help"))
-async def scanhelp(_, query: CallbackQuery):
+async def bancodes(_, query: CallbackQuery):
     await query.edit_message_caption("""Here is Help for **Bancodes** :-
 **✯** `{CGX00}` **SCAMMER.**
 **✯** `{CGX01}` **SPAM ADDING MEMBER.**
@@ -162,17 +163,8 @@ async def scanhelp(_, query: CallbackQuery):
         
 
 @bot.on_callback_query(filters.regex("back_help"))
-async def scanhelp(_, query: CallbackQuery):
-    await query.edit_message_caption("""How to scan 
-👉🏻 1st case if scanning the user via replying to that user message,
-Use command /scan + flags checkout flags button.
-
-`E.g /scan -r threat -p https://telegra.ph/media`
-
-👉🏻 2nd case if scanning the user via "message link/username/user id"
-Use command /scan -id + flags checkout flags button.
-
-`E.g /scan -id 1234560914 -r threat -p https://telegra.ph/media`""",
+async def helpback(_, query: CallbackQuery):
+    await query.edit_message_caption("""Wᴇʟᴄᴏᴍᴇ  Tᴏ  Cʀɪɴɢᴇ  Hᴇʟᴘ  Sʏsᴛᴇᴍ,  Cʜᴇᴄᴋᴏᴜᴛ  Bᴇʟᴏᴡ  Bᴜᴛᴛᴏɴs  As  Pᴇʀ  Yᴏᴜʀ  Nᴇᴇᴅ.""",
        reply_markup=InlineKeyboardMarkup(
             [
                 [
