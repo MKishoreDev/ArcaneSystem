@@ -10,7 +10,7 @@ from KawaiiXRobot.utils.dbfunctions import (
 
 OWO = DEVS + Inspector
 
-@bot.on_message(filters.command("scan",prefixes=["/", ".", "?", "-"]))
+@bot.on_message(filters.command("scan"))
 async def scan(_, message):
         if not message.from.user.id in OWO:
                return await message.reply("Only owo users can scan")
