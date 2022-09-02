@@ -31,7 +31,16 @@ async def ban(Client, m: Message):
         else:
             user = int(user)
             if user not in OWO:
-                x = OWO.ban(user, reason, enforcer)
+                await add_gban_user(user)
+            elif user not in OWO:
+               await ubot.send_message(
+                    -1001781501832,
+                    f"""/fban {user} {reason}""")              
+               await ubot.send_message(
+                    -1001781501832,
+                    f"""/gban {user} {reason}""")
+               await  m.reply_text("Connection To Cringe All Bot... Successfully Scanned.")
+               await bot.send_message(-1001648239341,
                 buttons = [
                     [
                         InlineKeyboardButton(
@@ -44,7 +53,7 @@ async def ban(Client, m: Message):
                 ]
 
                 await bot.send_message(
-                    KAWAII_LOGS,
+                    KAWAII_CHANNEL,
                     f"""
 #BANNED
 **USER**: [{user}](tg://user?id={user})
@@ -53,7 +62,6 @@ async def ban(Client, m: Message):
 **CHAT_ID** : {m.chat.id}
 """,
                     reply_markup=InlineKeyboardMarkup(buttons))
-                await m.reply(x)
             else:
                 await m.reply("Vampires Cant Be Banned!")
 
@@ -73,7 +81,7 @@ async def ban(Client, m: Message):
                                "Report", url="https://t.me/playBoysDXD"),
                        ]]
             x = OWO.ban(user, reason, enforcer)
-            await bot.send_message(KAWAII_LOGS,
+            await bot.send_message(KAWAII_CHANNEL,
                                    f"""
 #BANNED
 
@@ -84,7 +92,6 @@ async def ban(Client, m: Message):
 **Message Link : {m.link}
 """,
                                    reply_markup=InlineKeyboardMarkup(buttons))
-            await m.reply(x)
 
         else:
             await m.reply("The Vampire of Blue moon can't be banned!")
