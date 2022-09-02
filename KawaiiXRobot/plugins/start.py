@@ -115,7 +115,7 @@ Use command /scan -id + flags checkout flags button.
             ],
             [
                 InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes_help"),
-                InlineKeyboardButton("Cʟᴏsᴇ", callback_data="back_start"),
+                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="back_help"),
                 ],
              ]
          ))
@@ -156,7 +156,7 @@ async def bancodes(_, query: CallbackQuery):
             ],
             [
                 InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes_help"),
-                InlineKeyboardButton("Cʟᴏsᴇ", callback_data="back_start"),
+                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="back_help"),
                 ],
              ]
          ))
