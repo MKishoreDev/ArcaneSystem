@@ -12,7 +12,7 @@ OWO = DEVS + Inspector
 
 @bot.on_message(filters.command("scan"))
 async def scan(_, message):
-        if not message.from.user.id in OWO:
+        if not message.from_user.id in OWO:
                return await message.reply("Only owo users can scan")
         elif len(message.command) <2:
                   return await message.reply("give user ID")
