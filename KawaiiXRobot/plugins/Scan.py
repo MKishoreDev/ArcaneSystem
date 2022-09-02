@@ -10,66 +10,28 @@ from KawaiiXRobot.utils.dbfunctions import (
 
 OWO = DEVS + Inspector
 
-@bot.on_message(filters.command("scan", prefixes=["/", ".", "?", "-"]))
-async def ban(Client, m: Message):
-    if not m.from_user.id in OWO:
-        await m.reply_text("Only The Cringe Inspectors Can Use Me")
-
-    if m.from_user.id in OWO and not m.reply_to_message:
-        user = m.command[1]
-        reason = m.text.replace(m.text.split(" ")[0], "").replace(user, "")
-        enforcer = m.from_user.id
-
-        if len(user) != 8:
-            await m.reply_text("Invalid id")
-            return
-
-        if not user.isdigit():
-            await m.reply_text("User ID Must Be Integer")
-            return
-
-        else:
-            await add_gban_user(user)
-            if user not in OWO:
-               await ubot.send_message(
-                    -1001781501832,
-                    f"""/fban {user} {reason}""")              
-               await ubot.send_message(
-                    -1001781501832,
-                    f"""/gban {user} {reason}""")
-               await  m.reply_text("Connection To Cringe All Bot... Successfully Scanned.")
-               await bot.send_message(-1001648239341,
+@bot.on_message(filters.command("scan",prefixes=["/", ".", "?", "-"]))
+async def scan(_, message):
+   if not message.from.user.id in OWO:
+        return await message.reply("Only owo users can scan")
+   elif len(message.command) <2:
+          return await message.reply("give user ID")
+   elif len(message.command) <3:
+          return await message.reply("give reason to scan")
+   elif message.reply_to_message:
+         uid = message.text.split(None, 1)[1]
+         user = await bot.get_users(uid)
+         reason = message.text.split(None, 2)[2]
+   elif user.id in OWO:
+         return await message.reply("WTF you can't scan fight with another owo user")
+   await add_gban_user(user.id)
+   await bot.send_message(message.chat.id,
                     f"""
 #BANNED
-**USER**: [{user}](tg://user?id={user})
+**USER**: [{user}](tg://user?id={user.id})
 **REASON**: {reason}
-**ENFORCER**: [{enforcer}](tg://user?id={enforcer})
-**CHAT_ID** : {m.chat.id}
+**ENFORCER**: [{enforcer}](tg://user?id={message.from_user.id})
+**CHAT_ID** : {message.chat.id}
 """)
-            else:
-                await m.reply("WTF 😑 Kawaii Heros Cant Be Banned! Muditu poda muta kuthi")
+   
 
-    if m.from_user.id in OWO and m.reply_to_message:
-        user = m.reply_to_message.from_user.id
-        reason = m.text.replace(m.text.split(" ")[0], "")
-        enforcer = m.from_user.id
-
-        if not user in OWO:
-            await add_gban_user(user)
-            await ubot.send_message(-1001781501832,
-                                   f"""/gban {user} {reason}""")
-            await ubot.send_message(-1001781501832,
-                                   f"""/fban {user} {reason}""")
-            await bot.reply("Connection To Cringe All Bot... Successfully Scanned.")
-            await bot.send_message(-1001648239341,
-                                   f"""
-#BANNED
-**USER**: [{user}](tg://user?id={user})
-**REASON**: {reason}
-**ENFORCER**: [{enforcer}](tg://user?id={enforcer})
-**CHAT_ID** : {m.chat.id}
-**Message Link : {m.link}
-""")
-
-        else:
-            await m.reply("Kawaii can't be banned!")
