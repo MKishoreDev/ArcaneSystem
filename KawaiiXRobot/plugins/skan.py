@@ -16,7 +16,7 @@ async def ban(Client, m: Message):
      if not m.from_user.id in OWO:
         await m.reply_text("Only The Cringe Inspectors Can Use Me")
 
-    if m.from_user.id in OWO and not m.reply_to_message:
+     if m.from_user.id in OWO and not m.reply_to_message:
         user = m.command[1]
         reason = m.text.replace(m.text.split(" ")[0], "").replace(user, "")
         enforcer = m.from_user.id
