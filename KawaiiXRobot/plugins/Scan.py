@@ -12,20 +12,20 @@ OWO = DEVS + Inspector
 
 @bot.on_message(filters.command("scan",prefixes=["/", ".", "?", "-"]))
 async def scan(_, message):
-   if not message.from.user.id in OWO:
-        return await message.reply("Only owo users can scan")
-   elif len(message.command) <2:
-          return await message.reply("give user ID")
-   elif len(message.command) <3:
-          return await message.reply("give reason to scan")
-   elif message.reply_to_message:
-         uid = message.text.split(None, 1)[1]
-         user = await bot.get_users(uid)
-         reason = message.text.split(None, 2)[2]
-   elif user.id in OWO:
-         return await message.reply("WTF you can't scan fight with another owo user")
-   await add_gban_user(user.id)
-   await bot.send_message(message.chat.id,
+        if not message.from.user.id in OWO:
+               return await message.reply("Only owo users can scan")
+        elif len(message.command) <2:
+                  return await message.reply("give user ID")
+        elif len(message.command) <3:
+                  return await message.reply("give reason to scan")
+        elif message.reply_to_message:
+        uid = message.text.split(None, 1)[1]
+        user = await bot.get_users(uid)
+        reason = message.text.split(None, 2)[2]
+        elif user.id in OWO:
+              return await message.reply("WTF you can't scan fight with another owo user")
+        await add_gban_user(user.id)
+        await bot.send_message(message.chat.id,
                     f"""
 #BANNED
 **USER**: [{user}](tg://user?id={user.id})
