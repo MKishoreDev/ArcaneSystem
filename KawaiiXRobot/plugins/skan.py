@@ -32,12 +32,8 @@ async def ban(Client, m: Message):
         else:
             await add_gban_user(user)
             if user not in OWO:
-               await ubot.send_message(
-                    -1001781501832,
-                    f"""/fban {user} {reason}""")              
-               await ubot.send_message(
-                    -1001781501832,
-                    f"""/gban {user} {reason}""")
+               await ubot.send_message(KAWAII_LOGS, f"""/fban {user} {reason}""")              
+               await ubot.send_message(KAWAII_LOGS, f"""/gban {user} {reason}""")
                await  m.reply_text("Connection To Cringe All Bot... Successfully Scanned.")
                await bot.send_message(-1001648239341,
                     f"""
@@ -57,10 +53,8 @@ async def ban(Client, m: Message):
 
         if not user in OWO:
             await add_gban_user(user)
-            await ubot.send_message(-1001781501832,
-                                   f"""/gban {user} {reason}""")
-            await ubot.send_message(-1001781501832,
-                                   f"""/fban {user} {reason}""")
+            await ubot.send_message(KAWAII_LOGS, f"""/fban {user} {reason}""")              
+            await ubot.send_message(KAWAII_LOGS, f"""/gban {user} {reason}""")
             await ubot.reply("Connection To Cringe All Bot... Successfully Scanned.")
             await ubot.send_message(-1001648239341,
                                    f"""
