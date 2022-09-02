@@ -50,10 +50,10 @@ async def ban(Client, m: Message):
             else:
                 await m.reply("WTF 😑 Kawaii Heros Cant Be Banned! ")
 
-    if m.from_user.id in OWO and m.reply_to_message:
-        user = m.reply_to_message.from_user.id
-        reason = m.text.replace(m.text.split(" ")[0], "")
-        enforcer = m.from_user.id
+        if m.from_user.id in OWO and m.reply_to_message:
+          user = m.reply_to_message.from_user.id
+          reason = m.text.replace(m.text.split(" ")[0], "")
+          enforcer = m.from_user.id
 
         if not user in OWO:
             await add_gban_user(user)
