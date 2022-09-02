@@ -176,7 +176,7 @@ Use command /scan -id + flags checkout flags button.
        reply_markup=InlineKeyboardMarkup(
             [
                 [
-                InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan_help),
+                InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan_help"),
                 InlineKeyboardButton("Exᴛʀᴀ", callback_data="extra"),
             ],
             [
