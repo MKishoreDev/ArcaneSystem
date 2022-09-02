@@ -41,27 +41,13 @@ async def ban(Client, m: Message):
                     f"""/gban {user} {reason}""")
                await  m.reply_text("Connection To Cringe All Bot... Successfully Scanned.")
                await bot.send_message(-1001648239341,
-                buttons = [
-                    [
-                        InlineKeyboardButton(
-                            "Support", url="https://t.me/playBoysDXD")
-                    ],
-                    [
-                        InlineKeyboardButton(
-                            "Report", url="https://t.me/playBoysDXD")
-                    ],
-                ]
-
-                await bot.send_message(
-                    KAWAII_CHANNEL,
                     f"""
 #BANNED
 **USER**: [{user}](tg://user?id={user})
 **REASON**: {reason}
 **ENFORCER**: [{enforcer}](tg://user?id={enforcer})
 **CHAT_ID** : {m.chat.id}
-""",
-                    reply_markup=InlineKeyboardMarkup(buttons))
+""")
             else:
                 await m.reply("Vampires Cant Be Banned!")
 
