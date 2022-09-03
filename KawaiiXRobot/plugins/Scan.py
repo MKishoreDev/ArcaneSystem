@@ -18,12 +18,12 @@ async def scan(_, message):
                   return await message.reply("give user ID")
         elif len(message.command) <3:
                  return await message.reply("give reason to scan")
-        if not message.reply_to_message:
+        elif not message.reply_to_message:
                  user_id_text = message.text.split(None, 1)[1]
                  user = await bot.get_users(user_id_text)
                  reason = message.text.split(None, 2)[2]
                  await add_gban_user(user.id)
-        await bot.send_message(message.chat.id, "this means the users is scanned hacker add here text")
+                 await bot.send_message(message.chat.id, "this means the users is scanned hacker add here text")
         else:
                if len(message.command) <2:
                        await ok.edit_text("give reason boi")
