@@ -21,8 +21,6 @@ async def scan(_, message):
         user_id_text = message.text.split(None, 1)[1]
         user = await bot.get_users(user_id_text)
         reason = message.text.split(None, 2)[2]
-        elif user.id in OWO:
-              return await message.reply("WTF you can't scan fight with another owo user")
         await add_gban_user(user.id)
         await bot.send_message(message.chat.id,
                     f"""
