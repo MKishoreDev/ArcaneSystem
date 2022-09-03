@@ -10,8 +10,8 @@ from KawaiiXRobot.utils.dbfunctions import (
 
 OWO = DEVS + Inspector
 
-@bot.on_message(filters.command("revert"))
-async def revive(_, message):
+@bot.on_message(filters.command("scan"))
+async def scanning(_, message):
           
           if message.from_user.id in OWO and message.reply_to_message:
                        await add_gban_user(message.reply_to_message.from_user.id)
