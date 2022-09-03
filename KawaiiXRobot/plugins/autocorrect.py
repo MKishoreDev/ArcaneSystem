@@ -1,9 +1,9 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from wbb import Inspector, USERBOT_ID, USERBOT_PREFIX, ubot, arq
-from wbb.modules.userbot import eor
-from wbb.utils.filter_groups import autocorrect_group
+from KawaiiXRobot import Inspector, USERBOT_ID, USERBOT_PREFIX, ubot, arq
+from KawaiiXRobot.modules.userbot import eor
+from KawaiiXRobot.utils.filter_groups import autocorrect_group
 
 
 @app.on_message(
