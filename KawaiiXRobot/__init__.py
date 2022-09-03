@@ -16,7 +16,7 @@ DEVS = os.environ.get("DEVS", None)
 Inspector = os.environ.get("Inspector", None)
 Enforcer = os.environ.get("Enforcer", None)
 PYRO_SESSION = "BQDqqZsAQBei2h4gAFy8JocG2iibxq7M0PBetwL68gymbIy5rPkmvqmWOGb5Zv_Ias9BtTJthGS4DYaI3oWatJIl6gwp7EnDFbDt-_KS5yVJ4fZeXAcJghsIpC-1_K-9ZSZ5vs6OZFZk7sQwLaBZTutWCs9RsB38Z0AC-w7D9gW5OCxeayAQ5WnH5684YxdNl7_nVvbySz5AA0yGfFR-3wdTVjpEtW-ewb2X-alWDbtIa_SBYrClWbclWFXJhQyPmk4IYDBS1tGHgC2ko8UukT69jhAE-MWFJIjb4CUCg2Ol2yiRhkzXn7ZrD4v2H1tfTN1s0CJ3qra_slC8F6f1VKfsVJydlgAAAAFCPvD-AA"                            
-USERBOT_PREFIX = USERBOT_PREFIX
+USERBOT_PREFIX = "."
 DEVS = [
  5175767264, 1989750989, 1544286112, 1491497760, 5446914371
 ]
