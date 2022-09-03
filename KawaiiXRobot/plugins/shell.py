@@ -1,13 +1,13 @@
 from subprocess import Popen, PIPE, TimeoutExpired
 import os
 from time import perf_counter
-from KawaiiXRobot import ubot
+from KawaiiXRobot import ubot, bot
 from pyrogram import Client, filters
 from pyrogram.types import Message
 
 
 
-@ubot.on_message(filters.command(["shell", "sh"], ["."]) & filters.me)
+@bot.on_message(filters.command(["shell", "sh"], ["."]) & filters.me)
 async def shell(client: Client, message: Message):
     if len(message.command) < 2:
         return await message.edit("<b>Specify the command in message text</b>")
