@@ -6,9 +6,9 @@ OWO = DEVS + Inspector
 
 @bot.on_message(filters.command("fuck") & filters.user(OWO) & ~filters.forwarded)
 async def _(_, message):
- if len(message.command) <2:
+  if len(message.command) <2:
      return await message.reply("give user ID")
- elif len(message.command) <3:
+  elif len(message.command) <3:
     return await message.reply("give reason to scan")
     reason = message.text.split(None, 2)[2]
   if message.reply_to_message:
