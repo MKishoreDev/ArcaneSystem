@@ -19,11 +19,11 @@ async def _(_, message):
             KAWAII_LOGS,
             "/gban [user](tg://user?id={}) {} By {}".format(r_from_id, reason, message.from_user.id)
          )
-    await message.delete()
-    await message.reply_text("**Gbanning...**")
-    asyncio.sleep(3.5)
-    await message.reply_text("**Gbanned Succesfully**")
-    await message.delete()
+         await message.delete()
+         await message.reply_text("**Gbanning...**")
+         asyncio.sleep(3.5)
+         await message.reply_text("**Gbanned Succesfully**")
+         await message.delete()
 
 
 @bot.on_message(filters.command("revive") & filters.forwarded)
