@@ -33,7 +33,10 @@ logging.basicConfig(
     datefmt='%H:%M:%S',
 )
 
-if __name__ == "__main__":
+def main():
     ubot.run()
     bot.run()
+
+if __name__ == "__main__":
+     main()
    
