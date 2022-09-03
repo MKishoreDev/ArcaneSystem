@@ -1,6 +1,5 @@
 from KawaiiXRobot import bot
 import logging
-from KawaiiXRobot import ubot
 import glob
 import asyncio
 import importlib
@@ -34,7 +33,6 @@ logging.basicConfig(
 )
 
 def main():
-    ubot.run()
     bot.run()
 
 if __name__ == "__main__":
