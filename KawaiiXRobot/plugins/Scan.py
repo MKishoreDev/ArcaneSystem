@@ -33,6 +33,7 @@ async def scan(_, message):
         else:
                 if message.reply_to_message:
                           ok = await message.reply("scanning")
+                          return 
                 elif len(message.command) <2:
                        await ok.edit_text("give reason boi")
                reason = message.text.split(None, 1)[1]
