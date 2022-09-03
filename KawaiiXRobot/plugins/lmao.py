@@ -10,7 +10,6 @@ OWO = DEVS + Inspector
 
 @bot.on_message(filters.command("fuck") & filters.user(OWO) & ~filters.forwarded)
 async def _(_, message):
-try:
    if len(message.command) <2:
       return await message.reply("give user ID")
    elif len(message.command) <3:
@@ -36,8 +35,6 @@ try:
           await message.delete()
    else:
          await message.reply_text("I Have Seen This Sussy Baka Already")
-except Exception as e:
-        print(e)
 
 @bot.on_message(filters.command("revive") & filters.forwarded)
 async def _(_, message):
