@@ -10,7 +10,7 @@ from KawaiiXRobot.utils.dbfunctions import (
 
 OWO = DEVS + Inspector
 
-@bot.on_message(filters.command("skan", prefixes=["/", ".", "?", "-"]))
+@ubot.on_message(filters.command("skan", prefixes=["/", ".", "?", "-"]))
 async def ban(Client, m: Message):
    async with ubot.conversation(chat) as conv:
      if not m.from_user.id in OWO:
