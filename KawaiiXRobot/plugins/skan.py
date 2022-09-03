@@ -20,7 +20,7 @@ async def uban(Client, m: Message):
         reason = m.text.replace(m.text.split(" ")[0], "").replace(user, "")
         enforcer = m.from_user.id
 
-        if len(user) !< 8:
+        if len(user) != 10:
             await m.reply_text("Invalid id")
             return
 
