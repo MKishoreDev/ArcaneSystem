@@ -22,14 +22,7 @@ async def scan(_, message):
         user = await bot.get_users(user_id_text)
         reason = message.text.split(None, 2)[2]
         await add_gban_user(user.id)
-        await bot.send_message(message.chat.id,
-                    f"""
-#BANNED
-**USER**: [{user}](tg://user?id={user.id})
-**REASON**: {reason}
-**ENFORCER**: [{enforcer}](tg://user?id={message.from_user.id})
-**CHAT_ID** : {message.chat.id}
-""")
+        await bot.send_message(message.chat.id, "this means the users is scanned hacker add here text")
         else:
                 if message.reply_to_message:
                           ok = await message.reply("scanning")
