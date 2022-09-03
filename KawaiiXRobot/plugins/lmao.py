@@ -14,6 +14,7 @@ async def _(_, message):
       return await message.reply("give user ID")
    elif len(message.command) <3:
      return await message.reply("give reason to scan")
+
      reason = message.text.split(None, 2)[2]
    if message.reply_to_message:
           r_from_id = message.reply_to_message.from_user.id
