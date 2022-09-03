@@ -32,11 +32,11 @@ async def scan(_, message):
 **ENFORCER**: [{enforcer}](tg://user?id={message.from_user.id})
 **CHAT_ID** : {message.chat.id}
 """)
-   
         else:
                 if message.reply_to_message:
+                          ok = await message.reply("scanning")
                 elif len(message.command) <2:
-                       return await message.reply("give reason boi")
+                       await ok.edit_text("give reason boi")
                reason = message.text.split(None, 1)[1]
                user_id = message.reply_to_message.from_user.id
                info = await bot.get_users(user_id)
