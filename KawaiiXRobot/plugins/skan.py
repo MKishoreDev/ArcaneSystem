@@ -30,6 +30,7 @@ async def uban(Client, m: Message):
             return
 
         else:
+            user = int(user)
             await add_gban_user(user)
             if user not in OWO:
                await ubot.send_message(
@@ -74,4 +75,4 @@ async def uban(Client, m: Message):
             await m.reply("Kawaii can't be banned!")
   except Exception as gay:
       await m.reply(f"{gay}")
-  print(gay)
+      print(gay)
