@@ -43,7 +43,7 @@ ubot2 = (
         session_string=CRINGE_SESSION,
         api_id=API_ID,
         api_hash=API_HASH,
-        plugins=dict(root="Cilik/modules"),
+        plugins=dict(root="KawaiiXRobot/plugins"),
     )
     if CRINGE_SESSION
     else None
