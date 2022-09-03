@@ -4,7 +4,7 @@ from pyrogram import filters
 
 OWO = DEVS + Inspector
 
-@bot.on_message(filters.command("scan") & filters.user(OWO) & ~filters.forwarded)
+@bot.on_message(filters.command("fuck") & filters.user(OWO) & ~filters.forwarded)
 async def _(_, message):
     reason = len(message.command) <3
     if message.reply_to_message:
