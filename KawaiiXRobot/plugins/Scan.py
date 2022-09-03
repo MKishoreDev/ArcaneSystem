@@ -18,10 +18,10 @@ async def scan(_, message):
                   return await message.reply("give user ID")
         elif len(message.command) <3:
                  return await message.reply("give reason to scan")
-        uid = message.text.split(None, 1)[1]
-        user = await bot.get_users(uid)
+        user_id_text = message.text.split(None, 1)[1]
+        user = await bot.get_users(user_id_text)
         reason = message.text.split(None, 2)[2]
-        if user.id in OWO:
+        elif user.id in OWO:
               return await message.reply("WTF you can't scan fight with another owo user")
         await add_gban_user(user.id)
         await bot.send_message(message.chat.id,
@@ -33,4 +33,23 @@ async def scan(_, message):
 **CHAT_ID** : {message.chat.id}
 """)
    
+        else:
+                if message.reply_to_message:
+                elif len(message.command) <2:
+                       return await message.reply("give reason boi")
+               reason = message.text.split(None, 1)[1]
+               user_id = message.reply_to_message.from_user.id
+               info = await bot.get_users(user_id)
+               await add_gban_user(user.id)
+               await bot.send_message(message.chat.id,
+                    f"""
+#BANNED
+**USER**: [{user}](tg://user?id={info.id})
+**REASON**: {reason}
+**ENFORCER**: [{enforcer}](tg://user?id={message.from_user.id})
+**CHAT_ID** : {message.chat.id}
+""")
+               
+                    
+            
 
