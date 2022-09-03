@@ -1,4 +1,8 @@
 import asyncio
+
+from KawaiiXRobot.utils.dbfunctions import (
+    add_gban_user, is_gbanned_user
+)
 from KawaiiXRobot import KAWAII_LOGS, bot, DEVS, Inspector
 from pyrogram import filters
 
@@ -15,15 +19,20 @@ async def _(_, message):
          r_from_id = message.reply_to_message.from_user.id
   else:
          r_from_id = message.text.split(None, 1)[1]
+         return
+  if is_gbanned_user(r_from_id) == False:
          await bot.send_message(
             KAWAII_LOGS,
             "/gban [user](tg://user?id={}) {} By {}".format(r_from_id, reason, message.from_user.id)
          )
          await message.delete()
          await message.reply_text("**Gbanning...**")
-         asyncio.sleep(3.5)
+         await asyncio.sleep(3.5)
          await message.reply_text("**Gbanned Succesfully**")
+         await add_gban_user(r_from_id)
          await message.delete()
+  else:
+        await message.reply_text("I Have Seen This Sussy Baka Already")
 
 
 @bot.on_message(filters.command("revive") & filters.forwarded)
