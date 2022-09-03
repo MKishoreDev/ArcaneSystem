@@ -38,16 +38,12 @@ mdb = mongo_client.gof
 
 ubot = Client(session_string=PYRO_SESSION, api_id=API_ID, api_hash=API_HASH, name="CringeUser") #nandhaxd
 
-ubot2 = (
-    Client(
+ubot2 = Client(
         session_string=CRINGE_SESSION,
         api_id=API_ID,
         api_hash=API_HASH,
         plugins=dict(root="KawaiiXRobot/plugins",
-        name="CringeUBot2"),
-    )
-    if CRINGE_SESSION
-    else None
-)
+        name="CringeUBot2")
+ 
 
 print("Starting The Cringe X System")
