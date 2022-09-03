@@ -13,7 +13,7 @@ async def _(_, message):
     reason = message.text.split(None, 2)[2]
   if message.reply_to_message:
          r_from_id = message.reply_to_message.from_user.id
-    else:
+  else:
          r_from_id = message.text.split(None, 1)[1]
          await bot.send_message(
             KAWAII_LOGS,
