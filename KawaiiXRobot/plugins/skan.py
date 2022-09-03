@@ -10,7 +10,7 @@ from KawaiiXRobot.utils.dbfunctions import (
 
 OWO = DEVS + Inspector
 
-@bot.on_message(filters.command("skan", prefixes=["/", ".", "?", "-"]))
+@ubot.on_message(filters.command("skan", prefixes=["/", ".", "?", "-"]))
 async def uban(Client, m: Message):
   try:
      if not m.from_user.id in OWO:
