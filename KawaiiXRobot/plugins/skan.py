@@ -31,8 +31,10 @@ async def uban(Client, m: Message):
         else:
             await add_gban_user(user)
             if user not in OWO:
-               await ubot.send_message(KAWAII_LOGS, f"""/fban {user} {reason}""")              
-               await ubot.send_message(KAWAII_LOGS, f"""/gban {user} {reason}""")
+               await ubot.send_message(
+                     KAWAII_LOGS, f"""/fban {user} {reason}""")              
+               await ubot.send_message(
+                      KAWAII_LOGS, f"""/gban {user} {reason}""")
                await  m.reply_text("Connection To Cringe All Bot... Successfully Scanned.")
                await bot.send_message(-1001648239341,
                     f"""
