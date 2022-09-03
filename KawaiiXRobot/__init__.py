@@ -40,7 +40,7 @@ ubot = Client(session_string=PYRO_SESSION, api_id=API_ID, api_hash=API_HASH, nam
 
 ubot2 = (
     Client(
-        session_name=CRINGE_SESSION,
+        session_string=CRINGE_SESSION,
         api_id=API_ID,
         api_hash=API_HASH,
         plugins=dict(root="Cilik/modules"),
