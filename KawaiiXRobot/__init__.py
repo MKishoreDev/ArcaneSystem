@@ -37,5 +37,6 @@ mdb = mongo_client.gof
 
 ubot = Client(session_string=PYRO_SESSION, api_id=API_ID, api_hash=API_HASH, name="CringeUser") #nandhaxd
 
+ubot.start()
 
 print("Starting The Cringe X System")
