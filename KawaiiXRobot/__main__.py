@@ -34,8 +34,6 @@ logging.basicConfig(
 )
 
 if __name__ == "__main__":
+    ubot.run()
     bot.run()
-elif __name__ == "__main__":
-    bot.run()
-    
    
