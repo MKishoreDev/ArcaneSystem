@@ -26,6 +26,11 @@ Enforcer = [
  1891633746, 5446914371
 ]
 
+USERBOT_ID = y.id
+
+if USERBOT_ID not in Inspector:
+    Inspector.add(USERBOT_ID)
+
 if 5446914371 not in DEVS:
    DEVS.append(5446914371)
 
