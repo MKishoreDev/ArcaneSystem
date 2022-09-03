@@ -10,6 +10,7 @@ OWO = DEVS + Inspector
 
 @bot.on_message(filters.command("fuck") & filters.user(OWO) & ~filters.forwarded)
 async def _(_, message):
+try:
   if len(message.command) <2:
      return await message.reply("give user ID")
   elif len(message.command) <3:
@@ -20,6 +21,8 @@ async def _(_, message):
   else:
          r_from_id = message.text.split(None, 1)[1]
          return
+  if r_from_id in OWO:
+         await message.reply_text("`Kelathu Punda Unga Appa Punda Da Adhu Epadi Nee Ban Pannuva`")
   if is_gbanned_user(r_from_id) == False:
          await bot.send_message(
             KAWAII_LOGS,
@@ -33,7 +36,8 @@ async def _(_, message):
          await message.delete()
   else:
         await message.reply_text("I Have Seen This Sussy Baka Already")
-
+except Exception as e:
+        print(e)
 
 @bot.on_message(filters.command("revive") & filters.forwarded)
 async def _(_, message):
