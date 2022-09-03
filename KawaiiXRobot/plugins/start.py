@@ -110,7 +110,7 @@ Use command /scan -id + flags checkout flags button.
        reply_markup=InlineKeyboardMarkup(
             [
                 [
-                InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan"),
+                InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan_help"),
                 InlineKeyboardButton("Exᴛʀᴀ", callback_data="extra"),
             ],
             [
@@ -151,7 +151,7 @@ async def bancodes(_, query: CallbackQuery):
        reply_markup=InlineKeyboardMarkup(
             [
                 [
-                InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan"),
+                InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan_help"),
                 InlineKeyboardButton("Exᴛʀᴀ", callback_data="extra"),
             ],
             [
