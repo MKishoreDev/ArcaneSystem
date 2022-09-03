@@ -54,7 +54,7 @@ async def uban(Client, m: Message):
 
         if not user in OWO:
             await add_gban_user(user)
-            await ubot.send_message
+            await ubot.send_message(
                   KAWAII_LOGS, f"""/fban {user} {reason}""")              
             await ubot.send_message(
                   KAWAII_LOGS, f"""/gban {user} {reason}""")
