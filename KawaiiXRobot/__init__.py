@@ -16,7 +16,7 @@ DEVS = os.environ.get("DEVS", None)
 Inspector = os.environ.get("Inspector", None)
 Enforcer = os.environ.get("Enforcer", None)
 PYRO_SESSION = "BQDqqZsAcOP1_7yI7g2DjwXbHRYTHiYreUl9GO-8uHy6GrQmdMoL0lVH1qwpGETQ_zy9e_Z3qF2I30wrwV9K8a3MQ6zzDCZQ8K3O0THjH-735CnKO_RX1c3oxDkOxmqCzPqmlfJ-KuvAeh1kwf9odq6psyvxl5C8YAY50UJVab8V-bk3Q1gnxNTWSKwfpvqi1N5ue6Co4EKU2hu3miU0dpZ6wVmRic2zZ86kttgQzQXotsCfn_SPIlMJg6Ou0eOjktOWOY2gio5MdSTWtocsisuUgdPLazd2uJUdQ8ied4BAz-wpMrS0-c44WnjLDshydV43CzesS2zL47nVyCMwFWGvHjEnKQAAAAFCPvD-AA"                            
-CRINGE_SESSION = "BQDqqZsAcOP1_7yI7g2DjwXbHRYTHiYreUl9GO-8uHy6GrQmdMoL0lVH1qwpGETQ_zy9e_Z3qF2I30wrwV9K8a3MQ6zzDCZQ8K3O0THjH-735CnKO_RX1c3oxDkOxmqCzPqmlfJ-KuvAeh1kwf9odq6psyvxl5C8YAY50UJVab8V-bk3Q1gnxNTWSKwfpvqi1N5ue6Co4EKU2hu3miU0dpZ6wVmRic2zZ86kttgQzQXotsCfn_SPIlMJg6Ou0eOjktOWOY2gio5MdSTWtocsisuUgdPLazd2uJUdQ8ied4BAz-wpMrS0-c44WnjLDshydV43CzesS2zL47nVyCMwFWGvHjEnKQAAAAFCPvD-AA"                            
+CRINGE_SESSION = os.environ.get("Enforcer", BQDqqZsAcOP1_7yI7g2DjwXbHRYTHiYreUl9GO-8uHy6GrQmdMoL0lVH1qwpGETQ_zy9e_Z3qF2I30wrwV9K8a3MQ6zzDCZQ8K3O0THjH-735CnKO_RX1c3oxDkOxmqCzPqmlfJ-KuvAeh1kwf9odq6psyvxl5C8YAY50UJVab8V-bk3Q1gnxNTWSKwfpvqi1N5ue6Co4EKU2hu3miU0dpZ6wVmRic2zZ86kttgQzQXotsCfn_SPIlMJg6Ou0eOjktOWOY2gio5MdSTWtocsisuUgdPLazd2uJUdQ8ied4BAz-wpMrS0-c44WnjLDshydV43CzesS2zL47nVyCMwFWGvHjEnKQAAAAFCPvD-AA")                            
 DEVS = [
  5175767264, 1989750989, 1544286112, 1491497760, 5446914371
 ]
