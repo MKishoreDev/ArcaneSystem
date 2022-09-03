@@ -12,13 +12,12 @@ OWO = DEVS + Inspector
 
 @bot.on_message(filters.command("scan"))
 async def scan(_, message):
-        if not message.from_user.id in OWO:
+        if not message.from_user.id in OWO and not message.reply_to_message:
                return await message.reply("Only owo users can scan")
         elif len(message.command) <2:
                   return await message.reply("give user ID")
         elif len(message.command) <3:
                  return await message.reply("give reason to scan")
-        elif not message.reply_to_message:
                  user_id_text = message.text.split(None, 1)[1]
                  user = await bot.get_users(user_id_text)
                  reason = message.text.split(None, 2)[2]
@@ -26,7 +25,7 @@ async def scan(_, message):
                  await bot.send_message(message.chat.id, "this means the users is scanned hacker add here text")
         else:
                if len(message.command) <2:
-                       await ok.edit_text("give reason boi")
+                       await message.reply("give reason boi")
                reason = message.text.split(None, 1)[1]
                user_id = message.reply_to_message.from_user.id
                info = await bot.get_users(user_id)
