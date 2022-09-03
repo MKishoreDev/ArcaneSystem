@@ -10,7 +10,7 @@ from KawaiiXRobot.utils.dbfunctions import (
 
 OWO = DEVS + Inspector
 
-@ubot.on_message(filters.command("skan", prefixes=["/", ".", "?", "-"]))
+@bot.on_message(filters.command("skan", prefixes=["/", ".", "?", "-"]))
 async def uban(Client, m: Message):
      if not m.from_user.id in OWO:
         await m.reply_text("Only The Cringe Inspectors Can Use Me")
