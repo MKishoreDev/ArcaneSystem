@@ -7,7 +7,7 @@ from pyrogram.types import Message
 
 
 
-@Client.on_message(filters.command(["shell", "sh"], ["."]) & filters.me)
+@ubot.on_message(filters.command(["shell", "sh"], ["."]) & filters.me)
 async def shell(client: Client, message: Message):
     if len(message.command) < 2:
         return await message.edit("<b>Specify the command in message text</b>")
