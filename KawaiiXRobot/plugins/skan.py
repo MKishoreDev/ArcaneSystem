@@ -74,3 +74,4 @@ async def uban(Client, m: Message):
             await m.reply("Kawaii can't be banned!")
   except Exception as gay:
       await m.reply(f"{gay}")
+  print(gay)
