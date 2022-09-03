@@ -18,7 +18,7 @@ async def scan(_, message):
                   return await message.reply("give user ID")
         elif len(message.command) <3:
                  return await message.reply("give reason to scan")
-        elif not message.reply_to_message:
+        if not message.reply_to_message:
                  user_id_text = message.text.split(None, 1)[1]
                  user = await bot.get_users(user_id_text)
                  reason = message.text.split(None, 2)[2]
