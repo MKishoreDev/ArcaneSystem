@@ -6,7 +6,7 @@ OWO = DEVS + Inspector
 
 @bot.on_message(filters.command("scan") & filters.user(OWO) & ~filters.forwarded)
 async def _(_, message):
-    reason = len(message.command) <3:
+    reason = len(message.command) <3
     if message.reply_to_message:
          r_from_id = message.reply_to_message.from_user.id
     else:
