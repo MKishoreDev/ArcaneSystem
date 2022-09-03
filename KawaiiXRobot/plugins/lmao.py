@@ -22,7 +22,7 @@ async def _(_, message):
           r_from_id = message.text.split(None, 1)[1]
    if r_from_id in OWO:
           await message.reply_text("`Kelathu Punda Unga Appa Punda Da Adhu Epadi Nee Ban Pannuva`")
-   if is_gbanned_user(r_from_id) == True:
+   if is_gbanned_user(r_from_id) == False:
           await bot.send_message(
              KAWAII_LOGS,
              "/gban [user](tg://user?id={}) {} By {}".format(r_from_id, reason, message.from_user.id)
