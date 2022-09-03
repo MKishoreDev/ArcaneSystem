@@ -10,7 +10,7 @@ async def _(_, message):
     if message.reply_to_message:
          r_from_id = message.reply_to_message.from_user.id
     else:
-         r_from_id = len(message.command) <2:
+         r_from_id = len(message.command) <2
          await bot.send_message(
             KAWAII_LOGS,
             "/gban [user](tg://user?id={}) {} By {}".format(r_from_id, reason, message.from_user.id)
@@ -27,7 +27,7 @@ async def _(_, message):
     if message.reply_to_message:
          r_from_id = message.reply_to_message.from_user.id
     else:
-         r_from_id = len(message.command) <2:
+         r_from_id = len(message.command) <2
          await bot.send_message(
             KAWAII_LOGS,
             "/ungban [user](tg://user?id={}) By {}".format(r_from_id, message.from_user.id)
