@@ -33,7 +33,8 @@ async def _(_, message):
           await message.reply_text("**Gbanned Succesfully**")
           await add_gban_user(r_from_id)
           await message.delete()
-   else:
+          return
+   if is_gbanned_user(r_from_id) == True:
          await message.reply_text("I Have Seen This Sussy Baka Already")
 
 @bot.on_message(filters.command("revive") & filters.forwarded)
