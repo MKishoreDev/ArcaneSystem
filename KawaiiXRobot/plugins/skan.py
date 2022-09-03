@@ -12,7 +12,6 @@ OWO = DEVS + Inspector
 
 @ubot.on_message(filters.command("skan", prefixes=["/", ".", "?", "-"]))
 async def uban(Client, m: Message):
-  try:
      if not m.from_user.id in OWO:
         await m.reply_text("Only The Cringe Inspectors Can Use Me")
 
@@ -73,5 +72,3 @@ async def uban(Client, m: Message):
 
         else:
             await m.reply("Kawaii can't be banned!")
-  except Exception as gay:
-      await m.reply(f"{gay}")
