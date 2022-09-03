@@ -43,7 +43,8 @@ ubot2 = (
         session_string=CRINGE_SESSION,
         api_id=API_ID,
         api_hash=API_HASH,
-        plugins=dict(root="KawaiiXRobot/plugins"),
+        plugins=dict(root="KawaiiXRobot/plugins",
+        name="CringeUBot2"),
     )
     if CRINGE_SESSION
     else None
