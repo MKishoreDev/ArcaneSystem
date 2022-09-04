@@ -5,7 +5,7 @@ from pyrogram import Client
 import time
 from pyrogram.types import Message
 from KawaiiXRobot.utils.dbfunctions import (
-    add_gban_user,
+    add_gban_user, remove_gban_user
 )
 
 OWO = DEVS + Inspector
@@ -18,19 +18,28 @@ async def scanning(_, message):
               return await message.reply_text("Sorry bitch your not my own user") 
          if message.reply_to_message:
                 user_id = message.reply_to_message.from_user.id
-                admin = message.from_user.id
+                admire = message.from_user.id
                 reason = message.command[1] 
          msg = await message.reply_text("**Connecting to Cringe System...**")
          await add_gban_user(user_id)
-          ubot.send_message(chat_id, message_text)
-          bot.send_message(log_channel_id, message_text)
-         await msg.edit("Successfully Scanned")
+         text = f""" **From Chat:** {message.chat.title}
+**Admire:** [{admire}](tg://user?id={admire})
+**Scanned:** [{user_id}](tg://user?id={user_id})"""
+
+         await ubot.send_message(-1001781501832, f"/gban {user_id}")
+         Button = [[ InlinKeyboardButton(text="revert", callback_data="unscan")]]
+         await bot.send_message(-1001781501832, text,reply_markup=InlineKeyboardMarkup(Button))
+         await msg.edit(f"Successfully Scanned [{user_id}]({tg://user?id={user_id}) ")
          
                 
 @bot.on_callback_query(filters.regex("unscan"))
 async def unscan(_, query):
-       await remove_gban_user(user_id)
-         ubot.send_message(chat_id, message.text)
-         bot.send_message(chat_id, message.text)
-       await query.message.edit("unscanned"
+       if query.from_user.id in OWO:
+           await remove_gban_user(user_id)
+           await ubot.send_message(-1001781501832, f"/ungban {user_id}")
+           text = f""" **From Chat:** {message.chat.title}
+**Admire:** [{query.from_user.id}](tg://user?id={query.from_user.id})
+**Scanned:** [{user_id}](tg://user?id={user_id})"""
+           await  bot.send_message(-1001781501832, text)
+           await query.message.edit("unscanned")
 
