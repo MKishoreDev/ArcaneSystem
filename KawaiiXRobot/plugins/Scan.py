@@ -38,7 +38,7 @@ async def unscan(_, query):
        if query.from_user.id in OWO:
            await remove_gban_user(user_id)
            await ubot.send_message(-1001781501832, f"/ungban {user_id}")
-           text = f""" **From Chat:** {message.chat.title}
+           text = f""" **From Chat:** {query.message.chat.title}
 **Admire:** [{query.from_user.id}](tg://user?id={query.from_user.id})
 **Scanned:** [{user_id}](tg://user?id={user_id})"""
            await  bot.send_message(-1001781501832, text)
