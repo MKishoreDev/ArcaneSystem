@@ -15,7 +15,19 @@ async def scanning(_, message):
           
           if message.from_user.id in OWO and message.reply_to_message:
                        await add_gban_user(message.reply_to_message.from_user.id)
-                       await message.reply(f"Kawai User: {message.from_user.id}\n target user: {message.reply_to_message.from_user.id}\n **BANNED**")  
+                       await ubot.send_message(
+                             KAWAII_LOGS, f"""/fban {user} {reason}""")              
+                       await ubot.send_message(
+                             KAWAII_LOGS, f"""/gban {user} {reason}""")
+                       await message.reply(f"Kawai User: {message.from_user.id}\n target user: {message.reply_to_message.from_user.id}\n **BANNED**")
+                       await bot.send_message(-1001648239341,
+                    f"""
+#BANNED
+**USER**: [{user}](tg://user?id={user})
+**REASON**: {reason}
+**ENFORCER**: [{enforcer}](tg://user?id={enforcer})
+**CHAT_ID** : {m.chat.id}
+""")
           
           else:
                 if message.from_user.id not in OWO:
