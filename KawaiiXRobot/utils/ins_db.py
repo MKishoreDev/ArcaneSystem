@@ -1,4 +1,4 @@
-from .db import Db
+from .DB2 import Db
 
 
 class insDB(Db):
