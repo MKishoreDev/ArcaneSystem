@@ -51,7 +51,7 @@ async def process_ins(message: types.Message, status: str):
         key = (
             await ins_db.add_ins(chat_id, user_id)
             if status == "add"
-            else await ins_db.del_inschat_id, user_id)
+            else await ins_db.del_ins(chat_id, user_id)
         )
         return await message.reply(await gm(chat_id, key))
 
