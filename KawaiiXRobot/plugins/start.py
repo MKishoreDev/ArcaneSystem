@@ -1,3 +1,5 @@
+# Start.py ©Copyright By @HMF_Owner_1
+
 import os
 
 from pyrogram import filters
