@@ -27,8 +27,9 @@ async def scanning(_, message):
 **Scanned:** [{user_id}](tg://user?id={user_id})"""
 
          await ubot.send_message(-1001781501832, f"/gban {user_id}")
-         Button = [[ InlinKeyboardButton(text="revert", callback_data="unscan")]]
-         await bot.send_message(-1001781501832, text,reply_markup=InlineKeyboardMarkup(Button))
+         Button = [[ InlineKeyboardButton(text="revert", callback_data="unscan")]]
+         await bot.send_message(-1001781501832, text,
+         reply_markup=InlineKeyboardMarkup(Button))
          await msg.edit("Successfully Scanned [{user_id}]({tg://user?id={user_id}) ")
          
                 
