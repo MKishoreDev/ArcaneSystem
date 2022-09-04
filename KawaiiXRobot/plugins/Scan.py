@@ -1,3 +1,5 @@
+# Sacn.py ©Copyright By @NandhaXD Machan
+
 from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, Inspector, KAWAII_CHANNEL, ubot
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
@@ -9,7 +11,6 @@ from KawaiiXRobot.utils.dbfunctions import (
 )
 
 OWO = DEVS + Inspector
-
 
 @bot.on_message(filters.command("scan"))
 async def scanning(_, message):
@@ -31,10 +32,10 @@ async def scanning(_, message):
 
          await ubot.send_message(-1001781501832, f"/gban {user_id}")
          Button = [[ InlineKeyboardButton(text="revert", callback_data="unscan")]]
-         await bot.send_message(-1001781501832, text, reply_markup=InlineKeyboardMarkup(Button))
+         await bot.send_message(-1001648239341, text, reply_markup=InlineKeyboardMarkup(Button))
          await msg.edit_text(f"Successfully Scanned [{user_id}](tg://user?id={user_id})")
-         
-                
+
+                       
 @bot.on_callback_query(filters.regex("unscan"))
 async def unscan(_, query):
        if query.from_user.id in OWO:
