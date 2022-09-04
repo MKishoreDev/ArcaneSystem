@@ -18,6 +18,7 @@ async def scanning(_, message):
               return await message.reply_text("Sorry bitch your not my own user") 
          if not message.command[1]:
                   await message.reply("*Any reason to scanning?")
+                  return 
          elif message.reply_to_message:
                 user_id = message.reply_to_message.from_user.id
                 admire = message.from_user.id
