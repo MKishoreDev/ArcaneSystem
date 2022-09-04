@@ -29,7 +29,7 @@ async def scanning(_, message):
          await ubot.send_message(-1001781501832, f"/gban {user_id}")
          Button = [[ InlinKeyboardButton(text="revert", callback_data="unscan")]]
          await bot.send_message(-1001781501832, text,reply_markup=InlineKeyboardMarkup(Button))
-         await msg.edit(f"Successfully Scanned [{user_id}]({tg://user?id={user_id}) ")
+         await msg.edit("Successfully Scanned [{user_id}]({tg://user?id={user_id}) ")
          
                 
 @bot.on_callback_query(filters.regex("unscan"))
