@@ -1,4 +1,4 @@
-from .DB2 import Db
+from KawaiiXRobot.utils.DB2 import Db
 
 
 class insDB(Db):
