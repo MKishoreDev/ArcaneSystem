@@ -14,7 +14,7 @@ def load_plugins(plugin_name):
     load.logger = logging.getLogger(plugin_name)
     spec.loader.exec_module(load)
     sys.modules["KawaiiXRobot.plugins." + plugin_name] = load
-    print("Total Plugins -->" + len(plugin_name))
+    print("Total Plugins -->" + len(name))
     print("Imported --> " + plugin_name)
 
 path = "KawaiiXRobot/plugins/*.py"
