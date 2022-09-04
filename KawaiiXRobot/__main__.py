@@ -1,4 +1,5 @@
 from KawaiiXRobot import bot
+from KawaiiXRobot.modules import ALL_MODULES
 import logging
 import glob
 import asyncio
@@ -14,7 +15,7 @@ def load_plugins(plugin_name):
     load.logger = logging.getLogger(plugin_name)
     spec.loader.exec_module(load)
     sys.modules["KawaiiXRobot.plugins." + plugin_name] = load
-    print("Total Plugins -->" + len(name))
+    print("Total Plugins -->" + len(ALL_MODULES))
     print("Imported --> " + plugin_name)
 
 path = "KawaiiXRobot/plugins/*.py"
