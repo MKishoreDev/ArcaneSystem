@@ -6,7 +6,7 @@ import importlib
 import sys
 from pathlib import Path
 
-def load_plugins(plugin_name):
+def load_plugins(plugin_name, files):
     path = Path(f"KawaiiXRobot/plugins/{plugin_name}.py")
     name = "KawaiiXRobot.plugins.{}".format(plugin_name)
     spec = importlib.util.spec_from_file_location(name, path)
@@ -14,7 +14,7 @@ def load_plugins(plugin_name):
     load.logger = logging.getLogger(plugin_name)
     spec.loader.exec_module(load)
     sys.modules["KawaiiXRobot.plugins." + plugin_name] = load
-    print("Total Plugins -->" + shit)
+    print("Total Plugins -->" + len(files))
     print("Imported --> " + plugin_name)
 
 path = "KawaiiXRobot/plugins/*.py"
