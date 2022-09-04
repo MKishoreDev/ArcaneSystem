@@ -1,3 +1,5 @@
+# unacn.py ©Copyright By @NandhaXD Machan
+
 from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, Inspector, KAWAII_CHANNEL
 from pyrogram import filters
 from pyrogram import Client
