@@ -1,3 +1,5 @@
+# status.py ©Copyright By @HMF_Owner_1 
+
 import asyncio
 from KawaiiXRobot import bot, db
 from pyrogram import filters
