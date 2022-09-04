@@ -16,7 +16,9 @@ async def scanning(_, message):
          global user_id
          if message.from_user.id not in OWO:
               return await message.reply_text("Sorry bitch your not my own user") 
-         if message.reply_to_message:
+         if not message.command[1]:
+                  await message.reply("*Any reason to scanning?")
+         elif message.reply_to_message:
                 user_id = message.reply_to_message.from_user.id
                 admire = message.from_user.id
                 reason = message.command[1] 
@@ -30,7 +32,7 @@ async def scanning(_, message):
          Button = [[ InlineKeyboardButton(text="revert", callback_data="unscan")]]
          await bot.send_message(-1001781501832, text,
          reply_markup=InlineKeyboardMarkup(Button))
-         await msg.edit("Successfully Scanned [{user_id}]({tg://user?id={user_id}) ")
+         await msg.edit(f"Successfully Scanned [{user_id}]({tg://user?id={user_id}) ")
          
                 
 @bot.on_callback_query(filters.regex("unscan"))
