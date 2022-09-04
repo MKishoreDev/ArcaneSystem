@@ -101,8 +101,7 @@ def sh(_, m):
         code = m.text.replace(m.text.split(" ")[0], "")
         x = run(code)
         m.reply(
-            f"<b>SHELL</b>: <code>{code}</code>\n\n<b>OUTPUT</b>:\n<code>{x}</code>",
-            parse_mode="html")
+            f"<b>SHELL</b>: <code>{code}</code>\n\n<b>OUTPUT</b>:\n<code>{x}</code>")
     else:
         m.reply("This Is A Kawaii User's Restricted Command.You Don't Have Access To Use This.")
 
