@@ -16,7 +16,7 @@ async def scanning(_, message):
          global user_id
          if message.from_user.id not in OWO:
               return await message.reply_text("Sorry bitch your not my own user") 
-         if len(message.command) <1:
+         if len(message.command) <2:
                   await message.reply("*Any reason to scanning?")
                   return 
          elif message.reply_to_message:
