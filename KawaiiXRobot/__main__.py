@@ -1,5 +1,4 @@
 from KawaiiXRobot import bot
-from KawaiiXRobot.plugins import ALL_MODULES
 import logging
 import glob
 import asyncio
@@ -15,7 +14,7 @@ def load_plugins(plugin_name):
     load.logger = logging.getLogger(plugin_name)
     spec.loader.exec_module(load)
     sys.modules["KawaiiXRobot.plugins." + plugin_name] = load
-    print("Total Plugins -->" + ALL_MODULES)
+    print("Total Plugins -->" + len(shit))
     print("Imported --> " + plugin_name)
 
 path = "KawaiiXRobot/plugins/*.py"
@@ -24,7 +23,8 @@ for name in files:
     with open(name) as a:
         thepath = Path(a.name)
         plugin_name = thepath.stem
-        load_plugins(plugin_name.replace(".py", ""))
+        shit = plugin_name.replace(".py", "")
+        load_plugins(shit)
 
 logging.basicConfig(
     filename="logs.txt",
