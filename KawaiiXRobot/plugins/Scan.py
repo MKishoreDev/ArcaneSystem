@@ -21,7 +21,7 @@ async def scanning(_, message):
                 admin = message.from_user.id
                 reason = message.command[1] 
          msg = await message.reply_text("**Connecting to Cringe System...**")
-          await add_gban_user(user_id)
+         await add_gban_user(user_id)
           ubot.send_message(chat_id, message_text)
           bot.send_message(log_channel_id, message_text)
          await msg.edit("Successfully Scanned")
@@ -30,7 +30,7 @@ async def scanning(_, message):
 @bot.on_callback_query(filters.regex("unscan"))
 async def unscan(_, query):
        await remove_gban_user(user_id)
-        ubot.send_message(chat_id, message.text)
-        bot.send_message(chat_id, message.text)
+         ubot.send_message(chat_id, message.text)
+         bot.send_message(chat_id, message.text)
        await query.message.edit("unscanned"
 
