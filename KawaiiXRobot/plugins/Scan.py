@@ -10,34 +10,27 @@ from KawaiiXRobot.utils.dbfunctions import (
 
 OWO = DEVS + Inspector
 
+
 @bot.on_message(filters.command("scan"))
 async def scanning(_, message):
-          
-          if message.from_user.id in OWO and message.reply_to_message:
-                       await add_gban_user(message.reply_to_message.from_user.id)
-                       await ubot.send_message(
-                             KAWAII_LOGS, f"""/fban {user} {reason}""")              
-                       await ubot.send_message(
-                             KAWAII_LOGS, f"""/gban {user} {reason}""")
-                       await message.reply(f"Kawai User: {message.from_user.id}\n target user: {message.reply_to_message.from_user.id}\n **BANNED**")
-                       await bot.send_message(-1001648239341,
-                    f"""
-#BANNED
-**USER**: [{user}](tg://user?id={user})
-**REASON**: {reason}
-**ENFORCER**: [{enforcer}](tg://user?id={enforcer})
-**CHAT_ID** : {m.chat.id}
-""")
-          
-          else:
-                if message.from_user.id not in OWO:
-                      return await message("Only OWO user can use")
-                elif len(message.command) <2:
-                      return await message.reply("give a user ID or name")
-                elif not message.reply_to_message:
-                     user_id_text = message.text.split(None, 1)[1]
-                     user = await bot.get_users(user_id_text)
-                     await add_gban_user(user.id)
-                     await message.reply(f"Kawai User: {message.from_user.id}\n target user: {user.id}\n **BANNED**")
-             
+         global user_id
+         if message.from_user.id not in OWO:
+              return await message.reply_text("Sorry bitch your not my own user") 
+         if message.reply_to_message:
+                user_id = message.reply_to_message.from_user.id
+                admin = message.from_user.id
+                reason = message.command[1] 
+         msg = await message.reply_text("**Connecting to Cringe System...**")
+          await add_gban_user(user_id)
+          ubot.send_message(chat_id, message_text)
+          bot.send_message(log_channel_id, message_text)
+         await msg.edit("Successfully Scanned")
+         
+                
+@bot.on_callback_query(filters.regex("unscan"))
+async def unscan(_, query):
+       await remove_gban_user(user_id)
+        ubot.send_message(chat_id, message.text)
+        bot.send_message(chat_id, message.text)
+       await query.message.edit("unscanned"
 
