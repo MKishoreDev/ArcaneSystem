@@ -1,3 +1,5 @@
+# info.py ©Copyright By @ProErrorDxD Machan
+
 import os
 
 from pyrogram import filters
