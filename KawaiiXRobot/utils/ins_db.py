@@ -29,5 +29,4 @@ class insDB(DATABASE):
         return "deleted_ins"
 
 
-ins_db = insDB()
 
