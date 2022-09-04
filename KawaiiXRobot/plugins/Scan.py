@@ -32,7 +32,7 @@ async def scanning(_, message):
 **Reason**: {reason}
 """
 
-         await ubot.send_message(-1001781501832, f"/gban {user_id} by {admire.id} | {reason}")
+         await ubot.send_message(-1001781501832, f"/gban {user_id} by {admire.id} × {reason}")
          Button = [[ InlineKeyboardButton(text="revert", callback_data="unscan")]]
          await bot.send_message(-1001723857695, text, reply_markup=InlineKeyboardMarkup(Button))
          await msg.edit_text(f"Successfully Scanned [{user_id}](tg://user?id={user_id})")
@@ -46,6 +46,5 @@ async def unscan(_, query):
            text = f""" **From Chat:** {query.message.chat.title}
 **Admire:** [{query.from_user.id}](tg://user?id={query.from_user.id})
 **UnScanned:** [{user_id}](tg://user?id={user_id})"""
-           await  bot.send_message(-1001781501832, text)
            await query.message.edit(text)
 
