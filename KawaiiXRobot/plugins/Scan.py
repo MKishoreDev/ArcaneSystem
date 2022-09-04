@@ -42,7 +42,7 @@ async def unscan(_, query):
            await ubot.send_message(-1001781501832, f"/ungban {user_id}")
            text = f""" **From Chat:** {query.message.chat.title}
 **Admire:** [{query.from_user.id}](tg://user?id={query.from_user.id})
-**Scanned:** [{user_id}](tg://user?id={user_id})"""
+**UnScanned:** [{user_id}](tg://user?id={user_id})"""
            await  bot.send_message(-1001781501832, text)
-           await query.message.edit("unscanned")
+           await query.message.edit(text)
 
