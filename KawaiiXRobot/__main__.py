@@ -8,8 +8,8 @@ from pathlib import Path
 
 def load_plugins(plugin_name):
     punda = "KawaiiXRobot/plugins/*.py"
-    devu = glob.glob(path)
     path = Path(f"KawaiiXRobot/plugins/{plugin_name}.py")
+    devu = glob.glob(path)
     name = "KawaiiXRobot.plugins.{}".format(plugin_name)
     spec = importlib.util.spec_from_file_location(name, path)
     load = importlib.util.module_from_spec(spec)
