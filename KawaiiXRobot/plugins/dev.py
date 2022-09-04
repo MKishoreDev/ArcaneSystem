@@ -1,3 +1,5 @@
+# Dev.py ©Copyright By @ProErrorDxD  Machan
+
 import time
 from KawaiiXRobot import bot as app
 from KawaiiXRobot import bot, DEVS
