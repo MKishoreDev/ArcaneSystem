@@ -1,7 +1,7 @@
-from KawaiiXRobot.utils.db import db
+from .db import Db
 
 
-class DB(Db):
+class insDB(Db):
     async def get_ins(self, chat_id: int):
         return [
             row[1]
