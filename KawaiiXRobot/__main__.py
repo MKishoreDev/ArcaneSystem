@@ -1,3 +1,5 @@
+# __main__.py ©Copyright By @ProErrorDxD  Machan
+
 from KawaiiXRobot import bot
 import logging
 import glob
