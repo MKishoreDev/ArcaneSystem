@@ -30,3 +30,4 @@ class insDB(DATABASE):
 
 
 
+ins_db = insDB()
