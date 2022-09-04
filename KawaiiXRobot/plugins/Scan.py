@@ -28,7 +28,9 @@ async def scanning(_, message):
          await add_gban_user(user_id)
          text = f""" **From Chat:** {message.chat.title}
 **Admire:** [{admire}](tg://user?id={admire})
-**Scanned:** [{user_id}](tg://user?id={user_id})"""
+**Scanned:** [{user_id}](tg://user?id={user_id})
+**Reason**: {reason}
+"""
 
          await ubot.send_message(-1001781501832, f"/gban {user_id}")
          Button = [[ InlineKeyboardButton(text="revert", callback_data="unscan")]]
