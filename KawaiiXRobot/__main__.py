@@ -1,5 +1,5 @@
 from KawaiiXRobot import bot
-from KawaiiXRobot.modules import ALL_MODULES
+from KawaiiXRobot.plugins import ALL_MODULES
 import logging
 import glob
 import asyncio
