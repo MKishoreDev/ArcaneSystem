@@ -10,6 +10,7 @@ from KawaiiXRobot.utils.dbfunctions import (
     add_gban_user, remove_gban_user
 )
 
+HMF = DEVS + Inspector
 OWO = Enforcer
 
 @bot.on_message(filters.command(["scan"], ['/', ".", "?"]))
@@ -48,12 +49,11 @@ async def unscan(_, query):
 **UnScanned:** [{user_id}](tg://user?id={user_id})"""
            await query.message.edit(text)
 
-HMF = Dev + inspector
 
 @bot.on_callback_query(filters.regex("button_scan"))
 async def button_scan(_, query):
          global user_id
-     if query.from_user.id in OWO:
+     if query.from_user.id in HMF:
          await add_gban_user(user_id)
          await ubot.send_message(-1001781501832, f"/gban {user_id}")
          text = f""" **From Chat:** {query.message.chat.title}
