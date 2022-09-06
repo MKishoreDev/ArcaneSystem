@@ -52,14 +52,13 @@ async def unscan(_, query):
 
 @bot.on_callback_query(filters.regex("button_scan"))
 async def button_scan(_, query):
-         global user_id
-     if query.from_user.id in HMF:
-         await add_gban_user(user_id)
-         await ubot.send_message(-1001781501832, f"/gban {user_id}")
-         text = f""" **From Chat:** {query.message.chat.title}
+       if query.from_user.id in HMF:
+           await add_gban_user(user_id)
+           await ubot.send_message(-1001781501832, f"/gban {user_id}")
+           text = f""" **From Chat:** {query.message.chat.title}
 **Admire:** [{query.from_user.id}](tg://user?id={query.from_user.id})
 **Scanned:** [{user_id}](tg://user?id={user_id})
 **Reason**: {reason}"""
-          await query.message.edit(text, reply_markup=InlineKeyboardMarkup(Button))
+          await query.message.edit(text, reply_markup=InlineKeyboardMarkup(UButton))
 
-         Button = [[ InlineKeyboardButton(text="revert", callback_data="unscan")]]
+         UButton = [[ InlineKeyboardButton(text="revert", callback_data="unscan")]]
