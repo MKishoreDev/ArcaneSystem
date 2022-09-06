@@ -13,7 +13,7 @@ from KawaiiXRobot.utils.dbfunctions import (
 HMF = DEVS + Inspector
 OWO = Enforcer
 
-@bot.on_message(filters.command(["scan"], ['/', ".", "?"]))
+@bot.on_message(filters.command("scan"))
 async def scanning(_, message):
          global user_id
          if message.from_user.id not in OWO:
@@ -58,7 +58,9 @@ async def button_scan(_, query):
            textu = f""" **From Chat:** {query.message.chat.title}
 **Admire:** [{query.from_user.id}](tg://user?id={query.from_user.id})
 **Scanned:** [{user_id}](tg://user?id={user_id})
-**Reason**: {reason}"""
+**Reason**: {reason}
+
+Scanned Successful... [inspector](tg://user?id={query.from_user.id})"""
            await query.message.edit(textu, reply_markup=InlineKeyboardMarkup(UButton))
 
 UButton = [[ InlineKeyboardButton(text="revert", callback_data="unscan")]]
