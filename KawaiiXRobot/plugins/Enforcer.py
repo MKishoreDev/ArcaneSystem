@@ -1,6 +1,6 @@
 # Enforcer.py ©Copyright By @NandhaXD Machan Remaked By @HMF_Owner_1
 
-from KawaiiXRobot import bot, KAWAII_LOGS, Enforcer, DEVS, inspector, KAWAII_CHANNEL, ubot
+from KawaiiXRobot import bot, KAWAII_LOGS, Enforcer, DEVS, Inspector, KAWAII_CHANNEL, ubot
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client
