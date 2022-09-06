@@ -61,7 +61,7 @@ async def button_scan(_, query):
 **Reason**: {reason}
 
 Scanned Successful... [inspector](tg://user?id={query.from_user.id})"""
-           await query.message.edit(textu, reply_markup=InlineKeyboardMarkup(UButton))
+           await query.edit_message_text(textu, reply_markup=InlineKeyboardMarkup(UButton))
 
 UButton = [[ InlineKeyboardButton(text="revert", callback_data="unscan")]]
 
