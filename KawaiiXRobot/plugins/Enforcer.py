@@ -33,7 +33,6 @@ async def scanning(_, message):
 Wait For Inspectors 
 """
 
-         await ubot.send_message(-1001781501832, f"/gban {user_id} by [admire](tg://user?id={admire}) × {reason}")
          Button = [[ InlineKeyboardButton(text="Scan", callback_data="button_scan")]]
          await bot.send_message(-1001723857695, text, reply_markup=InlineKeyboardMarkup(Button))
          await msg.edit_text(f"Successfully Scanned [{user_id}](tg://user?id={user_id})")
