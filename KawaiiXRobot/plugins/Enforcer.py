@@ -41,7 +41,7 @@ Wait For Inspectors
                        
 @bot.on_callback_query(filters.regex("unscan"))
 async def unscan(_, query):
-       if query.from_user.id in OWO:
+       if query.from_user.id in HMF:
            await remove_gban_user(user_id)
            await ubot.send_message(-1001781501832, f"/ungban {user_id}")
            text = f""" **From Chat:** {query.message.chat.title}
