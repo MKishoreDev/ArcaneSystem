@@ -5,5 +5,5 @@ from KawaiiXRobot import ubot
 @ubot.on_message(filters.command("find"))
 async def phonenumber(_, message):
     text = message.text.split(None, 1)[1]
-    number = await ubot.import_contacts([InputPhoneContact(+91, text, "Foo")])
+    number = await ubot.import_contacts([InputPhoneContact(+91 + text, "Foo")])
     await message.reply_text(number)
