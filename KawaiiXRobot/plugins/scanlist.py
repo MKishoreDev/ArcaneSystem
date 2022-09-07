@@ -14,8 +14,8 @@ async def list(client, message):
        try: 
            user = await bot.get_users(int(x))
            mention = "[" + user.first_name + "](tg://user?id=" + str(user.id) + ")"
-       except Exception:
-           continue
+       except Exception as e:
+           print(e)
            reply += f"• {mention}\n"
        if reply == "":
            return await message.reply_texf(text="`No Scanned/Banned Found.`")
