@@ -12,7 +12,7 @@ async def list(client, message):
    for x in total_id:
        try: 
            user = await bot.get_users(int(x))
-           mention = "[" + user.first_name + "](tg://user?id=" + str(user.id) + ")"
+           mention = "[" + user.first_name + "](tg://user?id=" + str(user.id) + ")" or user.first_name
            reply += f"• {mention}\n"     
            await message.reply_video("https://telegra.ph/file/65239f3043ca5161617df.mp4", caption=reply)      
        except Exception as e:
