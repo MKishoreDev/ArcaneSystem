@@ -8,5 +8,5 @@ async def find(_, message):
                   return 
               elif message.reply_to_message:
                   Numb = message.text.replace("/find", "")
-                  await ubot.send_message([InputPhoneContact(f"{Numb}, "Foo")])
+                  await ubot.send_message([InputPhoneContact(f"{Numb}", "Foo")])
       
