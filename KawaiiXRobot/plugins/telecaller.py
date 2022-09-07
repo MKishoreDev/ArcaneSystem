@@ -3,8 +3,7 @@ from pyrogram import filters
 from KawaiiXRobot import ubot
 
 @ubot.on_message(filters.command("find"))
-async def find(_, message):
-              if message.reply_to_message:
-                  Numb = message.text.replace("/find", "")
-                  await ubot.send_message([InputPhoneContact(f"{Numb}", "Foo")])
-      
+async def phonenumber(_, message):
+    text = message.text.split(None, 1)[1]
+    number = await ubot.import_contacts([InputPhoneContact(text, "Foo")])
+    await message.reply_text(number)
