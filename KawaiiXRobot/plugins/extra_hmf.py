@@ -16,4 +16,4 @@ async def groupsearch(_, message):
     words = message.text.split(None, 1)[1]
     user_id = message.reply_to_message.from_user.id
     sg - async for message in ubot.search_messages(chat, words, from_user=f"{user_id}"):
-    await message.reply_text(message.text)
+        await message.reply_text(sg)
