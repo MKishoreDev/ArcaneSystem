@@ -9,7 +9,6 @@ async def list(client, message):
    total_num = len([i async for i in gbansdb.find({"user_id": {"$gt": 0}})])
    total_id = ([i['user_id'] async for i in gbansdb.find({"user_id": {"$gt": 0}})])
    reply = f"`{total_num}` **Globally Scanned/Banned Users\n**"
-   global total_id
    for x in total_id:
        try: 
            user = await bot.get_users(int(x))
