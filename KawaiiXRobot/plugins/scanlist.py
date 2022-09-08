@@ -13,9 +13,9 @@ async def list(client, message):
        user = await bot.get_users(int(x))
        mention = "[" + user.first_name + "](tg://user?id=" + str(user.id) + ")" or user.first_name
        reply += f"• {mention}\n"     
-       try: 
-          await message.reply_video("https://telegra.ph/file/65239f3043ca5161617df.mp4", caption=reply)      
-       except Exception as e:
-           print(e)
-       if reply == "":
-           return await message.reply_text("`No Scanned/Banned Found.`")
+   try: 
+      await message.reply_video("https://telegra.ph/file/65239f3043ca5161617df.mp4", caption=reply)      
+   except Exception as e:
+       print(e)
+   if len(reply.split("\n")) < 1:
+       return await message.reply_text("No Scanned/Banned Found.")
