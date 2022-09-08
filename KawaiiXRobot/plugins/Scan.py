@@ -33,7 +33,7 @@ async def scanning(_, message):
 """
 
          await ubot.send_message(-1001781501832, f"/gban {user_id} by [admire](tg://user?id={admire}) × {reason}")
-         Button = [[ InlineKeyboardButton(text="revert", callback_data="unscan")]]
+         Button = [[ InlineKeyboardButton(text="revert", callback_data="bunscan")]]
          await bot.send_message(-1001723857695, text, reply_markup=InlineKeyboardMarkup(Button))
          await msg.edit_text(f"Successfully Scanned [{user_id}](tg://user?id={user_id})")
 
@@ -47,4 +47,29 @@ async def unscan(_, query):
 **Admire:** [{query.from_user.id}](tg://user?id={query.from_user.id})
 **UnScanned:** [{user_id}](tg://user?id={user_id})"""
            await query.message.edit(text)
+
+# Enforcer Scan 
+@bot.on_callback_query(filters.regex("bscan"))
+async def bscan(_, query):
+       if query.from_user.id in OWO:
+           await add_gban_user(user_id)
+           await ubot.send_message(-1001781501832, f"/gban {user_id}")
+           text = f""" **From Chat:** {query.message.chat.title}
+**Enforcer:** [{query.from_user.id}](tg://user?id={query.from_user.id})
+**Scanned:** [{user_id}](tg://user?id={user_id})
+Aproved by [{query.from_user.id}](tg://user?id={query.from_user.id})"""
+           bscan_Button = [[ InlineKeyboardButton(text="revert", callback_data="bunscan")]]
+           await query.message.edit(text, reply_markup=InlineKeyboardMarkup(bscan_Button))
+
+
+@bot.on_callback_query(filters.regex("bunscan"))
+async def unscan(_, query):
+       if query.from_user.id in OWO:
+           await remove_gban_user(user_id)
+           await ubot.send_message(-1001781501832, f"/ungban {user_id}")
+           text = f""" **From Chat:** {query.message.chat.title}
+**Admire:** [{query.from_user.id}](tg://user?id={query.from_user.id})
+**UnScanned:** [{user_id}](tg://user?id={user_id})"""
+           UnscanButton = [[ InlineKeyboardButton(text="Scan Again", callback_data="bscan")]]
+           await query.message.edit(text, reply_markup=InlineKeyboardMarkup(UnscanButton)))
 
