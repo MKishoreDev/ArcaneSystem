@@ -71,5 +71,5 @@ async def unscan(_, query):
 **Admire:** [{query.from_user.id}](tg://user?id={query.from_user.id})
 **UnScanned:** [{user_id}](tg://user?id={user_id})"""
            UnscanButton = [[ InlineKeyboardButton(text="Scan Again", callback_data="bscan")]]
-           await query.message.edit(text, reply_markup=InlineKeyboardMarkup(UnscanButton)))
+           await query.message.edit(text, reply_markup=InlineKeyboardMarkup(UnscanButton))
 
