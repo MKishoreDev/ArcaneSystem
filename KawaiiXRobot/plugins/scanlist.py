@@ -17,5 +17,5 @@ async def list(client, message):
       await message.reply_video("https://telegra.ph/file/65239f3043ca5161617df.mp4", caption=reply)      
    except Exception as e:
        print(e)
-   if len(reply.split("\n")) < 1:
+   if len(reply.split("\n")) < 2:
        return await message.reply_text("No Scanned/Banned Found.")
