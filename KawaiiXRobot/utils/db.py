@@ -43,7 +43,7 @@ class DATABASE:
 
     def get_proof(self, user_id):
         if self.proof_db.find_one({"user_id": user_id}):
-            role = self.proof_db.find_one({"user_id": user_id})
+            proof = self.proof_db.find_one({"user_id": user_id})
             return {
                 "user_id": proof['user_id'],
                 "proof": proof['proof'],
