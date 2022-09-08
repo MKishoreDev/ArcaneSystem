@@ -30,3 +30,23 @@ class DATABASE:
             }
         else:
             return {"status": False}
+
+    def add_proof(self, user_id, proof):
+        if self.proof_db.find_one({"user_id": user_id}):
+            self.proof_db.update_one({"user_id": user_id},
+                                    {"$set": {
+                                        "proof": proof
+                                    }})
+        else:
+            self.proof_db.insert_one({"user_id": user_id, "proof": proof})
+
+    def get_proof(self, user_id):
+        if self.proof_db.find_one({"user_id": user_id}):
+            role = self.proof_db.find_one({"user_id": user_id})
+            return {
+                "user_id": proof['user_id'],
+                "proof": role['role'],
+                "proof": True,
+            }
+        else:
+            return {"proof": False}
