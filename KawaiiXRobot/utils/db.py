@@ -7,6 +7,7 @@ class DATABASE:
     def __init__(self, db_url) -> None:
         self.db_url = db_url
         self.role_db = MongoClient(self.db_url)['Sylviorus']['CUSTOM_ROLES']
+        self.proof_db = MongoClient(self.db_url)['data']['proof']
 
     def already_exists(self, user_id):
         return bool(x := self.db.find_one({"user_id": user_id}))
