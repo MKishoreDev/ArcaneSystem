@@ -61,7 +61,7 @@ async def scanning(_, message):
          elif message.reply_to_message:
                 user_id = message.reply_to_message.from_user.id
                 admire = message.from_user.id
-                reason = message.text.replace("/scan", "")
+                reason = message.text.replace("/escan", "")
          msg = await message.reply_text("**Connecting to Cringe System...**")
          text = f""" **From Chat:** {message.chat.title}
 **Enforcer:** [{admire}](tg://user?id={admire})
