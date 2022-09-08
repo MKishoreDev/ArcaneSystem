@@ -50,4 +50,4 @@ class DATABASE:
                 "status": True,
             }
         else:
-            return {"proof": False}
+            return {"status": False}
