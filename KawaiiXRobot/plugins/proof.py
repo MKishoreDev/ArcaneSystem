@@ -17,5 +17,15 @@ async def proof(client, message):
     if db.get_proof(data_id)['status'] == False:
        await db.add_proof(data_id, store)
        await message.reply_text("**Sucessfully Stored Data For** `{}`".format(data_id))
+
+@bot.on_message(filters.command(["data"], ['/', ".", "?"]))
+async def data(client, message):
+    data_id = message.text.split(None, 1)[1]
+    if len(message.command) <1:
+       await message.reply_text("`Usage:` `/data 1`")
+    if db.get_proof(data_id)['status'] == True:
+       await message.reply_text(f"Data Of {data_id}\n\n • {db.get_proof(data_id)['proof']}")
+    if db.get_proof(data_id)['status'] == False:
+       await message.reply_text("**No Such Data Found For** `{}`".format(data_id))
        
        
