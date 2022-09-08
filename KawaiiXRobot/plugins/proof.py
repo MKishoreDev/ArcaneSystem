@@ -15,7 +15,7 @@ async def proof(client, message):
     if db.get_proof(data_id)['status'] == True:
        await message.reply_text("`The Proof For This Id Was Already Added Remove The Proof And Try Again`")
     if db.get_proof(data_id)['status'] == False:
-       await db.add_proof(data_id, store)
+       db.add_proof(data_id, store)
        await message.reply_text("**Sucessfully Stored Data For** `{}`".format(data_id))
 
 @bot.on_message(filters.command(["data"], ['/', ".", "?"]))
