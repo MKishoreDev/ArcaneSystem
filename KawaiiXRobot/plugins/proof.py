@@ -12,9 +12,9 @@ async def proof(client, message):
        store = message.reply_to_message.text
     else:
        store = message.text.split(None, 2)[2]
-    if db.get_proof(data_id)['status'] != True:
+    if db.get_proof(data_id)['status'] == True:
        await message.reply_text("`The Proof For This Id Was Already Added Remove The Proof And Try Again`")
-    elif db.get_proof(data_id)['status'] == True:
+    elif db.get_proof(data_id)['status'] == False:
        await db.add_proof(data_id, store)
        await message.reply_text("**Sucessfullyb Stored Data For** `{}`".format(data_id))
        
