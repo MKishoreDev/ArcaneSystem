@@ -46,7 +46,7 @@ class DATABASE:
             role = self.proof_db.find_one({"user_id": user_id})
             return {
                 "user_id": proof['user_id'],
-                "proof": role['role'],
+                "proof": proof['proof'],
                 "proof": True,
             }
         else:
