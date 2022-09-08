@@ -16,13 +16,13 @@ def proofss(_, m: Message):
 
 @bot.on_message(filters.command("getproof", ['/', ".", "?"]))
     if db.get_proof(m.from_user.id)['proofs'] != True:
-        status = "Proof Not Stored"
+        proofs = "Proof Not Stored"
 
     elif db.get_proof(m.from_user.id)['proofs'] == True:
-        status = db.get_role(m.from_user.id)['proof']
+        proofs = db.get_role(m.from_user.id)['proof']
 
     else:
-        status = "Proof Not Stored"
+        proofs = "Proof Not Stored"
 
     if m.from_user.id in HMF:
         dev_text = f"""
