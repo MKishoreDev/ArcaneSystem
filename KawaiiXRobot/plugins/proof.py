@@ -14,11 +14,11 @@ def proofss(_, m: Message):
     else:
         m.reply("Usᴀɢᴇ : /addproof 12345678 telegraph link")
 
-@bot.on_message(filters.command("getproof", ['/', ".", "?"]))
-    if db.get_proof(m.from_user.id)['proofs'] != True:
+@bot.on_message(filters.command("proof", ['/', ".", "?"]))
+    if db.get_proof(m.from_user.id)['proof'] != True:
         proofs = "Proof Not Stored"
 
-    elif db.get_proof(m.from_user.id)['proofs'] == True:
+    elif db.get_proof(m.from_user.id)['proof'] == True:
         proofs = db.get_role(m.from_user.id)['proof']
 
     else:
