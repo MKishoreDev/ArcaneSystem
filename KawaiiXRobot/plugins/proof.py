@@ -1,7 +1,7 @@
 from pyrogram import filters, Client
-from KawaiiXRobot import bot, db
+from KawaiiXRobot import bot, db, DEVS
 
-@bot.on_message(filters.command(["proof"], ['/', ".", "?"]))
+@bot.on_message(filters.command(["proof"], ['/', ".", "?"]) & filters.user(DEVS))
 async def proof(client, message):
     data_id = message.text.split(None, 1)[1]
     if len(message.command) <1:
