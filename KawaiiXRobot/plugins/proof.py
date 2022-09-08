@@ -3,7 +3,7 @@ from KawaiiXRobot import bot, db, DEVS
 
 @bot.on_message(filters.command(["proof"], ['/', ".", "?"]) & filters.user(DEVS))
 async def proof(client, message):
-    data_id = message.text.split(None, 1)[1]
+    data_id = message.text.split("", 1)[1]
     if len(message.command) <1:
        await message.reply_text("`Usage:` `/proof 1 fuck`")
     elif len(message.command) <2:
@@ -11,7 +11,7 @@ async def proof(client, message):
     if message.reply_to_message:
        store = message.reply_to_message.text
     if not message.reply_to_message:
-       store = message.text.split(None, 2)[2]
+       store = message.text.split("", 2)[2]
     if db.get_proof(data_id)['status'] == True:
        await message.reply_text("`The Proof For This Id Was Already Added Remove The Proof And Try Again`")
     if db.get_proof(data_id)['status'] != False:
@@ -20,7 +20,7 @@ async def proof(client, message):
 
 @bot.on_message(filters.command(["data"], ['/', ".", "?"]))
 async def data(client, message):
-    data_id = message.text.split(None, 1)[1]
+    data_id = message.text.split("", 1)[1]
     if len(message.command) <1:
        await message.reply_text("`Usage:` `/data 1`")
     if db.get_proof(data_id)['status'] == True:
