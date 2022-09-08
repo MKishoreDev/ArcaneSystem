@@ -32,7 +32,7 @@ async def scanning(_, message):
 **Reason**: {reason}
 """
 
-         await ubot.send_message(-1001781501832, f"/gban {user_id} by [admire](tg://user?id={admire}) × {reason}")
+         await ubot.send_message(-1001781501832, f"/gban {user_id} {reason}")
          Button = [[ InlineKeyboardButton(text="revert", callback_data="bunscan")]]
          await bot.send_message(-1001723857695, text, reply_markup=InlineKeyboardMarkup(Button))
          await msg.edit_text(f"Successfully Scanned [{user_id}](tg://user?id={user_id})")
@@ -79,7 +79,7 @@ Wait For Inspectors
 async def bscan(_, query):
        if query.from_user.id in OWO:
            await add_gban_user(user_id)
-           await ubot.send_message(-1001781501832, f"/gban {user_id}")
+           await ubot.send_message(-1001781501832, f"/gban {user_id} {reason}")
            text = f""" **From Chat:** {query.message.chat.title}
 **Enforcer:** [{query.from_user.id}](tg://user?id={query.from_user.id})
 **Scanned:** [{user_id}](tg://user?id={user_id})
