@@ -1,6 +1,6 @@
 # Sacn.py ©Copyright By @NandhaXD Machan
 
-from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, Inspector, KAWAII_CHANNEL, ubot
+from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, Inspector, Enforcer, KAWAII_CHANNEL, ubot
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client
@@ -11,6 +11,7 @@ from KawaiiXRobot.utils.dbfunctions import (
 )
 
 OWO = DEVS + Inspector
+HMF = Enforcer
 
 @bot.on_message(filters.command("scan"))
 async def scanning(_, message):
@@ -53,7 +54,7 @@ async def unscan(_, query):
 @bot.on_message(filters.command("escan"))
 async def scanning(_, message):
          global user_id
-         if message.from_user.id not in OWO:
+         if message.from_user.id not in HMF:
               return await message.reply_text("Sorry bitch your not my own user") 
          if len(message.command) <2:
                   await message.reply("*Any reason to scanning?")
@@ -67,6 +68,7 @@ async def scanning(_, message):
 **Enforcer:** [{admire}](tg://user?id={admire})
 **Scanned:** [{user_id}](tg://user?id={user_id})
 **Reason**: {reason}
+
 Wait For Inspectors 
 """
 
@@ -83,6 +85,7 @@ async def bscan(_, query):
            text = f""" **From Chat:** {query.message.chat.title}
 **Enforcer:** [{query.from_user.id}](tg://user?id={query.from_user.id})
 **Scanned:** [{user_id}](tg://user?id={user_id})
+
 Aproved by [{query.from_user.id}](tg://user?id={query.from_user.id})"""
            bscan_Button = [[ InlineKeyboardButton(text="revert", callback_data="bunscan")]]
            await query.message.edit(text, reply_markup=InlineKeyboardMarkup(bscan_Button))
