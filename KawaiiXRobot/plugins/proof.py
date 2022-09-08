@@ -14,15 +14,15 @@ async def proof(client, message):
        store = message.text.split(None, 2)[2]
     if message.reply_to_message.sticker:
        store = message.reply_to_message.sticker.file_id
-    if message.reply_to_message.photo:
+    elif message.reply_to_message.photo:
        store = message.reply_to_message.photo.file_id
-    if message.reply_to_message.audio:
+    elif message.reply_to_message.audio:
        store = message.reply_to_message.audio.file_id
-    if message.reply_to_message.video:
+    elif message.reply_to_message.video:
        store = message.reply_to_message.video.file_id
-    if message.reply_to_message.document:
+    elif message.reply_to_message.document:
        store = message.reply_to_message.document.file_id
-    if message.reply_to_message.animation:
+    elif message.reply_to_message.animation:
        store = message.reply_to_message.animation.file_id
     if db.get_proof(data_id)['status'] == True:
        await message.reply_text("`The Proof For This Id Was Already Added Remove The Proof And Try Again`")
