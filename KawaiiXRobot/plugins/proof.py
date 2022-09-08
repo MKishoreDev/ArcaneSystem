@@ -1,4 +1,4 @@
-reason = m.text.split(None, 2)[2]from pyrogram import filters, Client
+from pyrogram import filters, Client
 from KawaiiXRobot import bot, db, DEVS
 
 @bot.on_message(filters.command(["proof"], ['/', ".", "?"]) & filters.user(DEVS))
