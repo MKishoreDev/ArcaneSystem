@@ -47,7 +47,7 @@ class DATABASE:
             return {
                 "user_id": proof['user_id'],
                 "proof": proof['proof'],
-                "proof": True,
+                "status": True,
             }
         else:
             return {"proof": False}
