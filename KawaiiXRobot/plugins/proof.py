@@ -14,7 +14,7 @@ async def proof(client, message):
        store = message.text.split(None, 2)[2]
     if db.get_proof(data_id)['status'] == True:
        await message.reply_text("`The Proof For This Id Was Already Added Remove The Proof And Try Again`")
-    if db.get_proof(data_id)['status'] == False:
+    if db.get_proof(data_id)['status'] != False:
        db.add_proof(data_id, store)
        await message.reply_text("**Sucessfully Stored Data For** `{}`".format(data_id))
 
@@ -25,7 +25,7 @@ async def data(client, message):
        await message.reply_text("`Usage:` `/data 1`")
     if db.get_proof(data_id)['status'] == True:
        await message.reply_text(f"Data Of {data_id}\n\n • {db.get_proof(data_id)['proof']}")
-    if db.get_proof(data_id)['status'] == False:
+    if db.get_proof(data_id)['status'] != True:
        await message.reply_text("**No Such Data Found For** `{}`".format(data_id))
        
        
