@@ -1,10 +1,12 @@
 # Sacn.py ©Copyright By @NandhaXD Machan
 
+import time
+import pytz
+import datetime
 from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, Inspector, Enforcer, KAWAII_CHANNEL, ubot
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client
-import time
 from pyrogram.types import Message
 from KawaiiXRobot.utils.dbfunctions import (
     add_gban_user, remove_gban_user
@@ -13,6 +15,9 @@ from KawaiiXRobot.utils.dbfunctions import (
 OWO = DEVS + Inspector
 HMF = Enforcer
 COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
+
+india_Date_Time = datetime.datetime.now(tz=pytz.timezone("Asia/Calcutta"))
+Current_Date_Time = india_Date_Time.strftime("%Y-%m-%dT%H:%M")
 
 @bot.on_message(filters.command("scan", COMMANDS))
 async def scanning(_, message):
@@ -51,6 +56,7 @@ async def scanning(_, message):
 **Admire:** [{admire}](tg://user?id={admire})
 **Scanned:** [{user_id}](tg://user?id={user_id})
 **Reason**: {reason}
+**Event Stamp:** {Current_Date_Time}
 """
 
          await ubot.send_message(-1001781501832, f"/gban {user_id} {reason}")
