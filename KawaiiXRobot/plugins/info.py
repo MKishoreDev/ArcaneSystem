@@ -9,6 +9,8 @@ from KawaiiXRobot import DEVS, bot
 from KawaiiXRobot.utils.sections import section
 from KawaiiXRobot.utils.dbfunctions import is_gbanned_user
 
+COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
+
 async def get_user_info(user, already=False):
     if not already:
         user = await bot.get_users(user)
@@ -65,7 +67,7 @@ async def get_chat_info(chat, already=False):
     return [caption, photo_id]
 
 
-@bot.on_message(filters.command("info"))
+@bot.on_message(filters.command("info", COMMANDS))
 async def info_func(_, message: Message):
     if message.reply_to_message:
         user = message.reply_to_message.from_user.id
@@ -90,7 +92,7 @@ async def info_func(_, message: Message):
     os.remove(photo)
 
 
-@bot.on_message(filters.command("ginfo"))
+@bot.on_message(filters.command("ginfo", COMMANDS))
 async def chat_info_func(_, message: Message):
     try:
         if len(message.command) > 2:
