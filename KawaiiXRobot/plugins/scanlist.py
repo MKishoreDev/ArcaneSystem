@@ -4,7 +4,9 @@ from pyrogram import filters, Client
 from KawaiiXRobot import bot
 from KawaiiXRobot.utils.dbfunctions import gbansdb
 
-@bot.on_message(filters.command(["scanlist"], ['/', ".", "?"]))
+COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
+
+@bot.on_message(filters.command(scanlist, COMMANDS))
 async def list(client, message):
    total_num = len([i async for i in gbansdb.find({"user_id": {"$gt": 0}})])
    total_id = ([i['user_id'] async for i in gbansdb.find({"user_id": {"$gt": 0}})])
