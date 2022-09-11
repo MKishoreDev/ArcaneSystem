@@ -12,6 +12,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from KawaiiXRobot.utils.dbfunctions import is_gbanned_user
 
 HMF = DEVS + Inspector + Enforcer 
+COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
 async def get_user_info(user, already=False):
     if not already:
@@ -41,7 +42,7 @@ buttons = [
     ],   
 ]
 
-@bot.on_message(filters.command("start", ['/', ".", "?"]))
+@bot.on_message(filters.command("start", COMMANDS))
 async def status(bot, m: Message):
     is_gbanned = await is_gbanned_user(m.from_user.id)
     if m.from_user.id in DEVS:
@@ -77,7 +78,7 @@ Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
                 reply_markup=InlineKeyboardMarkup(buttons))
 
 
-@bot.on_message(filters.command(["help"], ['/', ".", "?"]))
+@bot.on_message(filters.command("help", COMMANDS))
 async def help(client, message):
     HELP_TEXT = """Wᴇʟᴄᴏᴍᴇ  Tᴏ  Cʀɪɴɢᴇ  Hᴇʟᴘ  Sʏsᴛᴇᴍ,  Cʜᴇᴄᴋᴏᴜᴛ  Bᴇʟᴏᴡ  Bᴜᴛᴛᴏɴs  As  Pᴇʀ  Yᴏᴜʀ  Nᴇᴇᴅ.""",
 
