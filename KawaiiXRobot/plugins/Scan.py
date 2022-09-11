@@ -49,21 +49,6 @@ async def unscan(_, query):
 **UnScanned:** [{user_id}](tg://user?id={user_id})"""
            await query.message.edit(text)
 
-if user_id in DEVS:
-    message.reply_text(
-         "Dev's Can't Be Ban 😑"
-    )
-
-if user_id in Inspector:
-    message.reply_text(
-         "Inspector's Can't Be Ban 😑"
-    )
-
-if user_id in Enforcer:
-    message.reply_text(
-         "Enforcer's Can't Be Ban 😑. If You Want Ban Or Remove Enforcer Ask Dev With Correct Reason 👍"
-    )
-
 # Enforcer Scan 
 
 @bot.on_message(filters.command("escan"))
