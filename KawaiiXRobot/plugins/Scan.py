@@ -16,6 +16,15 @@ HMF = Enforcer
 @bot.on_message(filters.command("scan"))
 async def scanning(_, message):
          global user_id
+         if message.from_user.id not in OWO:
+              return await message.reply_text("Sorry bitch your not my own user") 
+         if len(message.command) <2:
+                  await message.reply("*Any reason to scanning?")
+                  return 
+         elif message.reply_to_message:
+                user_id = message.reply_to_message.from_user.id
+                admire = message.from_user.id
+                reason = message.text.replace("/scan", "")
 
          if int(user_id) in DEVS:
              await message.reply_text(
@@ -35,15 +44,6 @@ async def scanning(_, message):
              )
              return
                        
-         if message.from_user.id not in OWO:
-              return await message.reply_text("Sorry bitch your not my own user") 
-         if len(message.command) <2:
-                  await message.reply("*Any reason to scanning?")
-                  return 
-         elif message.reply_to_message:
-                user_id = message.reply_to_message.from_user.id
-                admire = message.from_user.id
-                reason = message.text.replace("/scan", "")
          msg = await message.reply_text("**Connecting to Cringe System...**")
          await add_gban_user(user_id)
          text = f""" **From Chat:** {message.chat.title}
