@@ -16,6 +16,24 @@ HMF = Enforcer
 @bot.on_message(filters.command("scan"))
 async def scanning(_, message):
          global user_id
+         if int(user_id) in DEVS:
+             await message.reply_text(
+                 "Dev's Can't Be Ban 😑"
+             )
+             return
+
+         if int(user_id) in Inspector:
+             await message.reply_text(
+                 "Inspector's Can't Be Ban 😑"
+             )
+             return
+
+         if int(user_id) in Enforcer:
+             await message.reply_text(
+                 "Enforcer's Can't Be Ban 😑. If You Want Ban Or Remove Enforcer Ask Dev With Correct Reason 👍"
+             )
+             return
+                       
          if message.from_user.id not in OWO:
               return await message.reply_text("Sorry bitch your not my own user") 
          if len(message.command) <2:
@@ -38,23 +56,6 @@ async def scanning(_, message):
          await bot.send_message(-1001723857695, text, reply_markup=InlineKeyboardMarkup(Button))
          await msg.edit_text(f"Successfully Scanned [{user_id}](tg://user?id={user_id})")
 
-         if int(user_id) in DEVS:
-             await message.reply_text(
-                 "Dev's Can't Be Ban 😑"
-             )
-             return
-
-         if int(user_id) in Inspector:
-             await message.reply_text(
-                 "Inspector's Can't Be Ban 😑"
-             )
-             return
-
-         if int(user_id) in Enforcer:
-             await message.reply_text(
-                 "Enforcer's Can't Be Ban 😑. If You Want Ban Or Remove Enforcer Ask Dev With Correct Reason 👍"
-             )
-             return
                        
 @bot.on_callback_query(filters.regex("unscan"))
 async def unscan(_, query):
