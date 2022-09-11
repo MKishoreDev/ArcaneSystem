@@ -16,6 +16,7 @@ HMF = Enforcer
 @bot.on_message(filters.command("scan"))
 async def scanning(_, message):
          global user_id
+
          if int(user_id) in DEVS:
              await message.reply_text(
                  "Dev's Can't Be Ban 😑"
