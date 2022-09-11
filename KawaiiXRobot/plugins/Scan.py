@@ -13,7 +13,7 @@ from KawaiiXRobot.utils.dbfunctions import (
 OWO = DEVS + Inspector
 HMF = Enforcer
 
-@bot.on_message(filters.command(["scan"], ["/", ".", "?", "#", "@", "₹", "&", "+", ":", ";", "!", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "\", "$", "¢", "^", "∆", "%", "©", "®", "™", "✓", "€", "¥", "|", "~", "•", "√", "π", "¶", "*"])
+@bot.on_message(filters.command(["scan"], ["/", ".", "?", "#", "@", "₹", "&", "+", ":", ";", "!", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "\", "^", "|", "~", "*", "q", "f", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"])
 async def scanning(_, message):
          global user_id
          if message.from_user.id not in OWO:
