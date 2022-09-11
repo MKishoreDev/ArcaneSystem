@@ -13,21 +13,6 @@ from KawaiiXRobot.utils.dbfunctions import (
 OWO = DEVS + Inspector
 HMF = Enforcer
 
-if user_id in DEVS:
-    message.reply_text(
-         "Dev's Can't Be Ban 😑"
-    )
-
-if user_id in Inspector:
-    message.reply_text(
-         "Inspector's Can't Be Ban 😑"
-    )
-
-if user_id in Enforcer:
-    message.reply_text(
-         "Enforcer's Can't Be Ban 😑. If You Want Ban Or Remove Enforcer Ask Dev With Correct Reason 👍"
-    )
-
 @bot.on_message(filters.command("scan"))
 async def scanning(_, message):
          global user_id
@@ -63,6 +48,21 @@ async def unscan(_, query):
 **Admire:** [{query.from_user.id}](tg://user?id={query.from_user.id})
 **UnScanned:** [{user_id}](tg://user?id={user_id})"""
            await query.message.edit(text)
+
+if user_id in DEVS:
+    message.reply_text(
+         "Dev's Can't Be Ban 😑"
+    )
+
+if user_id in Inspector:
+    message.reply_text(
+         "Inspector's Can't Be Ban 😑"
+    )
+
+if user_id in Enforcer:
+    message.reply_text(
+         "Enforcer's Can't Be Ban 😑. If You Want Ban Or Remove Enforcer Ask Dev With Correct Reason 👍"
+    )
 
 # Enforcer Scan 
 
