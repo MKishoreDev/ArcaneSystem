@@ -16,9 +16,9 @@ async def proof(client, message):
        await message.reply_text("`Usage:` `/proof 1 fuck`")
     elif len(message.command) <2:
        await message.reply_text("`Give Proof For The Given Id")
-    elif not message.reply_to_message:
+    if not message.reply_to_message:
        store = parse_com(message.text, f"proof {data_id}")
-    elif message.reply_to_message:
+    if message.reply_to_message:
        store = message.reply_to_message.text
     elif message.reply_to_message.sticker:
        store = message.reply_to_message.sticker.file_id
@@ -32,9 +32,9 @@ async def proof(client, message):
        store = message.reply_to_message.document.file_id
     elif message.reply_to_message.animation:
        store = message.reply_to_message.animation.file_id
-    elif db.get_proof(data_id)['status'] == True:
+    if db.get_proof(data_id)['status'] == True:
        await message.reply_text("`The Proof For This Id Was Already Added Remove The Proof And Try Again`")
-    elif db.get_proof(data_id)['status'] != False:
+    if db.get_proof(data_id)['status'] != False:
        db.add_proof(data_id, store)
        await message.reply_text("**Sucessfully Stored Data For** `{}`".format(data_id))
 
@@ -43,9 +43,9 @@ async def data(client, message):
     data_id = parse_com(message.text, "data")
     if len(message.command) <1:
        await message.reply_text("`Usage:` `/data 1`")
-    elif db.get_proof(data_id)['status'] == True:
+    if db.get_proof(data_id)['status'] == True:
        await message.reply_text(f"Data Of {data_id}\n\n • {db.get_proof(data_id)['proof']}")
-    elif db.get_proof(data_id)['status'] != True:
+    if db.get_proof(data_id)['status'] != True:
        await message.reply_text("**No Such Data Found For** `{}`".format(data_id))
        
        
