@@ -13,17 +13,17 @@ from KawaiiXRobot.utils.dbfunctions import (
 OWO = DEVS + Inspector
 HMF = Enforcer
 
-if int(user_id) in DEVS:
+if user_id in DEVS:
     message.reply_text(
          "Dev's Can't Be Ban 😑"
     )
 
-if int(user_id) in Inspector:
+if user_id in Inspector:
     message.reply_text(
          "Inspector's Can't Be Ban 😑"
     )
 
-if int(user_id) in Enforcer:
+if user_id in Enforcer:
     message.reply_text(
          "Enforcer's Can't Be Ban 😑. If You Want Ban Or Remove Enforcer Ask Dev With Correct Reason 👍"
     )
