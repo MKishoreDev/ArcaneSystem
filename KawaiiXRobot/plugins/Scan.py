@@ -38,20 +38,23 @@ async def scanning(_, message):
          await bot.send_message(-1001723857695, text, reply_markup=InlineKeyboardMarkup(Button))
          await msg.edit_text(f"Successfully Scanned [{user_id}](tg://user?id={user_id})")
 
-if user_id DEVS:
-    message.reply_text(
-         "Dev's Can't Be Ban 😑"
-    )
+         if int(user_id) in DEVS:
+             message.reply_text(
+                 "Dev's Can't Be Ban 😑"
+             )
+             return
 
-if user_id Inspector:
-    message.reply_text(
-         "Inspector's Can't Be Ban 😑"
-    )
+         if int(user_id) in Inspector:
+             message.reply_text(
+                 "Inspector's Can't Be Ban 😑"
+             )
+             return
 
-if user_id Enforcer:
-    message.reply_text(
-         "Enforcer's Can't Be Ban 😑. If You Want Ban Or Remove Enforcer Ask Dev With Correct Reason 👍"
-    )
+         if int(user_id) in Enforcer:
+             message.reply_text(
+                 "Enforcer's Can't Be Ban 😑. If You Want Ban Or Remove Enforcer Ask Dev With Correct Reason 👍"
+             )
+             return
                        
 @bot.on_callback_query(filters.regex("unscan"))
 async def unscan(_, query):
