@@ -12,7 +12,7 @@ from KawaiiXRobot.utils.dbfunctions import (
 
 OWO = DEVS + Inspector
 HMF = Enforcer
-COMMANDS = ["/", ".", "?", "#", "@", "₹", "&", "+", ":", ";", "!", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "\", "^", "|", "~", "*", "q", "f", "w", "e", "r", "t", "y", "u", "i", "o", "p", "a", "s", "d", "g", "h", "j", "k", "l", "z", "x", "c", "v", "b", "n", "m"]
+COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
 @bot.on_message(filters.command("scan", COMMANDS))
 async def scanning(_, message):
