@@ -10,6 +10,8 @@ import sys, traceback, io
 from subprocess import getoutput as run
 from requests import get, post
 
+COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
+
 def paste(text):
     url = "https://spaceb.in/api/v1/documents/"
     res = post(url, data={"content": text, "extension": "txt"})
@@ -35,7 +37,7 @@ def get_readable_time(seconds: int) -> str:
     ping_time += ":".join(time_list)
     return ping_time
 
-@app.on_message(filters.command("eval", prefixes=["/", ".", "?", "-"]))
+@app.on_message(filters.command("eval", COMMANDS))
 async def eval(client, message):
     if message.from_user.id in DEVS:
 
@@ -97,7 +99,7 @@ async def aexec(code, client, message):
     return await locals()["__aexec"](client, message)
 
 
-@app.on_message(filters.command("sh", prefixes=['/', '.', '?', '-']))
+@app.on_message(filters.command("sh", COMMANDS))
 def sh(_, m):
     if m.from_user.id in DEVS:
         code = m.text.replace(m.text.split(" ")[0], "")
@@ -136,7 +138,7 @@ def sendfilecallback(_, query: CallbackQuery):
     else:
         query.answer("This Is A Kawaii User's Restricted Command.You Don't Have Access To Use This.")
 
-@app.on_message(filters.command("ping", prefixes=['/', '.', '?', '-']))
+@app.on_message(filters.command("ping", COMMANDS))
 async def ping(_, m):
     start_time = time.time()
     text = await m.reply_text("Pinging...")
