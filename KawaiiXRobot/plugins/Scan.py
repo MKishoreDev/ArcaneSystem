@@ -39,19 +39,19 @@ async def scanning(_, message):
          await msg.edit_text(f"Successfully Scanned [{user_id}](tg://user?id={user_id})")
 
          if int(user_id) in DEVS:
-             message.reply_text(
+             await message.reply_text(
                  "Dev's Can't Be Ban 😑"
              )
              return
 
          if int(user_id) in Inspector:
-             message.reply_text(
+             await message.reply_text(
                  "Inspector's Can't Be Ban 😑"
              )
              return
 
          if int(user_id) in Enforcer:
-             message.reply_text(
+             await message.reply_text(
                  "Enforcer's Can't Be Ban 😑. If You Want Ban Or Remove Enforcer Ask Dev With Correct Reason 👍"
              )
              return
