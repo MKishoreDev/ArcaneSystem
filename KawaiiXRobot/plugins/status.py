@@ -7,6 +7,7 @@ from config import DEVS, Inspector, Enforcer
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 
 HMF = DEVS + Inspector + Enforcer 
+COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
 SCAN_IMG = (
       "https://telegra.ph/file/9e5724561661e86b06a25.jpg"
@@ -19,7 +20,7 @@ buttons = [
     ],
 ]
 
-@bot.on_message(filters.command("status", ['/', ".", "?"]))
+@bot.on_message(filters.command("status", COMMANDS))
 async def status(bot, m: Message):
     if m.from_user.id in DEVS:
         status = "**Gᴏᴅ Oғ Cʀɪɴɢᴇ**"
@@ -66,7 +67,7 @@ Mᴇᴍʙᴇʀ Oғ Cʀɪɴɢᴇ
         await m.reply(text, reply_markup=InlineKeyboardMarkup(buttons))
 
 
-@bot.on_message(filters.command("setrole"))
+@bot.on_message(filters.command("setrole", COMMANDS))
 def setstatus(_, m: Message):
     role = m.text.replace(m.text.split(" ")[0], "")
     if not role == "":
