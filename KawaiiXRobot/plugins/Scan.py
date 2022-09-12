@@ -94,6 +94,7 @@ async def scanning(_, message):
 **Enforcer:** [{admire}](tg://user?id={admire})
 **Scanned:** [{user_id}](tg://user?id={user_id})
 **Reason**: {reason}
+**Event Stamp:** {Current_Date_Time}
 
 Wait For Inspectors 
 """
