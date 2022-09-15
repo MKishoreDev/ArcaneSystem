@@ -1,6 +1,6 @@
-from KawaiiXRobot.utils import cli
+from KawaiiXRobot.utils.filtersdb import cli
 
-filter = cli["Zaid"]["FILTER"]
+filter = cli["Cringe"]["FILTER"]
 
 async def save_proof(keyword, chat_id, message_id) -> None:
     add = await filter.find_one({"keyword": keyword})
