@@ -2,11 +2,6 @@ from helpers.mongo import cli
 
 filter = cli["Zaid"]["FILTER"]
 
-remove_proof,
-    get_proof,
-    get_proof_names,
-    save_proof,
-
 async def save_proof(keyword, chat_id, message_id) -> None:
     add = await filter.find_one({"keyword": keyword})
     if add:
