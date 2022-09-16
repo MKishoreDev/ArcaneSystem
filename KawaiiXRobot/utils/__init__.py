@@ -5,7 +5,7 @@ import threading
 import dns.resolver
 import pymongo
 
-mongo_dbb = motor.motor_asyncio.AsyncIOMotorClient(MONGO_DB)
+mongo_dbb = motor.motor_asyncio.AsyncIOMotorClient(MONGO_URI)
 SPAMBOT = "CringeXSystem"
 cli = mongo_dbb["CringeXSystem"]
 
