@@ -27,7 +27,7 @@ async def get_proof(keyword, chat_id):
         return False
 
 
-async def remove_proof(chat_id):
+async def proofs_remove(chat_id):
     await filter.delete_many({"chat_id": chat_id})
 
 
