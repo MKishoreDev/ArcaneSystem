@@ -1,4 +1,4 @@
-from KawaiiXRobot.utils.filtersdb import cli
+from KawaiiXRobot.utils import cli
 
 filter = cli["Cringe"]["FILTER"]
 
