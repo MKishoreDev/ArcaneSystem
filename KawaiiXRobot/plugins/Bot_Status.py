@@ -12,7 +12,6 @@ from pyrogram.errors import FloodWait
 async def statusbots():
     async with ubot:
             while True:
-                print("Checking...")
                 GET_CHANNEL_OR_GROUP = await ubot.get_chat(int(CHANNEL_OR_GROUP_ID))
                 CHANNEL_OR_GROUP_NAME = GET_CHANNEL_OR_GROUP.title
                 CHANNEL_OR_GROUP_TYPE = GET_CHANNEL_OR_GROUP.type
@@ -41,8 +40,7 @@ async def statusbots():
                 time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
                 last_update = time.strftime(f"%d %b %Y at %I:%M %p")
                 checker_bot += f"\n\n🛂 Last Check: {last_update} ({TIME_ZONE})\n\n🟡 **updates every 45 min(s)**\n\n⚡ Powered by:- @Cringe_X_NetWork"
-                await ubot.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, checker_bot)
-                print(f"Last Check At: {last_update}")                
+                await ubot.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, checker_bot)               
                 await asyncio.sleep(2700)
                         
 
