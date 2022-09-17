@@ -4,6 +4,7 @@ from pyrogram import Client
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from KawaiiXRobot.utils.db import DATABASE
+from KawaiiXRobot.plugins.Bot_Status import statusbots
 
 API_ID = os.environ.get("API_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
