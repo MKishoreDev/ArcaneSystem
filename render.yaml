@@ -5,7 +5,7 @@ services:
   env: static
   buildCommand: yarn; yarn build; yarn next export
   staticPublishPath: out
-  pullRequestPreviewsEnabled: true     # optional
+  pullRequestPreviewsEnabled: true     # optionals
   envVars:
   - key: NODE_ENV
     value: production
