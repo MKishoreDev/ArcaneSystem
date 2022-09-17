@@ -5,7 +5,7 @@ import pytz
 import asyncio
 import datetime
 from KawaiiXRobot import bot, DEVS, Inspector, ubot, MESSAGE_ID, CHANNEL_OR_GROUP_ID, BOT_LIST, TIME_ZONE
-from pyrogram import Client, filters
+from pyrogram import filters
 from pyrogram.errors import FloodWait
 
 async def statusbots():
