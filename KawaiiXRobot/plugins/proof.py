@@ -110,3 +110,55 @@ async def save_filters(_, message):
   await save_proof("/data" + proofy.split()[0], di)
   await message.reply_text(f"__**Saved filter {proofy.split()[0]}.**__")
 
+@bot.on_message(
+    filters.text
+    & ~filters.edited
+    & ~filters.private
+    & ~filters.via_bot
+    & ~filters.forwarded,
+    group=1,
+)
+async def filters_re(_, message):
+  text = message.text.lower().strip()
+  if not text:
+    return
+  muser = message.from_user
+  chat_id = message.chat.id
+  list_of_filters = await get_proof_names()
+  for word in list_of_proofs:
+    pattern = r"( |^|[^\w])" + re.escape(word) + r"( |$|[^\w])"
+    if re.search(pattern, text, flags=re.IGNORECASE):
+      proof_msg = await get_proof(word)
+      if not proof_msg['media']:
+        if proof_msg['text']:
+          cap, keyb = get_keyboard(proof_msg['text'])
+          cap = cap.format(username="@" + muser.username, mention=f"[{muser.first_name}](tg://user?id={muser.id})", chatname=message.chat.title, firstname=muser.first_name, lastname = muser.last_name, fullname=muser.first_name + (muser.last_name or ""), date=date.today(), time=f"{(datetime.today()).time()}"[:8])
+          return await message.reply_text(text=cap, reply_markup=keyb)
+      else:
+        media = proof_msg['media']
+        file = proof_msg['file']
+        if media == 'photo':
+          func = message.reply_photo
+        elif media == 'video':
+          func = message.reply_video
+        elif media == 'audio':
+          func = message.reply_audio
+        elif media == 'animation':
+          func = message.reply_animation
+        elif media == 'document':
+          func = message.reply_document
+        elif media == 'sticker':
+          func = message.reply_sticker
+        else:
+          func = None
+        if proof_msg['text']:
+          cap, keyb = get_keyboard(proof_msg['text'])
+          if cap:
+            cap = proof_msg['text'].format(username="@" + muser.username, mention=f"[{muser.first_name}](tg://user?id={muser.id})", chatname=message.chat.title, firstname=muser.first_name, lastname = muser.last_name, fullname=muser.first_name + (muser.last_name or ""), date=date.today(), time=f"{(datetime.today()).time()}"[:8])
+        else:
+          cap = None
+          keyb = None
+        if not func and not cap:
+          return
+        if func:
+          return await func(file, caption=cap, reply_markup=keyb)
