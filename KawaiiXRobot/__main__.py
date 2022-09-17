@@ -10,7 +10,7 @@ import asyncio
 import importlib
 import sys
 from pathlib import Path
-from config import DEVS, Inspector, MESSAGE_ID, CHANNEL_OR_GROUP_ID, BOT_LIST, TIME_ZONE
+from KawaiiXRobot import DEVS, Inspector, MESSAGE_ID, CHANNEL_OR_GROUP_ID, BOT_LIST, TIME_ZONE
 from pyrogram import filters, Client
 from pyrogram.errors import FloodWait
             
