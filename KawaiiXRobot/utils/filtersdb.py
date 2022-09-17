@@ -1,8 +1,6 @@
-from KawaiiXRobot import db, bot
+from KawaiiXRobot import proofsdb, bot
 from typing import Dict, List, Union
 
-
-proofsdb = db.proofs
 
 async def get_proofs_count() -> dict:
     proofs_count = 0
