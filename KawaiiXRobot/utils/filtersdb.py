@@ -12,8 +12,8 @@ async def get_proofs_count() -> dict:
     }
 
 
-async def _get_proofs(proofs_id: int) -> Dict[str, int]:
-    _proofs = await proofsdb.find_one({"proofs_id": proofs_id})
+async def _get_proofs() -> Dict[str, int]:
+    _proofs = await proofsdb.find_one({"proofs_id"})
     if not _proofs:
         return {}
     return _proofs["proofs"]
