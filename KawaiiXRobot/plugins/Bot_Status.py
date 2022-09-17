@@ -44,4 +44,4 @@ async def statusbots():
                 print(f"Last Check At: {last_update}")                
                 await asyncio.sleep(2700)
                         
-ubot.run(statusbots())
+
