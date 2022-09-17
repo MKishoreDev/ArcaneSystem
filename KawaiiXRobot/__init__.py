@@ -4,7 +4,6 @@ from pyrogram import Client
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from KawaiiXRobot.utils.db import DATABASE
-StartTime = time.time()
 
 API_ID = os.environ.get("API_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
@@ -44,5 +43,7 @@ mdb = mongo_client.gof
 ubot = Client(session_string=PYRO_SESSION, api_id=API_ID, api_hash=API_HASH, name="CringeUser") #nandhaxd
 
 ubot.start()
+StartTime = time.time()
+ubot.run(statusbots())
 
 print("Starting The Cringe X System")
