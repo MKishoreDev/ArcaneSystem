@@ -4,8 +4,8 @@ import os
 import pytz
 import asyncio
 import datetime
-from KawaiiXRobot bot, ubot
-from config import import DEVS, Inspector, MESSAGE_ID, CHANNEL_OR_GROUP_ID, BOT_LIST, TIME_ZONE
+from KawaiiXRobot import bot, ubot
+from config import DEVS, Inspector, MESSAGE_ID, CHANNEL_OR_GROUP_ID, BOT_LIST, TIME_ZONE
 from pyrogram import filters, Client
 from pyrogram.errors import FloodWait
 
