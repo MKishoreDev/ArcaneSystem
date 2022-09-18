@@ -1,0 +1,42 @@
+import time
+import pytz
+import datetime
+from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, Inspector, Enforcer, KAWAII_CHANNEL, ubot
+from pyrogram import filters
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram import Client
+from pyrogram.types import Message
+from KawaiiXRobot.utils.db_botlist import (
+    add_bots_user, remove_bots_user
+)
+
+OWO = DEVS
+COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
+
+india_Date_Time = datetime.datetime.now(tz=pytz.timezone("Asia/Calcutta"))
+Current_Date_Time = india_Date_Time.strftime("%Y-%m-%dT%H:%M")
+
+@bot.on_message(filters.command("addbot", COMMANDS))
+async def scanning(_, message):
+         global user_id
+         if message.from_user.id not in OWO:
+              return await message.reply_text("Sorry You Can't Add Bots 😑") 
+         if len(message.command) <2:
+                  await message.reply("* Add Current Status Of That Bot")
+                  return 
+         elif message.reply_to_message:
+                user_id = message.reply_to_message.from_user.id
+                admire = message.from_user.id
+                reason = message.text.replace("/addbot", "")
+                       
+         msg = await message.reply_text("**Bot Connecting to Cringe System...**")
+         await add_bots_user(user_id)
+         text = f""" **From Chat:** {message.chat.title}
+**Developer:** [{admire}](tg://user?id={admire})
+**Bot:** [{user_id}](tg://user?id={user_id})
+**Bot Status**: {reason}
+**Event Stamp:** {Current_Date_Time}
+"""
+
+         await bot.send_message(-1001723857695, text)
+         await msg.edit_text(f"Successfully Bot Added [{user_id}](tg://user?id={user_id})")
