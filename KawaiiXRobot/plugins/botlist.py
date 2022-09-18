@@ -10,7 +10,7 @@ from KawaiiXRobot.utils.db_botlist import (
     add_bots_user, remove_bots_user
 )
 
-from KawaiiXRobot.utils.db_botlist import botssdb
+from KawaiiXRobot.utils.db_botlist import botsdb
 from KawaiiXRobot.utils import db_botlist as x
 
 OWO = DEVS
