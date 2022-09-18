@@ -10,6 +10,8 @@ from KawaiiXRobot.utils.db_botlist import (
     add_bots_user, remove_bots_user
 )
 
+from KawaiiXRobot.utils import db_botlist as x
+
 OWO = DEVS
 COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
@@ -40,3 +42,23 @@ async def scanning(_, message):
 
          await bot.send_message(-1001723857695, text)
          await msg.edit_text(f"Successfully Bot Added [{user_id}](tg://user?id={user_id})")
+
+
+@bot.on_message(filters.command("rmbot"))
+async def revive(_, message):
+          
+          if message.from_user.id in OWO and message.reply_to_message:
+                       await x.remove_bots_user(message.reply_to_message.from_user.id)
+                       await message.reply(f"Cringe Dev: {message.from_user.id}\n target Bot: {message.reply_to_message.from_user.id}\n **Bot Removed**")  
+          
+          else:
+                if message.from_user.id not in OWO:
+                      return await message("Only Cringe Dev can use")
+                elif len(message.command) <2:
+                      return await message.reply("give a user ID or name")
+                elif not message.reply_to_message:
+                     user_id_text = message.text.split(None, 1)[1]
+                     user = await bot.get_users(user_id_text)
+                     await x.remove_bots_user(user.id)
+                     await message.reply(f"Cringe User: {message.from_user.id}\n target user: {user.id}\n **Bot Removed**")
+             
