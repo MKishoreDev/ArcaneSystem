@@ -1,6 +1,6 @@
 from KawaiiXRobot import mdb
 
-botsdb = mdb.gban
+botsdb = mdb.bots
 
 async def is_Boted_user(user_id: int) -> bool:
     user = await botsdb.find_one({"user_id": user_id})
@@ -10,14 +10,14 @@ async def is_Boted_user(user_id: int) -> bool:
         return True
 
 
-async def add_gban_user(user_id: int):
+async def add_bots_user(user_id: int):
     is_Boted = await is_Boted_user(user_id)
     if is_Boted:
         return
     return await botsdb.insert_one({"user_id": user_id})
 
 
-async def remove_gban_user(user_id: int):
+async def remove_bots_user(user_id: int):
     is_Boted = await is_Boted_user(user_id)
     if not is_Boted:
         return
