@@ -10,6 +10,7 @@ from KawaiiXRobot.utils.db_botlist import (
     add_bots_user, remove_bots_user
 )
 
+from KawaiiXRobot.utils.db_botlist import botssdb
 from KawaiiXRobot.utils import db_botlist as x
 
 OWO = DEVS
@@ -62,3 +63,18 @@ async def revive(_, message):
                      await x.remove_bots_user(user.id)
                      await message.reply(f"Cringe User: {message.from_user.id}\n target user: {user.id}\n **Bot Removed**")
              
+@bot.on_message(filters.command("botlist", COMMANDS))
+async def list(client, message):
+   total_num = len([i async for i in botsdb.find({"user_id": {"$gt": 0}})])
+   total_id = ([i['user_id'] async for i in botsdb.find({"user_id": {"$gt": 0}})])
+   reply = f"`{total_num}` **Under Cringe Bots\n**"
+   for x in total_id:
+       user = await bot.get_users(int(x))
+       mention = "[" + user.first_name + "](tg://user?id=" + str(user.id) + ")" or user.first_name
+       reply += f"• {mention}\n"     
+   try: 
+      await message.reply_video("https://telegra.ph/file/65239f3043ca5161617df.mp4", caption=reply)      
+   except Exception as e:
+       print(e)
+   if len(reply.split("\n")) < 2:
+       return await message.reply_text("No Bots Added.")
