@@ -1,6 +1,5 @@
 from KawaiiXRobot import mdb
 from typing import Dict, List, Union
-from KawaiiXRobot import mdb
 
 inspectorersdb = mdb.inspectorers
 
