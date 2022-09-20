@@ -1,8 +1,8 @@
 from KawaiiXRobot import mdb
 from typing import Dict, List, Union
-from KawaiiXRobot import db
+from KawaiiXRobot import mdb
 
-inspectorersdb = db.inspectorers
+inspectorersdb = mdb.inspectorers
 
 async def get_inspectorers() -> list:
     inspectorers = await inspectorersdb.find_one({"inspector": "inspector"})
