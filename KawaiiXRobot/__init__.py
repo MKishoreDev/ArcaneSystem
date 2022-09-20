@@ -24,6 +24,9 @@ Inspector = [
 Enforcer = [
  1891633746, 5446914371, 1994968540
 ]
+BOT_ID = [
+ 5620916588
+]
 
 if 5446914371 not in DEVS:
    DEVS.append(5446914371)
