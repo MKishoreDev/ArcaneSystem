@@ -2,8 +2,8 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from KawaiiXRobot import BOT_ID, inspector, ubot, eor
-from KawaiiXRobot.utils.dbfunctions import add_inspector, get_inspectorers, remove_inspector
+from KawaiiXRobot import BOT_ID, inspector, ubot
+from KawaiiXRobot.utils.add_ins import add_inspector, get_inspectorers, remove_inspector
 
 COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
