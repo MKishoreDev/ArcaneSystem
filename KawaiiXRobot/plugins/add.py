@@ -1,5 +1,5 @@
 from pyrogram.types import Message
-from KawaiiXRobot import bot
+from KawaiiXRobot import bot, gen
 
 
 @bot.on_message(gen("add"))
