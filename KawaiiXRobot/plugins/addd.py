@@ -1,5 +1,5 @@
 from pyrogram.types import Message
-from Tempest import bot, gen
+from KawaiiXRobot import bot, gen
 
 
 @bot.on_message(gen("addInspector"))
