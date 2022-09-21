@@ -23,7 +23,7 @@ async def addInspector_handler(_, m: Message):
 
 
 
-@bot.on_message(filters.command("inslist", COMMANDS, exclude = ["Inspector"]))
+@bot.on_message(filters.command("inslist", COMMANDS))
 async def getInspector_handler(_, m: Message):
     Inspector_list = [x for x in bot.getdv("Inspector").split()]
     Inspector_list = "No Inspectors added." if not Inspector_list else Inspector_list
