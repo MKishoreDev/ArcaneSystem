@@ -1,8 +1,9 @@
 from pyrogram.types import Message
-from KawaiiXRobot import bot, gen
+from KawaiiXRobot import bot
+from pyrogram import filters
 
 
-@bot.on_message(gen("add"))
+@bot.on_message(filters.command("add"))
 async def addInspector_handler(_, m: Message):
     reply = m.reply_to_message
 
@@ -21,7 +22,7 @@ async def addInspector_handler(_, m: Message):
 
 
 
-@bot.on_message(gen("inslist", exclude = ["Inspector"]))
+@bot.on_message(filters.command("inslist", exclude = ["Inspector"]))
 async def getInspector_handler(_, m: Message):
     Inspector_list = [x for x in bot.getdv("Inspector").split()]
     Inspector_list = "No Inspectors added." if not Inspector_list else Inspector_list
@@ -30,7 +31,7 @@ async def getInspector_handler(_, m: Message):
 
 
 
-@bot.on_message(gen("delIns"))
+@bot.on_message(filters.command("delIns"))
 async def delInspector_handler(_, m: Message):
     reply = m.reply_to_message
     user_id = str(reply.from_user.id)
