@@ -20,7 +20,6 @@ COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
 india_Date_Time = datetime.datetime.now(tz=pytz.timezone("Asia/Calcutta"))
 Current_Date_Time = india_Date_Time.strftime("%Y-%m-%dT%H:%M")
-is_Inspector = await is_Inspector_user(user_id)
 
 @bot.on_message(filters.command("scan", COMMANDS))
 async def scanning(_, message):
