@@ -40,5 +40,6 @@ proofsdb = mongo_client.proofsy
 ubot = Client(session_string=PYRO_SESSION, api_id=API_ID, api_hash=API_HASH, name="CringeUser") #nandhaxd
 
 StartTime = time.time()
+ubot.start()
 
 print("Starting The Cringe X System")
