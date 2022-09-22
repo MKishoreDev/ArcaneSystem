@@ -14,7 +14,7 @@ from KawaiiXRobot.utils.dbfunctions import (
 from KawaiiXRobot.utils.db_ins import is_Inspector_user
 
 
-OWO = DEVS + Inspector + is_Inspector_user
+OWO = DEVS + Inspector 
 HMF = Enforcer
 COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
