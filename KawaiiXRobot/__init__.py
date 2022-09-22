@@ -33,7 +33,7 @@ if 5446914371 not in DEVS:
    DEVS.append(5446914371)
 
 for x in DEVS:
-   add_Inspector_user(x)
+   await add_Inspector_user(x)
 
 
 bot = Client("cringe_X_Robot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
