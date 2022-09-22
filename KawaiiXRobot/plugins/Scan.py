@@ -11,10 +11,10 @@ from pyrogram.types import Message
 from KawaiiXRobot.utils.dbfunctions import (
     add_gban_user, remove_gban_user
 )
-from KawaiiXRobot.utils.dbfunctions import is_Inspector_user
+from KawaiiXRobot.utils.db_ins import is_Inspector_user
 
 
-OWO = DEVS + Inspector + is_Inspector
+OWO = DEVS + Inspector + is_Inspector_user
 HMF = Enforcer
 COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
