@@ -13,13 +13,14 @@ from KawaiiXRobot.utils.dbfunctions import (
 )
 from KawaiiXRobot.utils.dbfunctions import is_Inspector_user
 
-is_Inspector = await is_Inspector_user(user_id)
+
 OWO = DEVS + Inspector + is_Inspector
 HMF = Enforcer
 COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
 india_Date_Time = datetime.datetime.now(tz=pytz.timezone("Asia/Calcutta"))
 Current_Date_Time = india_Date_Time.strftime("%Y-%m-%dT%H:%M")
+is_Inspector = await is_Inspector_user(user_id)
 
 @bot.on_message(filters.command("scan", COMMANDS))
 async def scanning(_, message):
