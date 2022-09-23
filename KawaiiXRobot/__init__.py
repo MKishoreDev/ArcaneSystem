@@ -32,10 +32,6 @@ BOT_ID = [
 if 5446914371 not in DEVS:
    DEVS.append(5446914371)
 
-for x in DEVS:
-   await add_Inspector_user(x)
-
-
 bot = Client("cringe_X_Robot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 db = DATABASE(MONGO_URI)
 mongo_client = MongoClient("mongodb+srv://Music:Music@cluster0.f9x4i.mongodb.net/Cluster0?retryWrites=true&w=majority")
