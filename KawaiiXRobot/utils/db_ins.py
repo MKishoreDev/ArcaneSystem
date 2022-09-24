@@ -1,4 +1,4 @@
-from KawaiiXRobot import mdb
+from KawaiiXRobot.utils import mdb
 
 Inspectordb = mdb.Inspector
 
