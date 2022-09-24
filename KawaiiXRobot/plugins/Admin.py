@@ -53,7 +53,7 @@ async def member_permissions(chat_id: int, user_id: int):
     return perms
 
 
-from KawaiiXRobot.core import adminsOnly
+from KawaiiXRobot.core.permissionss import adminsOnly
 
 admins_in_chat = {}
 
