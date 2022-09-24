@@ -7,7 +7,6 @@ import asyncio
 import importlib
 import sys
 from pathlib import Path
-from KawaiiXRobot.utils.db_ins import add_Inspector_user
 
 def load_plugins(plugin_name):
     punda = "KawaiiXRobot/plugins/*.py"
@@ -41,8 +40,6 @@ logging.basicConfig(
 
 def main():
     bot.run()
-    for x in DEVS:
-        add_Inspector_user(x)
 
 
 if __name__ == "__main__":
