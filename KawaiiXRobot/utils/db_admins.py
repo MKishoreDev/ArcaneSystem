@@ -4,7 +4,7 @@ from string import ascii_lowercase
 
 from typing import Dict, List, Union
 
-from wbb import mdb
+from KawaiiXRobot import mdb
 
 notesdb = mdb.notes
 filtersdb = mdb.filters
