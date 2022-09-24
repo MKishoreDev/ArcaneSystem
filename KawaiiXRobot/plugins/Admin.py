@@ -11,6 +11,7 @@ from pyrogram.types import (
     Message,
 )
 
+from KawaiiXRobot.core.permissionss import adminsOnly
 from KawaiiXRobot import Inspector
 from KawaiiXRobot import bot as app
 from KawaiiXRobot.utils.errors import capture_err
@@ -52,8 +53,6 @@ async def member_permissions(chat_id: int, user_id: int):
         perms.append("can_manage_voice_chats")
     return perms
 
-
-from KawaiiXRobot.core.permissionss import adminsOnly
 
 admins_in_chat = {}
 
