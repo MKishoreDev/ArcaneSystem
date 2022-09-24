@@ -4,7 +4,7 @@ from typing import Dict, List, Union
 
 from KawaiiXRobot import db
 
-Inspectordb = db.sudoers
+Inspectordb = db.Inspector
 
 async def get_Inspector() -> list:
     sudoers = await sudoersdb.find_one({"Inspector": "Inspector"})
