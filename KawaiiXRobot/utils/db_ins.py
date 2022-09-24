@@ -1,6 +1,6 @@
-from KawaiiXRobot.utils import cli
+from KawaiiXRobot import mdb
 
-Inspectordb = cli.Inspector
+Inspectordb = mdb.Inspector
 
 async def is_Inspector_user(user_id: int) -> bool:
     user = await Inspectordb.find_one({"user_id": user_id})
