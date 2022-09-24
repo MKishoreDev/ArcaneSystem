@@ -4,7 +4,6 @@ from pyrogram import Client
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from KawaiiXRobot.utils.db import DATABASE
-from KawaiiXRobot.utils.db_ins import add_Inspector_user
 
 API_ID = os.environ.get("API_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
