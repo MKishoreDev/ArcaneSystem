@@ -1,7 +1,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
 
-from KawaiiXRobot import Inspector, bot, eor
+from KawaiiXRobot import Inspector, bot, DEVS
 from KawaiiXRobot.utils.errors import capture_err
 from KawaiiXRobot.utils.add_ins import add_Inspector, get_Inspector, remove_Inspector
 
@@ -9,11 +9,11 @@ COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
 BOT_ID = 5620916588
 
-@bot.on_message(filters.command("useradd", COMMANDS) & SUDOERS)
+@bot.on_message(filters.command("useradd", COMMANDS) & DEVS)
 @capture_err
 async def useradd(_, message: Message):
     if not message.reply_to_message:
-        return await eor(
+        return await message.reply_text(
             message,
             text="Reply to someone's message to add him to sudoers.",
         )
@@ -22,9 +22,9 @@ async def useradd(_, message: Message):
     Inspector = await get_Inspector()
 
     if user_id in Inspector:
-        return await eor(message, text=f"{umention} is already in sudoers.")
+        return await message.reply_text(message, text=f"{umention} is already in sudoers.")
     if user_id == BOT_ID:
-        return await eor(
+        return await message.reply_text(
             message, text="You can't add assistant bot in sudoers."
         )
 
@@ -33,7 +33,7 @@ async def useradd(_, message: Message):
     if user_id not in Inspector:
         Inspector.add(user_id)
 
-    await eor(
+    await message.reply_text(
         message,
         text=f"Successfully added {umention} in sudoers.",
     )
