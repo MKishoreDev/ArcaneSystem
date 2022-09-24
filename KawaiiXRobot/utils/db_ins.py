@@ -1,4 +1,4 @@
-from KawaiiXRobot.utils import mdb
+from KawaiiXRobot import mdb
 
 Inspectordb = mdb.Inspector
 
@@ -32,3 +32,4 @@ async def get_Inspector_id() -> int:
 
 async def get_Inspector_data() -> int:
     return ([i['user_id'] async for i in Inspectordb.find({"user_id": {"$gt": 0}})])
+
