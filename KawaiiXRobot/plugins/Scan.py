@@ -11,7 +11,6 @@ from pyrogram.types import Message
 from KawaiiXRobot.utils.dbfunctions import (
     add_gban_user, remove_gban_user
 )
-from KawaiiXRobot.utils.db_ins import is_Inspector_user
 
 
 OWO = DEVS + Inspector 
