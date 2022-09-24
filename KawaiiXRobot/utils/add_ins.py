@@ -2,9 +2,9 @@ import codecs
 import pickle
 from typing import Dict, List, Union
 
-from KawaiiXRobot import db
+from KawaiiXRobot import mdb
 
-Inspectordb = db.Inspector
+Inspectordb = mdb.Inspector
 
 async def get_Inspector() -> list:
     sudoers = await sudoersdb.find_one({"Inspector": "Inspector"})
