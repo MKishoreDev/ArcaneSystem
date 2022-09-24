@@ -13,7 +13,7 @@ from pyrogram.types import (
 
 from KawaiiXRobot import Inspector
 from KawaiiXRobot import bot as app
-from KawaiiXRobot.core.decorators.errors import capture_err
+from KawaiiXRobot.utils.errors import capture_err
 from KawaiiXRobot.utils.db_admins import (
     add_warn,
     get_warn,
@@ -25,6 +25,74 @@ from KawaiiXRobot.utils.db_admins import (
 COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
 BOT_ID = 5620916588
+
+async def member_permissions(chat_id: int, user_id: int):
+    perms = []
+    try:
+        member = await app.get_chat_member(chat_id, user_id)
+    except Exception:
+        return []
+    if member.can_post_messages:
+        perms.append("can_post_messages")
+    if member.can_edit_messages:
+        perms.append("can_edit_messages")
+    if member.can_delete_messages:
+        perms.append("can_delete_messages")
+    if member.can_restrict_members:
+        perms.append("can_restrict_members")
+    if member.can_promote_members:
+        perms.append("can_promote_members")
+    if member.can_change_info:
+        perms.append("can_change_info")
+    if member.can_invite_users:
+        perms.append("can_invite_users")
+    if member.can_pin_messages:
+        perms.append("can_pin_messages")
+    if member.can_manage_voice_chats:
+        perms.append("can_manage_voice_chats")
+    return perms
+
+
+from KawaiiXRobot.utils import adminsOnly
+
+admins_in_chat = {}
+
+
+async def list_admins(chat_id: int):
+    global admins_in_chat
+    if chat_id in admins_in_chat:
+        interval = time() - admins_in_chat[chat_id]["last_updated_at"]
+        if interval < 3600:
+            return admins_in_chat[chat_id]["data"]
+
+    admins_in_chat[chat_id] = {
+        "last_updated_at": time(),
+        "data": [
+            member.user.id
+            async for member in app.iter_chat_members(
+                chat_id, filter="administrators"
+            )
+        ],
+    }
+    return admins_in_chat[chat_id]["data"]
+
+
+# Admin cache reload
+
+
+@app.on_chat_member_updated()
+async def admin_cache_func(_, cmu: ChatMemberUpdated):
+    if cmu.old_chat_member and cmu.old_chat_member.promoted_by:
+        admins_in_chat[cmu.chat.id] = {
+            "last_updated_at": time(),
+            "data": [
+                member.user.id
+                async for member in app.iter_chat_members(
+                    cmu.chat.id, filter="administrators"
+                )
+            ],
+        }
+        log.info(f"Updated admin cache for {cmu.chat.id} [{cmu.chat.title}]")
 
 
 @app.on_message(filters.command("warn", "dwarn", COMMANDS) & ~filters.edited & ~filters.private
