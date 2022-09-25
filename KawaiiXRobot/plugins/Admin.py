@@ -11,7 +11,7 @@ from pyrogram.types import (
     Message,
 )
 
-from KawaiiXRobot.core.permissionss.adminsOnly
+from KawaiiXRobot.core.permissionss.adminsOnly import adminsOnly 
 from KawaiiXRobot import Inspector
 from KawaiiXRobot import bot as app
 from KawaiiXRobot.utils.errors import capture_err
