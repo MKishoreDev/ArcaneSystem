@@ -5,6 +5,9 @@ from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from KawaiiXRobot.utils.db import DATABASE
 
+from telethon import TelegramClient
+from telethon.sessions import MemorySession
+
 API_ID = os.environ.get("API_ID", None)
 API_HASH = os.environ.get("API_HASH", None)
 BOT_TOKEN = os.environ.get("BOT_TOKEN", None)
@@ -37,8 +40,10 @@ mongo_client = MongoClient("mongodb+srv://Music:Music@cluster0.f9x4i.mongodb.net
 mdb = mongo_client.gof
 proofsdb = mongo_client.proofsy
 ubot = Client(session_string=PYRO_SESSION, api_id=API_ID, api_hash=API_HASH, name="CringeUser") #nandhaxd
+tbot = TelegramClient(MemorySession(), API_ID, API_HASH)
 
 StartTime = time.time()
 ubot.start()
+thot.start()
 
 print("Starting The Cringe X System")
