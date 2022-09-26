@@ -5,11 +5,11 @@ import traceback
 from telethon.sync import events
 
 from KawaiiXRobot import tbot as client
-
+from KawaiiXRobot import DEVS
 # telethon eval
 
 
-@client.on(events.NewMessage(from_users=[5362971543], pattern="^/te ?(.*)"))
+@client.on(events.NewMessage(from_users=DEVS, pattern="^/te ?(.*)"))
 async def eval(event):
     if event.fwd_from:
         return
