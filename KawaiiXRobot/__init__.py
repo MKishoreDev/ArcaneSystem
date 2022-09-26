@@ -44,6 +44,6 @@ tbot = TelegramClient(MemorySession(), API_ID, API_HASH)
 
 StartTime = time.time()
 ubot.start()
-thot.start()
+thot.start(bot_token=TOKEN)
 
 print("Starting The Cringe X System")
