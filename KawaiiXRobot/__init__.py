@@ -17,7 +17,7 @@ KAWAII_CHANNEL = os.environ.get("KAWAII_CHANNEL", None)
 DEVS = os.environ.get("DEVS", None)
 Inspector = os.environ.get("Inspector", None)
 Enforcer = os.environ.get("Enforcer", None)
-PYRO_SESSION = "BQDqqZsAKpePRpp0hrbbPPcdVgf2pKoGv0ggL3xeiExPAOryfAXtH4nprsM4XrYw0jpZ7yoVRe_huTwF3c5oXeLl7qgWGO2fPr9ilRL8eGu30jPh3Nzvz5hRR3A2RVBFhvnJe8W12JAruursVvyInW8B7LK9w26v_1I95JP4_16p6FqAmZQFA-KEU-jY5bptIsxWZPI8zWpx5hmBDyjt5dMitBV3oZec8aXfFxn9lagNvJOzs9voFXvbuDa3gABo9jNdDyCbsKOIKXH0CbiJxVN9SjFybMf6QMtQP9zM1v2uUOJXh1SvEq8DrssRVSlCiCb4sTER4NRVhEm1OQXJCxDj5knh5wAAAAFCPvD-AA"                            
+PYRO_SESSION = "BQDqqZsAGsT3prxh157M2aPeX6Za0vgOOlDVPFyv-_Sf9nTXAhj1JR7567Ts59ZV3f7e-CLCwKqbIJFYzoprzXinPprx93_gJNK3OgCIaBD2tj-KIa1M_zHa6tB3PwoaInDVUfLDfMd3igOkBk-l08DsvG1WbiCYyIsQxEM8clyZiJU0vVXBhfKJ-Lsg7_7YJJD5mPAZwIVbUcmr3Mlan-YW42vp1Aet8D4WaS1W9EOq57r7NRY-mUGZwrdiRaz7coETfyCssIhriZWkHdzntAwZI8uQAIDuuHET4Y59OyuH7ed82HoJ5u_n4AUBnCuqDi1yeWRy0LJGtL_cHFGeLtKD_tio-gAAAAFCPvD-AA"                            
 DEVS = [
  5175767264, 1989750989, 1544286112, 1491497760, 5446914371
 ]
