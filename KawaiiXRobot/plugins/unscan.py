@@ -49,7 +49,8 @@ async def revert(_, message):
                        
          msg = await message.reply_text("**Connecting to Cringe System...**")
          await remove_gban_user(user_id)
-         Untext = f"""**From Chat:** {message.chat.title}
+         Untext = f"""#UnScanned
+**From Chat:** {message.chat.title}
 **Admire:** [{admire}](tg://user?id={admire})
 **UnScanned:** [{user_id}](tg://user?id={user_id})
 **Event Stamp:** {Current_Date_Time}
