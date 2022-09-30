@@ -12,6 +12,7 @@ from KawaiiXRobot.utils.dbfunctions import (
     add_gban_user,
     remove_gban_user,
 )
+from KawaiiXRobot.utils import dbfunctions as x
 
 COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
@@ -25,13 +26,9 @@ async def revert(_, message):
          global user_id
          if message.from_user.id not in OWO:
               return await message.reply_text("Sorry bitch your not my own user") 
-         if len(message.command) <2:
-                  await message.reply("*Any reason to Unscan ?")
-                  return 
          elif message.reply_to_message:
                 user_id = message.reply_to_message.from_user.id
                 admire = message.from_user.id
-                reason = message.text.replace("/revert", "")
 
          if int(user_id) in DEVS:
              await message.reply_text(
@@ -58,11 +55,10 @@ async def revert(_, message):
 **From Chat:** {message.chat.title}
 **Admire:** [{admire}](tg://user?id={admire})
 **UnScanned:** [{user_id}](tg://user?id={user_id})
-**Reason**: {reason}
 **Event Stamp:** {Current_Date_Time}
 """
 
-         await ubot.send_message(-1001781501832, f"/ugban {user_id} {reason}")
+         await ubot.send_message(-1001781501832, f"/ugban {user_id}")
          await bot.send_message(-1001723857695, text)
-         await msg.edit_text(f"Successfully Scanned [{user_id}](tg://user?id={user_id})")
+         await msg.edit_text(f"Successfully UnScanned [{user_id}](tg://user?id={user_id})")
 
