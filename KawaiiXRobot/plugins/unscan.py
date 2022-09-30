@@ -16,7 +16,7 @@ COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
 OWO = DEVS + Inspector
 
-@bot.on_message(filters.command(["revert", COMMANDS))
+@bot.on_message(filters.command("revert", COMMANDS))
 async def revive(_, message):
           
           if message.from_user.id in OWO and message.reply_to_message:
