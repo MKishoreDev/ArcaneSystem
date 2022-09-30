@@ -16,6 +16,9 @@ COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
 OWO = DEVS + Inspector
 
+india_Date_Time = datetime.datetime.now(tz=pytz.timezone("Asia/Calcutta"))
+Current_Date_Time = india_Date_Time.strftime("%Y-%m-%dT%H:%M")
+
 @bot.on_message(filters.command("revert", COMMANDS))
 async def revert(_, message):
          global user_id
