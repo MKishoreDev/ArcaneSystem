@@ -12,9 +12,11 @@ from KawaiiXRobot.utils.dbfunctions import (
 
 from KawaiiXRobot.utils import dbfunctions as x
 
+COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
+
 OWO = DEVS + Inspector
 
-@bot.on_message(filters.command("revert"))
+@bot.on_message(filters.command("revert", "unscan", COMMANDS))
 async def revive(_, message):
           
           if message.from_user.id in OWO and message.reply_to_message:
