@@ -268,7 +268,7 @@ async def basichelp(_, query: CallbackQuery):
 async def girlssafe(_, query: CallbackQuery):
     await query.edit_message_caption("""**Girls And Boys Safe Zone**
 
-• `Don't Abuse Anyone, If You Abuse AnyOne Then You Will Scan From AnyOne`
+• `Don't Abuse Anyone, If You Abuse AnyOne Then You Will Get Ban From AnyOne`
 
 • `Porn Girls And Gay Boys Are Not Allowed In Group`""",
        reply_markup=InlineKeyboardMarkup(
@@ -284,10 +284,9 @@ async def girlssafe(_, query: CallbackQuery):
              ]
          ))
         
-
 @bot.on_callback_query(filters.regex("Toxic_Rules"))
 async def toxic(_, query: CallbackQuery):
-    await query.edit_message_caption("""**Toxic Rules** 
+    await query.edit_message_caption("""**Toxic Rules**
 
 • `Use Less Toxic For Your Entertainment`
 
