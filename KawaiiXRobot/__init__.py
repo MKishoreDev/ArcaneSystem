@@ -17,7 +17,7 @@ KAWAII_CHANNEL = os.environ.get("KAWAII_CHANNEL", None)
 DEVS = os.environ.get("DEVS", None)
 Inspector = os.environ.get("Inspector", None)
 Enforcer = os.environ.get("Enforcer", None)                         
-PYRO_SESSION = environ.get("PYRO_SESSION", None)
+PYRO_SESSION = os.environ.get("PYRO_SESSION", None)
 DEVS = [
  5175767264, 1989750989, 1544286112, 1491497760, 5446914371
 ]
