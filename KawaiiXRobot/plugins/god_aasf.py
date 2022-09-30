@@ -18,7 +18,7 @@ async def add_enf(_, message):
 		except RPCError:
 			await message.reply_text("`User Not Found`")
 			return
-	add_enf(user_id)
+	await add_enf(user_id)
 	await message.reply_text("Successfully Added To Enforcer")
 
 @bot.on_message(filters.command("rmenf"))
@@ -37,13 +37,13 @@ async def rm_enf(_, message):
 			await message.reply_text("`User Not Found`")
 			return
 
-	rm_enf(user_id)
+	await rm_enf(user_id)
 	await message.reply_text("Successfully Removed User From Enf")
 
 @bot.on_message(filters.command("enflist"))
 async def enflist(_, message):
 	chat_id = message.chat.id
-	enf_list = enf_list()
+	enf_list = await enf_list()
 	for enf in enf_list:
 		user = await bot.get_users(enf.user_id)
 		mention = user.mention
