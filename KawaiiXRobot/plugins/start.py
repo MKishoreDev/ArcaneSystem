@@ -245,7 +245,7 @@ async def rules(_, query: CallbackQuery):
         
 @bot.on_callback_query(filters.regex("basic_scanner_rules"))
 async def basichelp(_, query: CallbackQuery):
-    await query.edit_message_caption("""*Main Sanner*
+    await query.edit_message_caption("""**Main Sanner**
 
 • `don't scan without reason to anyone`
 • `don't scan first check the reason carefully` 
@@ -266,7 +266,7 @@ async def basichelp(_, query: CallbackQuery):
         
 @bot.on_callback_query(filters.regex("Girls_Safe_Rule"))
 async def girlssafe(_, query: CallbackQuery):
-    await query.edit_message_caption("""*Girls And Boys Safe Zone*
+    await query.edit_message_caption("""**Girls And Boys Safe Zone**
 
 • `Don't Abuse Anyone, If You Abuse AnyOne Then You Will Scan From AnyOne`
 
@@ -287,7 +287,7 @@ async def girlssafe(_, query: CallbackQuery):
 
 @bot.on_callback_query(filters.regex("Toxic_Rules"))
 async def toxicrules(_, query: CallbackQuery):
-    await query.edit_message_caption("""*Toxic Rules* 
+    await query.edit_message_caption("""**Toxic Rules** 
 
 • `Use Less Toxic For Your Entertainment`
 
