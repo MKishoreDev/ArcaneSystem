@@ -11,7 +11,7 @@ async def is_enf(user_id: int) -> bool:
 
 
 async def add_enf(user_id: int):
-    is_enf_user = await is_enf_user(user_id)
+    is_enf_user = await is_enf(user_id)
     if is_enf_user:
         return
     return await enfdb.insert_one({"user_id": user_id})
