@@ -219,7 +219,7 @@ async def rules(_, query: CallbackQuery):
                 InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
-                InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes_help"),
+                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
                 InlineKeyboardButton("Bᴀᴄᴋ", callback_data="back_help"),
                 ],
              ]
@@ -240,14 +240,14 @@ async def basichelp(_, query: CallbackQuery):
                 InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
-                InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes_help"),
+                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
                 InlineKeyboardButton("Bᴀᴄᴋ", callback_data="back_help"),
                 ],
              ]
          ))
         
 @bot.on_callback_query(filters.regex("Girls_Safe_Rule"))
-async def basichelp(_, query: CallbackQuery):
+async def girlssafe(_, query: CallbackQuery):
     await query.edit_message_caption("""*Girls And Boys Safe Zone*
 
 • `Don't Abuse Anyone, If You Abuse AnyOne Then You Will Scan From AnyOne`
@@ -260,10 +260,32 @@ async def basichelp(_, query: CallbackQuery):
                 InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
-                InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes_help"),
+                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
                 InlineKeyboardButton("Bᴀᴄᴋ", callback_data="back_help"),
                 ],
              ]
          ))
         
+
+@bot.on_callback_query(filters.regex("Toxic_Rules"))
+async def toxicrules(_, query: CallbackQuery):
+    await query.edit_message_caption("""*Toxic Rules* 
+
+• `Use Less Toxic For Your Entertainment`
+
+• `Don't Use Unwanted`""",
+       reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                InlineKeyboardButton("Bᴀsɪᴄ Rᴜʟᴇs", callback_data="basic_scanner_rules"),
+                InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
+            ],
+            [
+                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
+                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="back_help"),
+                ],
+             ]
+         ))
+        
+
 
