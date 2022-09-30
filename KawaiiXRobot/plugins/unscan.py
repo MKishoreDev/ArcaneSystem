@@ -57,23 +57,3 @@ async def revert(_, message):
          await ubot.send_message(-1001781501832, f"/ugban {user_id}")
          await bot.send_message(-1001723857695, Untext)
          await msg.edit_text(f"Successfully UnScanned [{user_id}](tg://user?id={user_id})")
-
-# Testing 
-@bot.on_message(filters.command("boom"))
-async def revive(_, message):
-
-          if message.from_user.id in OWO and message.reply_to_message:
-                       await x.remove_gban_user(message.reply_to_message.from_user.id)
-                       await message.reply(f"Kawai User: {message.from_user.id}\n target user: {message.reply_to_message.from_user.id}\n **UNBANNED**")  
-
-          else:
-                if message.from_user.id not in OWO:
-                      return await message("Only OWO user can use")
-                elif len(message.command) <2:
-                      return await message.reply("give a user ID or name")
-                elif not message.reply_to_message:
-                     user_id_text = message.text.split(None, 1)[1]
-                     user = await bot.get_users(user_id_text)
-                     await x.remove_gban_user(user.id)
-                     await message.reply(f"Kawai User: {message.from_user.id}\n target user: {user.id}\n **UNBANNED**")
-
