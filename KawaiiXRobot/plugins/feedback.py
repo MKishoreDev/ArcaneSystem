@@ -1,6 +1,6 @@
 # © NandhaXD
 
-from KawaiiXRobot import bot, DEVS as dev_user, SUPPORT_CHAT
+from KawaiiXRobot import bot, DEVS as dev_user
 from pyrogram import filters, enums 
 from pyrogram.enums import ChatType
 import random
