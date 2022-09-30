@@ -219,7 +219,7 @@ async def rules(client, message):
                 InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
-                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
+                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Boom"),
                 InlineKeyboardButton("Gʀᴏᴜᴘ Rᴜʟᴇs", callback_data="group_rules"),
             ],
             [
@@ -240,7 +240,7 @@ async def rules(_, query: CallbackQuery):
                 InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
-                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
+                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Boom"),
                 InlineKeyboardButton("Gʀᴏᴜᴘ Rᴜʟᴇs", callback_data="group_rules"),
             ],
             [
@@ -267,7 +267,7 @@ async def basichelp(_, query: CallbackQuery):
                 InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
-                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
+                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Boom"),
                 InlineKeyboardButton("Gʀᴏᴜᴘ Rᴜʟᴇs", callback_data="group_rules"),
             ],
             [
@@ -290,7 +290,7 @@ async def girlssafe(_, query: CallbackQuery):
                 InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
-                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
+                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Boom"),
                 InlineKeyboardButton("Gʀᴏᴜᴘ Rᴜʟᴇs", callback_data="group_rules"),
             ],
             [
@@ -324,7 +324,7 @@ async def basicgrouprules(_, query: CallbackQuery):
                 InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
-                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
+                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Boom"),
                 InlineKeyboardButton("Gʀᴏᴜᴘ Rᴜʟᴇs", callback_data="group_rules"),
             ],
             [
@@ -334,7 +334,7 @@ async def basicgrouprules(_, query: CallbackQuery):
          ))
         
 
-@bot.on_callback_query(filters.regex("Toxic_Rules"))
+@bot.on_callback_query(filters.regex("Toxic_Boom"))
 async def basictoxirules(_, query: CallbackQuery):
     await query.edit_message_caption("""**Group Rules**
 
