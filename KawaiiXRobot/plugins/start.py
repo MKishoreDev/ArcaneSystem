@@ -209,6 +209,24 @@ Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
 async def delete(_, query):
     await query.message.delete()
 
+@bot.on_message(filters.command("rules", COMMANDS))
+async def rules(client, message):
+    RULES_TEXT = """Aʟʟ Rᴜʟᴇs.""",
+    RULES_IMG = "https://telegra.ph/file/80f59b1adfd42a368552a.jpg"
+    RULES_BUTTON = [
+            [
+                InlineKeyboardButton("Bᴀsɪᴄ Rᴜʟᴇs", callback_data="basic_scanner_rules"),
+                InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
+            ],
+            [
+                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
+                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="back_help"),
+           ],
+        ]
+
+    await message.reply_photo(RULES_IMG, caption=RULES_TEXT,
+                              reply_markup=InlineKeyboardMarkup(RULES_BUTTON))
+
 @bot.on_callback_query(filters.regex("Rules"))
 async def rules(_, query: CallbackQuery):
     await query.edit_message_caption("""Aʟʟ Rᴜʟᴇs""",
