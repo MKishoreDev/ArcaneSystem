@@ -216,7 +216,7 @@ async def rules(_, query: CallbackQuery):
             [
                 [
                 InlineKeyboardButton("Bᴀsɪᴄ Rᴜʟᴇs", callback_data="basic_scanner_rules"),
-                InlineKeyboardButton("Exᴛʀᴀ", callback_data="extra"),
+                InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
                 InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes_help"),
@@ -227,17 +227,17 @@ async def rules(_, query: CallbackQuery):
         
 @bot.on_callback_query(filters.regex("basic_scanner_rules"))
 async def basichelp(_, query: CallbackQuery):
-    await query.edit_message_caption("""Main Sanner 
+    await query.edit_message_caption("""*Main Sanner*
 
-• don't scan without reason to anyone 
-• don't scan first check the reason carefully 
-• don't scan private chat because were don't trust private things 
-• don't give reason with clear pornography proof Hide and add reason""",
+• `don't scan without reason to anyone`
+• `don't scan first check the reason carefully` 
+• `don't scan private chat because were don't trust private things`
+• `don't give reason with clear pornography proof Hide and add reason`""",
        reply_markup=InlineKeyboardMarkup(
             [
                 [
-                InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan_help"),
-                InlineKeyboardButton("Exᴛʀᴀ", callback_data="extra"),
+                InlineKeyboardButton("Bᴀsɪᴄ Rᴜʟᴇs", callback_data="basic_scanner_rules"),
+                InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
                 InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes_help"),
@@ -246,3 +246,24 @@ async def basichelp(_, query: CallbackQuery):
              ]
          ))
         
+@bot.on_callback_query(filters.regex("Girls_Safe_Rule"))
+async def basichelp(_, query: CallbackQuery):
+    await query.edit_message_caption("""*Girls And Boys Safe Zone*
+
+• `Don't Abuse Anyone, If You Abuse AnyOne Then You Will Scan From AnyOne`
+
+• `Porn Girls And Gay Boys Are Not Allowed In Group`""",
+       reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                InlineKeyboardButton("Bᴀsɪᴄ Rᴜʟᴇs", callback_data="basic_scanner_rules"),
+                InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
+            ],
+            [
+                InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes_help"),
+                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="back_help"),
+                ],
+             ]
+         ))
+        
+
