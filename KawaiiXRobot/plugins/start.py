@@ -336,21 +336,11 @@ async def basicgrouprules(_, query: CallbackQuery):
 
 @bot.on_callback_query(filters.regex("Toxic_Boom"))
 async def basictoxirules(_, query: CallbackQuery):
-    await query.edit_message_caption("""**Group Rules**
+    await query.edit_message_caption("""**Toxic Rules** 
 
-• `Do not use profanity`
+• `Use Less Toxic For Your Entertainment`
 
-• `Do not advertise without admins permission.`
-
-• `Do not flood the group (No spamming).`
-
-• `Gore, Porn, Hentai or any sort of NSFW is strictly prohibited. Do not put up explicit content.`
-
-• `Do not "disturb" anyone in personal messages.`
-
-• `Do Not use bad Words On VC.`
-
-• `Don't Fight On A personal Reasons. also on a vc you can't.`""",
+• `Don't Use Unwanted`""",
        reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -358,7 +348,7 @@ async def basictoxirules(_, query: CallbackQuery):
                 InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
-                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
+                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Boom"),
                 InlineKeyboardButton("Gʀᴏᴜᴘ Rᴜʟᴇs", callback_data="group_rules"),
             ],
             [
