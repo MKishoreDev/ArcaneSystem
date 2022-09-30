@@ -220,7 +220,7 @@ async def rules(client, message):
             ],
             [
                 InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
-                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="back_help"),
+                InlineKeyboardButton("Cʟᴏsᴇ", callback_data="delete"),
            ],
         ]
 
@@ -238,7 +238,7 @@ async def rules(_, query: CallbackQuery):
             ],
             [
                 InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
-                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="back_help"),
+                InlineKeyboardButton("Cʟᴏsᴇ", callback_data="delete"),
                 ],
              ]
          ))
@@ -259,7 +259,7 @@ async def basichelp(_, query: CallbackQuery):
             ],
             [
                 InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
-                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="back_help"),
+                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="Rules"),
                 ],
              ]
          ))
@@ -279,7 +279,7 @@ async def girlssafe(_, query: CallbackQuery):
             ],
             [
                 InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
-                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="back_help"),
+                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="Rules"),
                 ],
              ]
          ))
@@ -300,10 +300,8 @@ async def toxicrules(_, query: CallbackQuery):
             ],
             [
                 InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
-                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="back_help"),
+                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="Rules"),
                 ],
              ]
          ))
         
-
-
