@@ -13,8 +13,6 @@ from KawaiiXRobot.utils.dbfunctions import (
     remove_gban_user,
 )
 
-from KawaiiXRobot.utils import dbfunctions as x
-
 COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
 OWO = DEVS + Inspector
@@ -54,7 +52,7 @@ async def revert(_, message):
              return
                        
          msg = await message.reply_text("**Connecting to Cringe System...**")
-         await x.remove_gban_user(user_id)
+         await remove_gban_user(user_id)
          text = f"""#UnScanned
 
 **From Chat:** {message.chat.title}
