@@ -211,7 +211,7 @@ async def delete(_, query):
 
 @bot.on_message(filters.command("rules", COMMANDS))
 async def rules(client, message):
-    RULES_TEXT = """Aʟʟ Rᴜʟᴇs.""",
+    RULES_TEXT = """Oᴜʀ Sᴄᴀɴɴᴇʀ Rᴜʟᴇs Fᴏʀ Aʟʟ Oᴜʀ Tᴇʟᴇɢʀᴀᴍ Mᴇᴍʙᴇʀs""",
     RULES_IMG = "https://telegra.ph/file/80f59b1adfd42a368552a.jpg"
     RULES_BUTTON = [
             [
@@ -229,7 +229,7 @@ async def rules(client, message):
 
 @bot.on_callback_query(filters.regex("Rules"))
 async def rules(_, query: CallbackQuery):
-    await query.edit_message_caption("""Aʟʟ Rᴜʟᴇs""",
+    await query.edit_message_caption("""Oᴜʀ Sᴄᴀɴɴᴇʀ Rᴜʟᴇs Fᴏʀ Aʟʟ Oᴜʀ Tᴇʟᴇɢʀᴀᴍ Mᴇᴍʙᴇʀs""",
        reply_markup=InlineKeyboardMarkup(
             [
                 [
@@ -286,7 +286,7 @@ async def girlssafe(_, query: CallbackQuery):
         
 
 @bot.on_callback_query(filters.regex("Toxic_Rules"))
-async def toxicrules(_, query: CallbackQuery):
+async def toxic(_, query: CallbackQuery):
     await query.edit_message_caption("""**Toxic Rules** 
 
 • `Use Less Toxic For Your Entertainment`
