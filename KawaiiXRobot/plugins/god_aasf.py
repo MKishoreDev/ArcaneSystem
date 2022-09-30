@@ -3,6 +3,9 @@ from KawaiiXRobot.utils.adddb import add_enf, rm_enf, enf_list
 from pyrogram import filters
 from pyrogram.errors import RPCError
 
+text = "Enforcers List:"
+
+
 @bot.on_message(filters.command("addenf"))
 async def add_enf(_, message):
 	chat_id = message.chat.id
@@ -47,6 +50,5 @@ async def enflist(_, message):
 	for enf in enf_list:
 		user = await bot.get_users(enf.user_id)
 		mention = user.mention
-                        text = "Enforcers List:"
 		text += "\n - {}".format(mention)
 	await message.reply_text(text)
