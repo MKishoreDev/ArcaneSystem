@@ -47,6 +47,6 @@ async def enflist(_, message):
 	for enf in enf_list:
 		user = await bot.get_users(enf.user_id)
 		mention = user.mention
-                text = "Enforcers List:"
+                        text = "Enforcers List:"
 		text += "\n - {}".format(mention)
 	await message.reply_text(text)
