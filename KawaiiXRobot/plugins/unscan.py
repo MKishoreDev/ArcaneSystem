@@ -55,7 +55,6 @@ async def revert(_, message):
 **UnScanned:** [{user_id}](tg://user?id={user_id})
 **Event Stamp:** {Current_Date_Time}
 """
-
          await ubot.send_message(-1001781501832, f"/ugban {user_id}")
          await bot.send_message(-1001723857695, Untext)
          await msg.edit_text(f"Successfully UnScanned [{user_id}](tg://user?id={user_id})")
