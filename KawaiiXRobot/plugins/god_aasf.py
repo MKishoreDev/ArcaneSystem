@@ -43,10 +43,10 @@ async def rm_enf(_, message):
 @bot.on_message(filters.command("enflist"))
 async def enflist(_, message):
 	chat_id = message.chat.id
-          text = "Enforcers List:"
 	enf_list = enf_list()
 	for enf in enf_list:
 		user = await bot.get_users(enf.user_id)
 		mention = user.mention
+                text = "Enforcers List:"
 		text += "\n - {}".format(mention)
 	await message.reply_text(text)
