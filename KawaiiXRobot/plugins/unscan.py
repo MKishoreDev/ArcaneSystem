@@ -3,10 +3,9 @@
 import time
 import pytz
 import datetime
-from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, Inspector, KAWAII_CHANNEL, Enforcer
+from KawaiiXRobot import bot, ubot, KAWAII_LOGS, DEVS, Inspector, KAWAII_CHANNEL, Enforcer
 from pyrogram import filters
 from pyrogram import Client
-import time
 from pyrogram.types import Message
 from KawaiiXRobot.utils.dbfunctions import (
     add_gban_user,
