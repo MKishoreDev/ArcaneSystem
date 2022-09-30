@@ -210,7 +210,7 @@ async def delete(_, query):
     await query.message.delete()
 
 @bot.on_callback_query(filters.regex("Rules"))
-async def scanhelp(_, query: CallbackQuery):
+async def rules(_, query: CallbackQuery):
     await query.edit_message_caption("""Aʟʟ Rᴜʟᴇs""",
        reply_markup=InlineKeyboardMarkup(
             [
@@ -226,7 +226,7 @@ async def scanhelp(_, query: CallbackQuery):
          ))
         
 @bot.on_callback_query(filters.regex("basic_scanner_rules"))
-async def scanhelp(_, query: CallbackQuery):
+async def basichelp(_, query: CallbackQuery):
     await query.edit_message_caption("""Main Sanner 
 
 • don't scan without reason to anyone 
