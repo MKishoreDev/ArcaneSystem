@@ -7,7 +7,7 @@ from KawaiiXRobot import mdb
 Inspectordb = mdb.Inspector
 
 async def get_Inspector() -> list:
-    sudoers = await sudoersdb.find_one({"Inspector": "Inspector"})
+    Inspector = await Inspectordb.find_one({"Inspector": "Inspector"})
     if not Inspector:
         return []
     return Inspector["Inspector"]
