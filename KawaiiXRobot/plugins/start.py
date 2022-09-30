@@ -215,7 +215,7 @@ async def rules(client, message):
     RULES_IMG = "https://telegra.ph/file/80f59b1adfd42a368552a.jpg"
     RULES_BUTTON = [
             [
-                InlineKeyboardButton("Bᴀsɪᴄ Rᴜʟᴇs", callback_data="basic_scanner_rules"),
+                InlineKeyboardButton("Iɴs Rᴜʟᴇs", callback_data="basic_scanner_rules"),
                 InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
@@ -236,7 +236,7 @@ async def rules(_, query: CallbackQuery):
        reply_markup=InlineKeyboardMarkup(
             [
                 [
-                InlineKeyboardButton("Bᴀsɪᴄ Rᴜʟᴇs", callback_data="basic_scanner_rules"),
+                InlineKeyboardButton("Iɴs Rᴜʟᴇs", callback_data="basic_scanner_rules"),
                 InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
@@ -251,19 +251,23 @@ async def rules(_, query: CallbackQuery):
         
 @bot.on_callback_query(filters.regex("basic_scanner_rules"))
 async def basichelp(_, query: CallbackQuery):
-    await query.edit_message_caption("""**Main Sanner**
+    await query.edit_message_caption("""**Inspector Rules**
 
 • `don't scan without reason to anyone`
+
+• `don't scan Without Proof, scan With Correct Proof`
+
+• `don't scan your personal issues`
 
 • `don't scan first check the reason carefully` 
 
 • `don't scan private chat because were don't trust private things`
 
-• `don't give reason with clear pornography proof Hide and add reason`""",
+• `don't give proof with clear pornography proof Hide and add reason`""",
        reply_markup=InlineKeyboardMarkup(
             [
                 [
-                InlineKeyboardButton("Bᴀsɪᴄ Rᴜʟᴇs", callback_data="basic_scanner_rules"),
+                InlineKeyboardButton("Iɴs Rᴜʟᴇs", callback_data="basic_scanner_rules"),
                 InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
@@ -286,7 +290,7 @@ async def girlssafe(_, query: CallbackQuery):
        reply_markup=InlineKeyboardMarkup(
             [
                 [
-                InlineKeyboardButton("Bᴀsɪᴄ Rᴜʟᴇs", callback_data="basic_scanner_rules"),
+                InlineKeyboardButton("Iɴs Rᴜʟᴇs", callback_data="basic_scanner_rules"),
                 InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
@@ -320,7 +324,7 @@ async def basicgrouprules(_, query: CallbackQuery):
        reply_markup=InlineKeyboardMarkup(
             [
                 [
-                InlineKeyboardButton("Bᴀsɪᴄ Rᴜʟᴇs", callback_data="basic_scanner_rules"),
+                InlineKeyboardButton("Iɴs Rᴜʟᴇs", callback_data="basic_scanner_rules"),
                 InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
@@ -344,7 +348,7 @@ async def basictoxirules(_, query: CallbackQuery):
        reply_markup=InlineKeyboardMarkup(
             [
                 [
-                InlineKeyboardButton("Bᴀsɪᴄ Rᴜʟᴇs", callback_data="basic_scanner_rules"),
+                InlineKeyboardButton("Iɴs Rᴜʟᴇs", callback_data="basic_scanner_rules"),
                 InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
             ],
             [
