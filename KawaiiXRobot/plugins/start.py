@@ -248,8 +248,11 @@ async def basichelp(_, query: CallbackQuery):
     await query.edit_message_caption("""**Main Sanner**
 
 • `don't scan without reason to anyone`
+
 • `don't scan first check the reason carefully` 
+
 • `don't scan private chat because were don't trust private things`
+
 • `don't give reason with clear pornography proof Hide and add reason`""",
        reply_markup=InlineKeyboardMarkup(
             [
@@ -291,6 +294,37 @@ async def newtox(_, query: CallbackQuery):
 • `Use Less Toxic For Your Entertainment`
 
 • `Don't Use Unwanted`""",
+       reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                InlineKeyboardButton("Bᴀsɪᴄ Rᴜʟᴇs", callback_data="basic_scanner_rules"),
+                InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
+            ],
+            [
+                InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Rules"),
+                InlineKeyboardButton("Bᴀᴄᴋ", callback_data="Rules"),
+                ],
+             ]
+         ))
+        
+
+@bot.on_callback_query(filters.regex("group_rules"))
+async def basicgrouprules(_, query: CallbackQuery):
+    await query.edit_message_caption("""**Group Rules**
+
+• `Do not use profanity`
+
+• `Do not advertise without admins permission.`
+
+• `Do not flood the group (No spamming).`
+
+• `Gore, Porn, Hentai or any sort of NSFW is strictly prohibited. Do not put up explicit content.`
+
+• `Do not "disturb" anyone in personal messages.`
+
+• `Do Not use bad Words On VC.`
+
+• `Don't Fight On A personal Reasons. also on a vc you can't.`""",
        reply_markup=InlineKeyboardMarkup(
             [
                 [
