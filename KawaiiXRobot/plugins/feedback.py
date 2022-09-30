@@ -6,7 +6,6 @@ from pyrogram.enums import ChatType
 import random
 from datetime import datetime
 from pyrogram.types import *
-from KawaiiXRobot import OWNER_ID
 
 scan_img = [ "https://telegra.ph/file/03ba8fea3c3ed2b98b68a.jpg", 
 "https://telegra.ph/file/be242e647504b5b253f79.jpg",
