@@ -285,7 +285,7 @@ async def girlssafe(_, query: CallbackQuery):
          ))
         
 @bot.on_callback_query(filters.regex("Toxic_Rules"))
-async def toxic(_, query: CallbackQuery):
+async def newtox(_, query: CallbackQuery):
     await query.edit_message_caption("""**Toxic Rules**
 
 • `Use Less Toxic For Your Entertainment`
