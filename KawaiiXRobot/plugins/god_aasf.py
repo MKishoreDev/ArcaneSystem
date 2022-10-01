@@ -8,6 +8,7 @@ text = "Enforcers List:"
 
 @bot.on_message(filters.command("addenf"))
 async def add_enf(_, message):
+        global user_id
 	chat_id = message.chat.id
 	if message.reply_to_message:
 		user_id = message.reply_to_message.from_user.id
@@ -21,12 +22,13 @@ async def add_enf(_, message):
 		except RPCError:
 			await message.reply_text("`User Not Found`")
 			return
-        global user_id
+
 	await add_enf(user_id)
 	await message.reply_photo("https://telegra.ph/file/c2bbc8ce37d490a182330.jpg", caption=f"Successfully Added {mention} To Enforcer")
 
 @bot.on_message(filters.command("rmenf"))
 async def rm_enf(_, message):
+        global user_id
 	chat_id = message.chat.id
 	if message.reply_to_message:
 		user_id = message.reply_to_message.from_user.id
@@ -41,7 +43,6 @@ async def rm_enf(_, message):
 			await message.reply_text("`User Not Found`")
 			return
 
-        global user_id
 	await rm_enf(user_id)
 	await message.reply_text("Successfully Removed User From Enf")
 
