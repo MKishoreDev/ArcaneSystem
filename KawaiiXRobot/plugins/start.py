@@ -5,7 +5,7 @@ import os
 from pyrogram import filters
 from pyrogram.types import Message, CallbackQuery
 from config import DEVS, Inspector, Enforcer 
-from KawaiiXRobot import bot
+from KawaiiXRobot import bot, db
 from pyrogram import Client
 from KawaiiXRobot.utils.sections import section
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
