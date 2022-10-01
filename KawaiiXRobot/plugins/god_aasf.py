@@ -9,8 +9,8 @@ text = "Enforcers List:"
 @bot.on_message(filters.command("addenf"))
 async def add_enf(_, message):
 	chat_id = message.chat.id
-        global user_id
 	if message.reply_to_message:
+                global user_id
 		user_id = message.reply_to_message.from_user.id
 		mention = message.reply_to_message.from_user.mention
 	else:
@@ -29,8 +29,8 @@ async def add_enf(_, message):
 @bot.on_message(filters.command("rmenf"))
 async def rm_enf(_, message):
 	chat_id = message.chat.id
-        global user_id
 	if message.reply_to_message:
+                global user_id
 		user_id = message.reply_to_message.from_user.id
 		mention = message.reply_to_message.from_user.mention
 	else:
