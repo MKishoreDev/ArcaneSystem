@@ -4,12 +4,13 @@ from pyrogram import filters
 from pyrogram.errors import RPCError
 
 text = "Enforcers List:"
-
+OWO = DEVS
 
 @bot.on_message(filters.command("addenf"))
 async def add_enf(_, message):
-        global user_id
-	chat_id = message.chat.id
+	 global user_id
+         if message.from_user.id not in OWO:
+              return await message.reply_text("Only Dev Can Add Ins") 
 	if message.reply_to_message:
 		user_id = message.reply_to_message.from_user.id
 		mention = message.reply_to_message.from_user.mention
@@ -28,8 +29,9 @@ async def add_enf(_, message):
 
 @bot.on_message(filters.command("rmenf"))
 async def rm_enf(_, message):
-        global user_id
-	chat_id = message.chat.id
+         global user_id
+         if message.from_user.id not in OWO:
+              return await message.reply_text("Only Dev Can Add Ins") 
 	if message.reply_to_message:
 		user_id = message.reply_to_message.from_user.id
 		mention = message.reply_to_message.from_user.mention
@@ -48,7 +50,9 @@ async def rm_enf(_, message):
 
 @bot.on_message(filters.command("enflist"))
 async def enflist(_, message):
-	chat_id = message.chat.id
+         global user_id
+         if message.from_user.id not in OWO:
+              return await message.reply_text("Only Dev Can Add Ins") 
 	enf_list = await enf_list()
 	for enf in enf_list:
 		user = await bot.get_users(enf.user_id)
