@@ -79,7 +79,20 @@ Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
                START_VID,
                 caption=Start_text,              
                 reply_markup=InlineKeyboardMarkup(buttons))
+   
+    else:
+        Start_Text = f"""
+`Hᴇʟʟᴏ! Tʜᴇʀᴇ I Aᴍ Cʀɪɴɢᴇ ° Sʏsᴛᴇᴍ Tʜᴇ Jᴜᴅɢᴇᴍᴇɴᴛ Eɴғᴏʀᴄɪɴɢ Sʏsᴛᴇᴍ `
 
+Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
+ ➛ Usᴇʀ: {m.from_user.first_name}
+ ➛ Iᴅ: {m.from_user.id}
+ ➛ Gʙᴀɴɴᴇᴅ: {is_gbanned}
+ ➛ Sᴛᴀᴛᴜs: {status}"""
+        await m.reply_video(
+               START_VID,
+                caption=Start_Text,              
+                reply_markup=InlineKeyboardMarkup(buttons))
 
 @bot.on_message(filters.command("help", COMMANDS))
 async def help(client, message):
