@@ -21,6 +21,7 @@ async def add_enf(_, message):
 		except RPCError:
 			await message.reply_text("`User Not Found`")
 			return
+        global user_id
 	await add_enf(user_id)
 	await message.reply_photo("https://telegra.ph/file/c2bbc8ce37d490a182330.jpg", caption=f"Successfully Added {mention} To Enforcer")
 
@@ -40,6 +41,7 @@ async def rm_enf(_, message):
 			await message.reply_text("`User Not Found`")
 			return
 
+        global user_id
 	await rm_enf(user_id)
 	await message.reply_text("Successfully Removed User From Enf")
 
