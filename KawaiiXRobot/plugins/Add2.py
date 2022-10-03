@@ -3,7 +3,9 @@ from pyrogram.types import Message
 
 from KawaiiXRobot import ENFORCERS, bot, DEVS
 
-@bot.on_message(filters.command("addenf", COMMANDS) & filters.user(DEVS))
+@bot.on_message(
+    filters.command("addenf", prefixes=['.', '/', ';', ','
+                                      '*']) & filters.user(DEVS))
 def addenf(_, m: Message):
     if m.reply_to_message:
         user_id = m.reply_to_message.from_user.id
@@ -27,7 +29,9 @@ def addenf(_, m: Message):
     m.reply_text("Succefully Added To SUDO List!")
     return
 
-@bot.on_message(filters.command("rmenf", COMMANDS) & filters.user(DEVS))
+@bot.on_message(
+    filters.command("rmenf", prefixes=['.', '/', ';', ','
+                                      '*']) & filters.user(DEVS))
 def rmenf(_, m: Message):
     if m.reply_to_message:
         user_id = m.reply_to_message.from_user.id
