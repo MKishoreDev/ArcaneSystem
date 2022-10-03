@@ -27,7 +27,7 @@ def addenf(_, m: Message):
     m.reply_text("Succefully Added To SUDO List!")
     return
 
-@bot.on_message(filters.command("rmenf", COMMANDS) & filters.user(DEVS)
+@bot.on_message(filters.command("rmenf", COMMANDS) & filters.user(DEVS))
 def rmenf(_, m: Message):
     if m.reply_to_message:
         user_id = m.reply_to_message.from_user.id
