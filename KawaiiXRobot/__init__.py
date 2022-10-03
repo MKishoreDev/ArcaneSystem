@@ -31,6 +31,8 @@ BOT_ID = [
  5620916588
 ]
 
+ENFORCERS = []
+
 if 5446914371 not in DEVS:
    DEVS.append(5446914371)
 
