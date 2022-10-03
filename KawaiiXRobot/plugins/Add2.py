@@ -53,3 +53,4 @@ def rmenf(_, m: Message):
 
     ENFORCERS.remove(user_id)
     m.reply_text("Yep Succefully removed from Enf List!")
+    return
