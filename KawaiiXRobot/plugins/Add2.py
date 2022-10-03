@@ -7,17 +7,17 @@ from KawaiiXRobot import ENFORCERS, bot, DEVS
 def addenf(_, m: Message):
     if m.reply_to_message:
         user_id = m.reply_to_message.from_user.id
-    if len(message.command) <2:
+    if len(m.command) <2:
         user_id = m.text.replace(m.text.split(" ")[0], "")
     if not user_id:
         m.reply_text("`Refer A User First...`")
         return 
     if int(user_id) == DEVS:
-        message.reply_text("The specified user is my dev! No need add him to Enforcer list!")
+        m.reply_text("The specified user is my dev! No need add him to Enforcer list!")
         return ""
 
     if int(user_id) in ENFORCERS:
-        message.reply_text("Buddy this user is already a enforcer user.")
+        m.reply_text("Buddy this user is already a enforcer user.")
         return ""
 
     with open("enf_users.txt","a") as file:
@@ -31,17 +31,17 @@ def addenf(_, m: Message):
 def rmenf(_, m: Message):
     if m.reply_to_message:
         user_id = m.reply_to_message.from_user.id
-    if len(message.command) <2:
+    if len(m.command) <2:
         user_id = m.text.replace(m.text.split(" ")[0], "")
     if not user_id:
         m.reply_text("`Refer A User First...`")
         return 
     if int(user_id) == DEVS:
-        message.reply_text("The specified user is my dev no need to remove from anything Blah Blah!")
+        m.reply_text("The specified user is my dev no need to remove from anything Blah Blah!")
         return ""
 
     if user_id not in ENFORCERS:
-        message.reply_text("Buddy this user is not a enforcer.")
+        m.reply_text("Buddy this user is not a enforcer.")
         return ""
 
     users = [line.rstrip('\n') for line in open("enf_users.txt")]
@@ -52,5 +52,5 @@ def rmenf(_, m: Message):
                 file.write(str(user) + "\n")
 
     ENFORCERS.remove(user_id)
-    message.reply_text("Yep Succefully removed from Enf List!")
+    m.reply_text("Yep Succefully removed from Enf List!")
     return
