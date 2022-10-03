@@ -14,7 +14,7 @@ def addenf(_, m: Message):
 #    if not user_id:
      #   m.reply_text("`Refer A User First...`")
       #  return 
-    if int(user_id) == DEVS:
+    if user_id == DEVS:
         m.reply_text("The specified user is my dev! No need add him to Enforcer list!")
         return ""
 
