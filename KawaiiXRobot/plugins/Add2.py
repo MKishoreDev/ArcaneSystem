@@ -11,9 +11,9 @@ def addenf(_, m: Message):
         user_id = m.reply_to_message.from_user.id
     if len(m.command) <2:
         user_id = m.text.replace(m.text.split(" ")[0], "")
-    if not user_id:
-        m.reply_text("`Refer A User First...`")
-        return 
+#    if not user_id:
+     #   m.reply_text("`Refer A User First...`")
+      #  return 
     if int(user_id) == DEVS:
         m.reply_text("The specified user is my dev! No need add him to Enforcer list!")
         return ""
@@ -37,9 +37,9 @@ def rmenf(_, m: Message):
         user_id = m.reply_to_message.from_user.id
     if len(m.command) <2:
         user_id = m.text.replace(m.text.split(" ")[0], "")
-    if not user_id:
-        m.reply_text("`Refer A User First...`")
-        return 
+   # if not user_id:
+        # m.reply_text("`Refer A User First...`")
+       # return 
     if int(user_id) == DEVS:
         m.reply_text("The specified user is my dev no need to remove from anything Blah Blah!")
         return ""
