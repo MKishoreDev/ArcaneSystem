@@ -99,7 +99,7 @@ async def delete(_, query):
 
 @bot.on_message(filters.command("rules", PREFIX))
 async def rules(client, message):
-    await message.reply_photo(RULES_MEDIA, caption=RULES_TEXT,
+    await message.reply_video(RULES_MEDIA, caption=RULES_TEXT,
                               reply_markup=InlineKeyboardMarkup(RULES_BUTTON))
 
 @bot.on_callback_query(filters.regex("Rules"))
