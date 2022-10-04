@@ -13,6 +13,19 @@ from Arcane.buttons import START_BUTTON, HELP_BUTTON, SCANHELP_BUTTON, SCANHELP_
 
 @bot.on_message(filters.command(["start"], PREFIX))
 async def start(_, m: Message):
+    is_gbanned = await is_gbanned_user(m.from_user.id)
+    if m.from_user.id in DEVS:
+        status = "**Gᴏᴅ Oғ Aʀᴄᴀɴᴇ**"
+
+    elif m.from_user.id in Inspector:
+        status = "**Iɴsᴘᴇᴄᴛᴏʀ**"
+
+    elif m.from_user.id in Enforcer:
+        status = "**Eɴғᴏʀᴄᴇʀ**"
+        
+    else:
+        status = "Cɪᴠɪʟɪᴀɴ"
+
     kk = await m.reply_video(ANIMATION_MEDIA, caption=ANI0)
     await asyncio.sleep(2)
     await kk.edit_caption(ANI1)
