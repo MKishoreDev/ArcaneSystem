@@ -1,11 +1,11 @@
-import os
 import time
 from pyrogram import Client
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 
-API_ID = os.environ.get("API_ID", None)
-API_HASH = os.environ.get("API_HASH", None)
-TOKEN = os.environ.get("BOT_TOKEN", None)
+
+API_ID = "15378843"
+API_HASH = "03e07e4821f7cfd77018a04196550e4b"
+TOKEN = "5751818296:AAFI3So6tddrqAg0HDYGki5pJTME5cWLjGc"
 DEVS = [
  5696053228, 5446914371, 1544286112, 1989750989
 ]
