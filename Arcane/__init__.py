@@ -1,7 +1,6 @@
 import os
 import time
 from pyrogram import Client
-from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
 from Arcane.utils.db import DATABASE
 
