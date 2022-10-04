@@ -7,7 +7,7 @@ from pyrogram.types import (
 from pyrogram import filters
 from Arcane import bot, PREFIX
 from Arcane.media import ANIMATION_MEDIA, START_MEDIA
-from arcane.buttons import START_BUTTON
+from Arcane.buttons import START_BUTTON
 
 @bot.on_message(filters.command(["start"], PREFIX))
 async def start(_, m: Message):
