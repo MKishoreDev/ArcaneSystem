@@ -27,7 +27,7 @@ async def start(_, m: Message):
     await asyncio.sleep(1)
     await kk.delete()     
     await m.reply_video(
-        photo=START_MEDIA,
+        START_MEDIA,
         caption=START_STRING.format(
             m.from_user.mention
         ),
