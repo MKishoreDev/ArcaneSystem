@@ -1,6 +1,5 @@
 pyrogram
 tgcrypto
-telethon
 pymongo
 motor
 requests
