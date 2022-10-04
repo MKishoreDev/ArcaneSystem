@@ -13,7 +13,7 @@ from Arcane.buttons import START_BUTTON, HELP_BUTTON, SCANHELP_BUTTON, SCANHELP_
 
 @bot.on_message(filters.command(["start"], PREFIX))
 async def start(_, m: Message):
-    kk = await m.reply_photo(ANIMATION_MEDIA, caption=ANI0)
+    kk = await m.reply_video(ANIMATION_MEDIA, caption=ANI0)
     await asyncio.sleep(2)
     await kk.edit_caption(ANI1)
     await asyncio.sleep(2)
