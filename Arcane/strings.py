@@ -6,6 +6,15 @@ START_STRING = """
 **Click The Below Help Button To Know About All My Commands Or Tap On Rules Button To Read Rules**
 """
 
+RULES_TEXT = "**Arcane Rules For All Over Telegram Users**"
+
+ANI1 = "`[████▒▒▒▒▒▒▒▒▒▒]` `20%`"
+ANI2 = "`[██████▒▒▒▒▒▒▒▒]` `40%`"
+ANI3 = "`[████████▒▒▒▒▒▒]` `60%`"
+ANI4 = "`[██████████▒▒▒▒]` `80%`"
+ANI5 = "`[███████████████]` `100%`"
+ANI6 = "`[COMPLETED]`"
+
 INSPECTOR_RULES = """**Inspector Rules**
 • `Don't Scan Without A Proper Reason`
 • `Don't Scan Without A Acceptable Proof`
