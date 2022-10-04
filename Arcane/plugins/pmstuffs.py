@@ -6,7 +6,7 @@ from pyrogram.types import (
 )
 from pyrogram import filters
 from Arcane import bot, PREFIX
-from Arcane.strings import START_STRING, ANI1, ANI2, ANI3, ANI4, ANI5, ANI6
+from Arcane.strings import START_STRING, ANI1, ANI2, ANI3, ANI4, ANI5, ANI6, TOXIC_RULES, GROUP_RULES, G_B_RULES, INSPECTOR_RULES
 from Arcane.media import ANIMATION_MEDIA, START_MEDIA, HELP_MEDIA
 from Arcane.buttons import START_BUTTON, HELP_BUTTON, SCANHELP_BUTTON, SCANHELP_BUTTON2, SCANHELP_BUTTON3, RULES_BUTTON, RULES_BUTTON2
 
@@ -116,58 +116,24 @@ async def rules(_, query: CallbackQuery):
         
 @bot.on_callback_query(filters.regex("basic_scanner_rules"))
 async def basichelp(_, query: CallbackQuery):
-    await query.edit_message_caption("""**Inspector Rules**
-
-• `don't scan without reason to anyone`
-
-• `don't scan Without Proof, scan With Correct Proof`
-
-• `don't scan your personal issues`
-
-• `don't scan first check the reason carefully` 
-
-• `don't scan private chat because were don't trust private things`
-
-• `don't give proof with clear pornography proof Hide and add reason`""",
+    await query.edit_message_caption(INSPECTOR_RULES,
         reply_markup=InlineKeyboardMarkup(RULES_BUTTON2))
         
 @bot.on_callback_query(filters.regex("Girls_Safe_Rule"))
 async def girlssafe(_, query: CallbackQuery):
-    await query.edit_message_caption("""**Girls And Boys Safe Zone**
-
-• `Don't Abuse Anyone, If You Abuse AnyOne Then You Will Get Ban From AnyOne`
-
-• `Porn Girls And Gay Boys Are Not Allowed In Group`""",
+    await query.edit_message_caption(G_B_RULES,
         reply_markup=InlineKeyboardMarkup(RULES_BUTTON2))
         
 
 @bot.on_callback_query(filters.regex("group_rules"))
 async def basicgrouprules(_, query: CallbackQuery):
-    await query.edit_message_caption("""**Group Rules**
-
-• `Do not use profanity`
-
-• `Do not advertise without admins permission.`
-
-• `Do not flood the group (No spamming).`
-
-• `Gore, Porn, Hentai or any sort of NSFW is strictly prohibited. Do not put up explicit content.`
-
-• `Do not "disturb" anyone in personal messages.`
-
-• `Do Not use bad Words On VC.`
-
-• `Don't Fight On A personal Reasons. also on a vc you can't.`""",
+    await query.edit_message_caption(GROUP_RULES,
         reply_markup=InlineKeyboardMarkup(RULES_BUTTON2))
         
 
 @bot.on_callback_query(filters.regex("Toxic_Boom"))
 async def basictoxirules(_, query: CallbackQuery):
-    await query.edit_message_caption("""**Toxic Rules** 
-
-• `Use Less Toxic For Your Entertainment`
-
-• `Don't Use Unwanted`""",
+    await query.edit_message_caption(TOXIC_RULES,
         reply_markup=InlineKeyboardMarkup(RULES_BUTTON2))
 
         
