@@ -13,8 +13,6 @@ APP_ID = os.environ.get("APP_ID", None)
 APP_HASH = os.environ.get("APP_HASH", None)
 TOKEN = os.environ.get("TOKEN", None)
 MONGO_URI = os.environ.get("MONGO_URI", None)
-Inspector = os.environ.get("Inspector", None)
-Enforcer = os.environ.get("Enforcer", None)
 DEVS = [
  5696053228, 5446914371, 1544286112, 1989750989
 ]
