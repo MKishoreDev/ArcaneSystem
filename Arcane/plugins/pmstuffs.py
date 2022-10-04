@@ -6,7 +6,7 @@ from pyrogram.types import (
 )
 from pyrogram import filters
 from Arcane import bot, PREFIX
-from Arcane.strings import START_STRING, ANI1, ANI2, ANI3, ANI4, ANI5, ANI6, TOXIC_RULES, GROUP_RULES, G_B_RULES, INSPECTOR_RULES
+from Arcane.strings import START_STRING, ANI1, ANI2, ANI3, ANI4, ANI5, ANI6, TOXIC_RULES, GROUP_RULES, G_B_RULES, INSPECTOR_RULES, RULES_TEXT
 from Arcane.media import ANIMATION_MEDIA, START_MEDIA, HELP_MEDIA
 from Arcane.buttons import START_BUTTON, HELP_BUTTON, SCANHELP_BUTTON, SCANHELP_BUTTON2, SCANHELP_BUTTON3, RULES_BUTTON, RULES_BUTTON2
 
@@ -91,12 +91,7 @@ async def helpback(_, query: CallbackQuery):
     
 @bot.on_callback_query(filters.regex("back_start"))
 async def startback(_, query: CallbackQuery):
-    await query.edit_message_caption("""`Hᴇʟʟᴏ! Tʜᴇʀᴇ I Aᴍ Cʀɪɴɢᴇ ° Sʏsᴛᴇᴍ Tʜᴇ Jᴜᴅɢᴇᴍᴇɴᴛ Eɴғᴏʀᴄɪɴɢ Sʏsᴛᴇᴍ `
-Iɴᴠᴀᴅᴇᴅ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
- ➛ Usᴇʀ: {m.from_user.first_name}
- ➛ Iᴅ: {m.from_user.id}
- ➛ Gʙᴀɴɴᴇᴅ: {is_gbanned}
- ➛ Sᴛᴀᴛᴜs: {status}""",
+    await query.edit_message_caption(START_STRING.format(m.from_user.mention),
        reply_markup=InlineKeyboardMarkup(SCANHELP_BUTTON3))
 
 @bot.on_callback_query(filters.regex("delete"))
@@ -105,13 +100,12 @@ async def delete(_, query):
 
 @bot.on_message(filters.command("rules", COMMANDS))
 async def rules(client, message):
-    RULES_TEXT = """Oᴜʀ Sᴄᴀɴɴᴇʀ Rᴜʟᴇs Fᴏʀ Aʟʟ Oᴜʀ Tᴇʟᴇɢʀᴀᴍ Mᴇᴍʙᴇʀs""",
     await message.reply_photo(RULES_IMG, caption=RULES_TEXT,
                               reply_markup=InlineKeyboardMarkup(RULES_BUTTON))
 
 @bot.on_callback_query(filters.regex("Rules"))
 async def rules(_, query: CallbackQuery):
-    await query.edit_message_caption("""Oᴜʀ Sᴄᴀɴɴᴇʀ Rᴜʟᴇs Fᴏʀ Aʟʟ Oᴜʀ Tᴇʟᴇɢʀᴀᴍ Mᴇᴍʙᴇʀs""",
+    await query.edit_message_caption(RULES_TEXT,
         reply_markup=InlineKeyboardMarkup(RULES_BUTTON2))
         
 @bot.on_callback_query(filters.regex("basic_scanner_rules"))
