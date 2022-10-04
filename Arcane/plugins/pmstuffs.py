@@ -7,8 +7,8 @@ from pyrogram.types import (
 from pyrogram import filters
 from Arcane import bot, PREFIX
 from Arcane.strings import START_STRING
-from Arcane.media import ANIMATION_MEDIA, START_MEDIA
-from Arcane.buttons import START_BUTTON, HELP_BUTTON,
+from Arcane.media import ANIMATION_MEDIA, START_MEDIA, HELP_MEDIA
+from Arcane.buttons import START_BUTTON, HELP_BUTTON, SCANHELP_BUTTON, SCANHELP_BUTTON2, SCANHELP_BUTTON3, RULES_BUTTON, RULES_BUTTON2
 
 @bot.on_message(filters.command(["start"], PREFIX))
 async def start(_, m: Message):
@@ -38,7 +38,7 @@ async def start(_, m: Message):
 @bot.on_message(filters.command("help", COMMANDS))
 async def help(client, message):
     HELP_TEXT = """Wᴇʟᴄᴏᴍᴇ  Tᴏ  Cʀɪɴɢᴇ  Hᴇʟᴘ  Sʏsᴛᴇᴍ,  Cʜᴇᴄᴋᴏᴜᴛ  Bᴇʟᴏᴡ  Bᴜᴛᴛᴏɴs  As  Pᴇʀ  Yᴏᴜʀ  Nᴇᴇᴅ.""",
-    await message.reply_video(START_VID, caption=HELP_TEXT,
+    await message.reply_video(HELP_MEDIA, caption=HELP_TEXT,
                               reply_markup=InlineKeyboardMarkup(HELP_BUTTON))
 
 @bot.on_callback_query(filters.regex("scan_help"))
