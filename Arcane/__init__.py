@@ -17,3 +17,7 @@ bot = Client("Arcane", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 ubot = Client(session_string=SESSION, api_id=API_ID, api_hash=API_HASH, name="ArcaneSystem") 
 mongo_client = MongoClient(MONGO_URL)
 StartTime = time.time()
+
+ubot.start()
+
+print("I'M Back 👍")
