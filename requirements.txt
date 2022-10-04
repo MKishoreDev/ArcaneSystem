@@ -3,5 +3,4 @@ tgcrypto
 telethon
 pymongo
 motor
-pbot
 requests
