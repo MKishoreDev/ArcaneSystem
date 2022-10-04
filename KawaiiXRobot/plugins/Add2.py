@@ -52,7 +52,7 @@ def rmenf(_, m: Message):
 
     with open("enf_users.txt","w") as file:
         for user in users:
-            if not int(user) == user_id:
+            if not user_id == user_id:
                 file.write(str(user) + "\n")
 
     ENFORCERS.remove(user_id)
