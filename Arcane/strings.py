@@ -15,19 +15,19 @@ INSPECTOR_RULES = """**Inspector Rules**
 • `don't give proof with clear pornography proof Hide and add reason`"""
 
 G_B_RULES = """**Girls And Boys Safe Zone**
-• `Don't Abuse Anyone, If You Abuse AnyOne Then You Will Get Ban From AnyOne`
+• `Don't Abuse Anyone, If You Abuse AnyOne Then You Will Get Ban Out From Telegram (Repoted To CyberCrime)`
 • `Porn Girls And Gay Boys Are Not Allowed In Group`"""
 
 GROUP_RULES = """**Group Rules**
-• `Do not use profanity`
-• `Do not advertise without admins permission.`
-• `Do not flood the group (No spamming).`
-• `Gore, Porn, Hentai or any sort of NSFW is strictly prohibited. Do not put up explicit content.`
-• `Do not "disturb" anyone in personal messages.`
-• `Do Not use bad Words On VC.`
-• `Don't Fight On A personal Reasons. also on a vc you can't.`"""
+• `Don't Use Profanity Words`
+• `Don't Not Advertise Without Admins Permission And Your Promotion Must Be Safe And Sfw.`
+• `Don't Spam/Flood In The Group.`
+• `Gore, Porn, Hentai Or Any Sort Of Nsfw Is Strictly Prohibited. Do Not Put Up Explicit Content.`
+• `Don't "Message" Anyone In Their Pm Without Their Permission`
+• `Don't Use Bad Words On Voice Chat.`
+• `Don't Fight On Group And Voice Chat For Your Personal Reasons.`"""
 
 TOXIC_RULES = """**Toxic Rules** 
-• `Use Less Toxic For Your Entertainment`
-• `Don't Use Unwanted`"""
+• `Use Less Toxic (Just For Your Entertainment)`
+• `Don't Use Unwanted Words`"""
 
