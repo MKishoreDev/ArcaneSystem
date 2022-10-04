@@ -26,8 +26,8 @@ for name in files:
     with open(name) as a:
         thepath = Path(a.name)
         plugin_name = thepath.stem
-        shit = plugin_name.replace(".py", "")
-        load_plugins(shit)
+        modname = plugin_name.replace(".py", "")
+        load_plugins(modname)
 
 logging.basicConfig(
     filename="logs.txt",
