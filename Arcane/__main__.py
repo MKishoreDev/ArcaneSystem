@@ -5,7 +5,7 @@ import asyncio
 import importlib
 
 from pathlib import Path
-from Arcane import bot, DEVS
+from Arcane import bot
 
 def load_plugins(plugin_name):
     root = "Arcane/plugins/*.py"
