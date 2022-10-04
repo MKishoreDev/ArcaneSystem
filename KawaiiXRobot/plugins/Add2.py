@@ -1,13 +1,7 @@
 from pyrogram import filters
 from pyrogram.types import Message
-
 from KawaiiXRobot import ENFORCERS, bot, DEVS
-
 from pyrogram import filters, Client
-from KawaiiXRobot import bot
-from KawaiiXRobot.utils.enflistdb import enfsdb
-
-COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
 
 @bot.on_message(
@@ -65,19 +59,3 @@ def rmenf(_, m: Message):
     ENFORCERS.remove(user_id)
     m.reply_text("Yep Succefully removed from Enf List!")
     return
-
-@bot.on_message(filters.command("enflist", COMMANDS))
-async def enflist(client, message):
-   total_num = len([i async for i in enfsdb.find({"user_id": {"$gt": 0}})])
-   total_id = ([i['user_id'] async for i in enfsdb.find({"user_id": {"$gt": 0}})])
-   reply = f"`{total_num}` **Cringe Enforcers List\n**"
-   for x in total_id:
-       user = await bot.get_users(int(x))
-       mention = "[" + user.first_name + "](tg://user?id=" + str(user.id) + ")" or user.first_name
-       reply += f"• {mention}\n"     
-   try: 
-      await message.reply_video("https://telegra.ph/file/65239f3043ca5161617df.mp4", caption=reply)      
-   except Exception as e:
-       print(e)
-   if len(reply.split("\n")) < 2:
-       return await message.reply_text("No Enforcer Added.")
