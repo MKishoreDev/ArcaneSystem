@@ -1,4 +1,4 @@
-aiohttp
+dnspython
 motor
 pymongo
 pyrogram
