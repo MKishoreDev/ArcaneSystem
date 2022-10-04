@@ -1,3 +1,5 @@
+from pyrogram.types import InlineKeyboardButton
+
 START_BUTTON = [
     [
         InlineKeyboardButton("𝗦𝘂𝗽𝗽𝗼𝗿𝘁", url="https://t.me/playBoysDXD"),
