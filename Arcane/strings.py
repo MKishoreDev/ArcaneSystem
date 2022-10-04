@@ -45,3 +45,27 @@ TOXIC_RULES = """**Toxic Rules**
 • `Use Less Toxic (Just For Your Entertainment)`
 • `Don't Use Unwanted Words`"""
 
+BANCODES = """Here Ls Help For **BanCodes** :-
+**•** `{CGX00}` **SCAMMER.**
+**•** `{CGX01}` **SPAM ADDING MEMBER.**
+**•** `{CGX03}` **ABUSE SPAM.**
+**•** `{CGX04}` **NSFW SPAMMER.**
+**•** `{CGX06}` **IMPERSONATION.**
+**•** `{CGX07}` **MD/BTC SCAM.**
+**•** `{CGX08}` **ADDING SPAMBOTS.**
+**•** `{CGX10}` **ILLEGAL.**
+**•** `{CGX11}` **PHISHING.**
+**•** `{CGX12}` **FRAUD PROMOTION  [ANY KIND].**
+**•** `{CGX13}` **CYBER THREATENING / CYBER BULLY.**
+**•** `{CGX14}` **CHILD ABUSE.**
+**•** `{CGX15}` **BAN EVASION.**
+**•** `{CGX16}` **SPAMBOT.**
+**•** `{CGX17}` **RAID INITIALIZOR.** 
+**•** `{CGX18}` **RAID PARTICIPANT.**
+**•** `{CGX19}` **KRIMINALANT.**
+**•** `{CGX20}` **SPAMMING VIOLENT CONTENT.**
+**•** `{CGX21}` **HATE SPEECH AGAINST NATIONALITY.**
+**•** `{CGX22}` **RAID/SPAM INFLAMMER.**
+**•** `{CGX23}` **PRONOGRAPHY CCONTENT PROMOTING.**
+**•** `{CGX24}` **PAID GIRL.**
+"""
