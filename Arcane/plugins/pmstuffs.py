@@ -6,6 +6,7 @@ from pyrogram.types import (
 )
 from pyrogram import filters
 from Arcane import bot, PREFIX
+from Arcane.strings import START_STRING
 from Arcane.media import ANIMATION_MEDIA, START_MEDIA
 from Arcane.buttons import START_BUTTON
 
