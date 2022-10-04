@@ -6,13 +6,13 @@ from pyrogram.types import (
 )
 from pyrogram import filters
 from Arcane import bot, PREFIX
-from Arcane.strings import START_STRING, ANI1, ANI2, ANI3, ANI4, ANI5, ANI6, TOXIC_RULES, GROUP_RULES, G_B_RULES, INSPECTOR_RULES, RULES_TEXT
-from Arcane.media import ANIMATION_MEDIA, START_MEDIA, HELP_MEDIA
+from Arcane.strings import START_STRING, ANI0, ANI1, ANI2, ANI3, ANI4, ANI5, ANI6, TOXIC_RULES, GROUP_RULES, G_B_RULES, INSPECTOR_RULES, RULES_TEXT
+from Arcane.media import ANIMATION_MEDIA, START_MEDIA, HELP_MEDIA, RULES_MEDIA
 from Arcane.buttons import START_BUTTON, HELP_BUTTON, SCANHELP_BUTTON, SCANHELP_BUTTON2, SCANHELP_BUTTON3, RULES_BUTTON, RULES_BUTTON2
 
 @bot.on_message(filters.command(["start"], PREFIX))
 async def start(_, m: Message):
-    kk = await m.reply_photo(ANIMATION_MEDIA, caption="`[▒▒▒▒▒▒▒▒▒▒▒▒▒▒]` `0%`")
+    kk = await m.reply_photo(ANIMATION_MEDIA, caption=ANI0)
     await asyncio.sleep(2)
     await kk.edit_caption(ANI1)
     await asyncio.sleep(2)
@@ -100,7 +100,7 @@ async def delete(_, query):
 
 @bot.on_message(filters.command("rules", COMMANDS))
 async def rules(client, message):
-    await message.reply_photo(RULES_IMG, caption=RULES_TEXT,
+    await message.reply_photo(RULES_MEDIA, caption=RULES_TEXT,
                               reply_markup=InlineKeyboardMarkup(RULES_BUTTON))
 
 @bot.on_callback_query(filters.regex("Rules"))
