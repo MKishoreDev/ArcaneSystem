@@ -46,34 +46,35 @@ TOXIC_RULES = """**Toxic Rules**
 • `Don't Use Unwanted Words`"""
 
 BANCODES = """Here Ls Help For **BanCodes** :-
-**•** `{CGX00}` **SCAMMER.**
-**•** `{CGX01}` **SPAM ADDING MEMBER.**
-**•** `{CGX03}` **ABUSE SPAM.**
-**•** `{CGX04}` **NSFW SPAMMER.**
-**•** `{CGX06}` **IMPERSONATION.**
-**•** `{CGX07}` **MD/BTC SCAM.**
-**•** `{CGX08}` **ADDING SPAMBOTS.**
-**•** `{CGX10}` **ILLEGAL.**
-**•** `{CGX11}` **PHISHING.**
-**•** `{CGX12}` **FRAUD PROMOTION  [ANY KIND].**
-**•** `{CGX13}` **CYBER THREATENING / CYBER BULLY.**
-**•** `{CGX14}` **CHILD ABUSE.**
-**•** `{CGX15}` **BAN EVASION.**
-**•** `{CGX16}` **SPAMBOT.**
-**•** `{CGX17}` **RAID INITIALIZOR.** 
-**•** `{CGX18}` **RAID PARTICIPANT.**
-**•** `{CGX19}` **KRIMINALANT.**
-**•** `{CGX20}` **SPAMMING VIOLENT CONTENT.**
-**•** `{CGX21}` **HATE SPEECH AGAINST NATIONALITY.**
-**•** `{CGX22}` **RAID/SPAM INFLAMMER.**
-**•** `{CGX23}` **PRONOGRAPHY CCONTENT PROMOTING.**
-**•** `{CGX24}` **PAID GIRL.**
+**•** `{ACX00}` **SCAMMER.**
+**•** `{ACX01}` **SPAM ADDING MEMBER.**
+**•** `{ACX03}` **ABUSE SPAM.**
+**•** `{ACX04}` **NSFW SPAMMER.**
+**•** `{ACX06}` **IMPERSONATION.**
+**•** `{ACX07}` **MD/BTC SCAM.**
+**•** `{ACX08}` **ADDING SPAMBOTS.**
+**•** `{ACX10}` **ILLEGAL.**
+**•** `{ACX11}` **PHISHING.**
+**•** `{ACX12}` **FRAUD PROMOTION  [ANY KIND].**
+**•** `{ACX13}` **CYBER THREATENING / CYBER BULLY.**
+**•** `{ACX14}` **CHILD ABUSE.**
+**•** `{ACX15}` **BAN EVASION.**
+**•** `{ACX16}` **SPAMBOT.**
+**•** `{ACX17}` **RAID INITIALIZOR.** 
+**•** `{ACX18}` **RAID PARTICIPANT.**
+**•** `{ACX19}` **KRIMINALANT.**
+**•** `{ACX20}` **SPAMMING VIOLENT CONTENT.**
+**•** `{ACX21}` **HATE SPEECH AGAINST NATIONALITY.**
+**•** `{ACX22}` **RAID/SPAM INFLAMMER.**
+**•** `{ACX23}` **PRONOGRAPHY CCONTENT PROMOTING.**
+**•** `{ACX24}` **PAID GIRL.**
 """
 
 SCAN_HELP = """How to scan 
 👉🏻 1st case if scanning the user via replying to that user message,
 Use command /scan + flags checkout flags button.
 `E.g /scan -r threat -p https://telegra.ph/media`
+
 👉🏻 2nd case if scanning the user via "message link/username/user id"
 Use command /scan -id + flags checkout flags button.
 `E.g /scan -id 1234560914 -r threat -p https://telegra.ph/media`"""
