@@ -6,7 +6,7 @@ from pyrogram.types import (
 )
 from pyrogram import filters
 from Arcane import bot, PREFIX
-from Arcane.strings import (START_STRING, HELP_TEXT ANI0, ANI1, ANI2, ANI3, ANI4, ANI5, ANI6, TOXIC_RULES, GROUP_RULES, G_B_RULES, INSPECTOR_RULES, RULES_TEXT, BANCODES)
+from Arcane.strings import *
 from Arcane.media import ANIMATION_MEDIA, START_MEDIA, HELP_MEDIA, RULES_MEDIA
 from Arcane.buttons import START_BUTTON, HELP_BUTTON, SCANHELP_BUTTON, SCANHELP_BUTTON2, SCANHELP_BUTTON3, RULES_BUTTON, RULES_BUTTON2
 
@@ -42,17 +42,7 @@ async def help(client, message):
 
 @bot.on_callback_query(filters.regex("scan_help"))
 async def scanhelp(_, query: CallbackQuery):
-    await query.edit_message_caption("""How to scan 
-
-👉🏻 1st case if scanning the user via replying to that user message,
-Use command /scan + flags checkout flags button.
-
-`E.g /scan -r threat -p https://telegra.ph/media`
-
-👉🏻 2nd case if scanning the user via "message link/username/user id"
-Use command /scan -id + flags checkout flags button.
-
-`E.g /scan -id 1234560914 -r threat -p https://telegra.ph/media`""",
+    await query.edit_message_caption(SCAN_HELP,
        reply_markup=InlineKeyboardMarkup(SCANHELP_BUTTON))
         
 @bot.on_callback_query(filters.regex("bancodes_help"))
