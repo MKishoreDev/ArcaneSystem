@@ -35,7 +35,7 @@ async def start(_, m: Message):
         reply_markup=InlineKeyboardMarkup(START_BUTTON),
     )
 
-@bot.on_message(filters.command("help", COMMANDS))
+@bot.on_message(filters.command("help", PREFIX))
 async def help(client, message):
     await message.reply_video(HELP_MEDIA, caption=HELP_TEXT,
                               reply_markup=InlineKeyboardMarkup(HELP_BUTTON))
