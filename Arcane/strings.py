@@ -29,5 +29,5 @@ GROUP_RULES = """**Group Rules**
 
 TOXIC_RULES = """**Toxic Rules** 
 • `Use Less Toxic For Your Entertainment`
-• `Don't Use Unwanted`""
+• `Don't Use Unwanted`"""
 
