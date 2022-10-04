@@ -2,6 +2,7 @@ import asyncio
 
 from pyrogram.types import (
     Message,
+    CallbackQuery,
     InlineKeyboardMarkup,
 )
 from pyrogram import filters
