@@ -6,7 +6,7 @@ from pyrogram.types import (
 )
 from pyrogram import filters
 from Arcane import bot, PREFIX
-from Arcane.strings import START_STRING, HELP_TEXT ANI0, ANI1, ANI2, ANI3, ANI4, ANI5, ANI6, TOXIC_RULES, GROUP_RULES, G_B_RULES, INSPECTOR_RULES, RULES_TEXT
+from Arcane.strings import (START_STRING, HELP_TEXT ANI0, ANI1, ANI2, ANI3, ANI4, ANI5, ANI6, TOXIC_RULES, GROUP_RULES, G_B_RULES, INSPECTOR_RULES, RULES_TEXT, BANCODES)
 from Arcane.media import ANIMATION_MEDIA, START_MEDIA, HELP_MEDIA, RULES_MEDIA
 from Arcane.buttons import START_BUTTON, HELP_BUTTON, SCANHELP_BUTTON, SCANHELP_BUTTON2, SCANHELP_BUTTON3, RULES_BUTTON, RULES_BUTTON2
 
@@ -57,30 +57,7 @@ Use command /scan -id + flags checkout flags button.
         
 @bot.on_callback_query(filters.regex("bancodes_help"))
 async def bancodes(_, query: CallbackQuery):
-    await query.edit_message_caption("""Here is Help for **Bancodes** :-
-**✯** `{CGX00}` **SCAMMER.**
-**✯** `{CGX01}` **SPAM ADDING MEMBER.**
-**✯** `{CGX03}` **ABUSE SPAM.**
-**✯** `{CGX04}` **NSFW SPAMMER.**
-**✯** `{CGX06}` **IMPERSONATION.**
-**✯** `{CGX07}` **MD/BTC SCAM.**
-**✯** `{CGX08}` **ADDING SPAMBOTS.**
-**✯** `{CGX10}` **ILLEGAL.**
-**✯** `{CGX11}` **PHISHING.**
-**✯** `{CGX12}` **FRAUD PROMOTION  [ANY KIND].**
-**✯** `{CGX13}` **CYBER THREATENING / CYBER BULLY.**
-**✯** `{CGX14}` **CHILD ABUSE.**
-**✯** `{CGX15}` **BAN EVASION.**
-**✯** `{CGX16}` **SPAMBOT.**
-**✯** `{CGX17}` **RAID INITIALIZOR.** 
-**✯** `{CGX18}` **RAID PARTICIPANT.**
-**✯** `{CGX19}` **KRIMINALANT.**
-**✯** `{CGX20}` **SPAMMING VIOLENT CONTENT.**
-**✯** `{CGX21}` **HATE SPEECH AGAINST NATIONALITY.**
-**✯** `{CGX22}` **RAID/SPAM INFLAMMER.**
-**✯** `{CGX23}` **PRONOGRAPHY CCONTENT PROMOTING.**
-**✯** `{CGX24}` **PAID GIRL.**
-""",
+    await query.edit_message_caption(BANCODES,
        reply_markup=InlineKeyboardMarkup(SCANHELP_BUTTON))
 
 @bot.on_callback_query(filters.regex("back_help"))
