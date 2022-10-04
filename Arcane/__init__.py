@@ -9,7 +9,7 @@ TOKEN = "5620916588:AAF9O_cVQ8rrlj-JZoqpjPCEaDjCPpMONrY"
 DEVS = [
  5696053228, 5446914371, 1544286112, 1989750989
 ]
-
+PREFIX = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 MONGO_URL = "mongodb+srv://Music:Music@cluster0.f9x4i.mongodb.net/Cluster0?retryWrites=true&w=majority"
 SESSION = ""
 
