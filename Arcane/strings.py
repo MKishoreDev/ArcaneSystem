@@ -7,12 +7,11 @@ START_STRING = """
 """
 
 INSPECTOR_RULES = """**Inspector Rules**
-• `don't scan without reason to anyone`
-• `don't scan Without Proof, scan With Correct Proof`
-• `don't scan your personal issues`
-• `don't scan first check the reason carefully` 
-• `don't scan private chat because were don't trust private things`
-• `don't give proof with clear pornography proof Hide and add reason`"""
+• `Don't Scan Without A Proper Reason`
+• `Don't Scan Without A Acceptable Proof`
+• `Don't Scan For Your Personal Issues`
+• `Don't Scan Private Chat Because We're Don't Trust Private Things`
+• `Don't Give Proof With Clear Pornography Content Hide/Blur/Edit And Add Proof`"""
 
 G_B_RULES = """**Girls And Boys Safe Zone**
 • `Don't Abuse Anyone, If You Abuse AnyOne Then You Will Get Ban Out From Telegram (Repoted To CyberCrime)`
