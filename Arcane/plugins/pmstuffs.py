@@ -6,7 +6,7 @@ from pyrogram.types import (
 )
 from pyrogram import filters
 from Arcane import bot, PREFIX
-from Arcane.strings import START_STRING
+from Arcane.strings import START_STRING, ANI1, ANI2, ANI3, ANI4, ANI5, ANI6
 from Arcane.media import ANIMATION_MEDIA, START_MEDIA, HELP_MEDIA
 from Arcane.buttons import START_BUTTON, HELP_BUTTON, SCANHELP_BUTTON, SCANHELP_BUTTON2, SCANHELP_BUTTON3, RULES_BUTTON, RULES_BUTTON2
 
@@ -14,17 +14,17 @@ from Arcane.buttons import START_BUTTON, HELP_BUTTON, SCANHELP_BUTTON, SCANHELP_
 async def start(_, m: Message):
     kk = await m.reply_photo(ANIMATION_MEDIA, caption="`[▒▒▒▒▒▒▒▒▒▒▒▒▒▒]` `0%`")
     await asyncio.sleep(2)
-    await kk.edit_caption("`[████▒▒▒▒▒▒▒▒▒▒]` `20%`")
+    await kk.edit_caption(ANI1)
     await asyncio.sleep(2)
-    await kk.edit_caption("`[██████▒▒▒▒▒▒▒▒]` `40%`")
+    await kk.edit_caption(ANI2)
     await asyncio.sleep(2)
-    await kk.edit_caption("`[████████▒▒▒▒▒▒]` `60%`")
+    await kk.edit_caption(ANI3)
     await asyncio.sleep(2)
-    await kk.edit_caption("`[██████████▒▒▒▒]` `80%`")
+    await kk.edit_caption(ANI4)
     await asyncio.sleep(2)
-    await kk.edit_caption("`[███████████████]` `100%`")
+    await kk.edit_caption(ANI5)
     await asyncio.sleep(2)
-    await kk.edit_caption("`[COMPLETED]`")
+    await kk.edit_caption(ANI6)
     await asyncio.sleep(1)
     await kk.delete()     
     await m.reply_video(
