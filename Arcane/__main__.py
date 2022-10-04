@@ -1,16 +1,15 @@
-# __main__.py ©Copyright By @ProErrorDxD  Machan
-
-from Arcane import bot, DEVS
-import logging
+import sys
 import glob
+import logging
 import asyncio
 import importlib
-import sys
+
 from pathlib import Path
+from Arcane import bot, DEVS
 
 def load_plugins(plugin_name):
-    punda = "Arcane/plugins/*.py"
-    devu = f"{len(glob.glob(punda))}"
+    root = "Arcane/plugins/*.py"
+    count = f"{len(glob.glob(root))}"
     path = Path(f"Arcane/plugins/{plugin_name}.py")
     name = "Arcane.plugins.{}".format(plugin_name)
     spec = importlib.util.spec_from_file_location(name, path)
@@ -18,7 +17,7 @@ def load_plugins(plugin_name):
     load.logger = logging.getLogger(plugin_name)
     spec.loader.exec_module(load)
     sys.modules["Arcane.plugins." + plugin_name] = load
-    print("Total Plugins -->" + devu)
+    print("Total Plugins -->" + count)
     print("Imported --> " + plugin_name)
 
 path = "Arcane/plugins/*.py"
@@ -38,10 +37,6 @@ logging.basicConfig(
     datefmt='%H:%M:%S',
 )
 
-def main():
-    bot.run()
-
-
 if __name__ == "__main__":
-     main()
+     bot.run()
    
