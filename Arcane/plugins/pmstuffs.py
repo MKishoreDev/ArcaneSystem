@@ -26,7 +26,7 @@ async def start(_, m: Message):
     await kk.edit_caption("`[COMPLETED]`")
     await asyncio.sleep(1)
     await kk.delete()     
-    await m.reply_photo(
+    await m.reply_video(
         photo=START_MEDIA,
         caption=START_STRING.format(
             m.from_user.mention
