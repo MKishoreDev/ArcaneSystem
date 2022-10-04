@@ -19,8 +19,8 @@ HELP_BUTTON = [
         [
             InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes"),
             InlineKeyboardButton("Cʟᴏsᴇ", callback_data="delete"),
-       ],
-    ]
+    ],   
+]
 
 SCANHELP_BUTTON = [
         [
@@ -30,8 +30,8 @@ SCANHELP_BUTTON = [
         [
             InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes_help"),
             InlineKeyboardButton("Bᴀᴄᴋ", callback_data="back_help"),
-       ],
-    ]
+    ],   
+]
 
 SCANHELP_BUTTON2 = [
         [
@@ -41,8 +41,8 @@ SCANHELP_BUTTON2 = [
         [
             InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes_help"),
             InlineKeyboardButton("Cʟᴏsᴇ", callback_data="delete"),
-       ],
-    ]
+    ],   
+]
 
 SCANHELP_BUTTON3 = [
         [
@@ -51,8 +51,8 @@ SCANHELP_BUTTON3 = [
         ],
         [
             InlineKeyboardButton(" Cᴏᴍᴍᴀɴᴅs  Aɴᴅ  Hᴇʟᴘ", callback_data="back_help"),
-       ],
-    ]
+    ],   
+]
 
 RULES_BUTTON = [
         [
@@ -65,8 +65,8 @@ RULES_BUTTON = [
         ],
         [
             InlineKeyboardButton("Cʟᴏsᴇ", callback_data="delete"),
-        ],
-     ]
+    ],   
+]
 
 RULES_BUTTON2 = [
         [
@@ -79,5 +79,5 @@ RULES_BUTTON2 = [
         ],
         [
             InlineKeyboardButton("Bᴀᴄᴋ", callback_data="Rules"),
-        ],
-     ]
+    ],   
+]
