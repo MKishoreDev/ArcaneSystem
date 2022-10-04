@@ -5,7 +5,7 @@ import asyncio
 import importlib
 
 from pathlib import Path
-from Arcane import bot
+from Arcane import bot, ubot 
 
 def load_plugins(plugin_name):
     root = "Arcane/plugins/*.py"
@@ -39,4 +39,5 @@ logging.basicConfig(
 
 if __name__ == "__main__":
      bot.run()
+     ubot.run()
    
