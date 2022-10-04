@@ -8,6 +8,11 @@ START_STRING = """
 
 RULES_TEXT = "**Arcane Rules For All Over Telegram Users**"
 
+HELP_TEXT = """
+**Welcome To Arcane Help Guidelines**
+
+`Click The Below Buttons To Know About Commands`
+"""
 ANI0 = "`[▒▒▒▒▒▒▒▒▒▒▒▒▒▒]` `0%`"
 ANI1 = "`[████▒▒▒▒▒▒▒▒▒▒]` `20%`"
 ANI2 = "`[██████▒▒▒▒▒▒▒▒]` `40%`"
