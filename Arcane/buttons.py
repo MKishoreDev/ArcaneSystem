@@ -1,83 +1,83 @@
 START_BUTTON = [
     [
-        InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/playBoysDXD"),
-        InlineKeyboardButton("Sᴘᴀᴍ ʀᴇᴘᴏʀᴛ", url="https://t.me/playBoysDXD"),
+        InlineKeyboardButton("𝗦𝘂𝗽𝗽𝗼𝗿𝘁", url="https://t.me/playBoysDXD"),
+        InlineKeyboardButton("𝗦𝗽𝗮𝗺 𝗥𝗲𝗽𝗼𝗿𝘁", url="https://t.me/playBoysDXD"),
     ],
     [
-        InlineKeyboardButton(" Cᴏᴍᴍᴀɴᴅs  Aɴᴅ  Hᴇʟᴘ", callback_data="back_help"),   
+        InlineKeyboardButton("𝗛𝗲𝗹𝗽 𝗚𝘂𝗶𝗱𝗲𝗹𝗶𝗻𝗲𝘀", callback_data="back_help"),   
     ],   
     [
-        InlineKeyboardButton("Rᴜʟᴇs", callback_data="Rules"),   
+        InlineKeyboardButton("𝗥𝘂𝗹𝗲𝘀", callback_data="Rules"),   
     ],   
 ]
 
 HELP_BUTTON = [
         [
-            InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan_help"),
-            InlineKeyboardButton("Exᴛʀᴀ", callback_data="extra"),
+            InlineKeyboardButton("𝗦𝗰𝗮𝗻", callback_data="scan_help"),
+            InlineKeyboardButton("𝗘𝘅𝘁𝗿𝗮", callback_data="extra"),
         ],
         [
-            InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes"),
-            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="delete"),
+            InlineKeyboardButton("𝗕𝗮𝗻-𝗖𝗼𝗱𝗲𝘀", callback_data="bancodes"),
+            InlineKeyboardButton("𝗖𝗹𝗼𝘀𝗲", callback_data="delete"),
     ],   
 ]
 
 SCANHELP_BUTTON = [
         [
-            InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan_help"),
-            InlineKeyboardButton("Exᴛʀᴀ", callback_data="extra"),
+            InlineKeyboardButton("𝗦𝗰𝗮𝗻", callback_data="scan_help"),
+            InlineKeyboardButton("𝗘𝘅𝘁𝗿𝗮", callback_data="extra"),
         ],
         [
-            InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes_help"),
-            InlineKeyboardButton("Bᴀᴄᴋ", callback_data="back_help"),
+            InlineKeyboardButton("𝗕𝗮𝗻-𝗖𝗼𝗱𝗲𝘀", callback_data="bancodes_help"),
+            InlineKeyboardButton("𝗕𝗮𝗰𝗸", callback_data="back_help"),
     ],   
 ]
 
 SCANHELP_BUTTON2 = [
         [
-            InlineKeyboardButton("Sᴄᴀɴ", callback_data="scan_help"),
-            InlineKeyboardButton("Exᴛʀᴀ", callback_data="extra"),
+            InlineKeyboardButton("𝗦𝗰𝗮𝗻", callback_data="scan_help"),
+            InlineKeyboardButton("𝗘𝘅𝘁𝗿𝗮", callback_data="extra"),
         ],
         [
-            InlineKeyboardButton("Bᴀɴᴄᴏᴅᴇs", callback_data="bancodes_help"),
-            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="delete"),
+            InlineKeyboardButton("𝗕𝗮𝗻-𝗖𝗼𝗱𝗲𝘀", callback_data="bancodes_help"),
+            InlineKeyboardButton("𝗖𝗹𝗼𝘀𝗲", callback_data="delete"),
     ],   
 ]
 
 SCANHELP_BUTTON3 = [
         [
-            InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/playBoysDXD"),
-            InlineKeyboardButton("Sᴘᴀᴍ ʀᴇᴘᴏʀᴛ", url="https://t.me/playBoysDXD"),
+            InlineKeyboardButton("𝗦𝘂𝗽𝗽𝗼𝗿𝘁", url="https://t.me/playBoysDXD"),
+            InlineKeyboardButton("𝗦𝗽𝗮𝗺 𝗥𝗲𝗽𝗼𝗿𝘁", url="https://t.me/playBoysDXD"),
         ],
         [
-            InlineKeyboardButton(" Cᴏᴍᴍᴀɴᴅs  Aɴᴅ  Hᴇʟᴘ", callback_data="back_help"),
+            InlineKeyboardButton("𝗛𝗲𝗹𝗽 𝗚𝘂𝗶𝗱𝗲𝗹𝗶𝗻𝗲𝘀", callback_data="back_help"),
     ],   
 ]
 
 RULES_BUTTON = [
         [
-            InlineKeyboardButton("Iɴs Rᴜʟᴇs", callback_data="basic_scanner_rules"),
-            InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
+            InlineKeyboardButton("𝗜𝗻𝘀𝗽𝗲𝗰𝘁𝗼𝗿 𝗥𝘂𝗹𝗲𝘀", callback_data="basic_scanner_rules"),
+            InlineKeyboardButton("𝗛𝘂𝗺𝗮𝗻 𝗥𝘂𝗹𝗲𝘀", callback_data="Girls_Safe_Rule"),
         ],
         [
-            InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Boom"),
-            InlineKeyboardButton("Gʀᴏᴜᴘ Rᴜʟᴇs", callback_data="group_rules"),
+            InlineKeyboardButton("𝗧𝗼𝘅𝗶𝗰 𝗥𝘂𝗹𝗲𝘀", callback_data="Toxic_Boom"),
+            InlineKeyboardButton("𝗚𝗿𝗼𝘂𝗽 𝗥𝘂𝗹𝗲𝘀", callback_data="group_rules"),
         ],
         [
-            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="delete"),
+            InlineKeyboardButton("𝗖𝗹𝗼𝘀𝗲", callback_data="delete"),
     ],   
 ]
 
 RULES_BUTTON2 = [
         [
-            InlineKeyboardButton("Iɴs Rᴜʟᴇs", callback_data="basic_scanner_rules"),
-            InlineKeyboardButton("Hᴜᴍᴀɴ Rᴜʟᴇs", callback_data="Girls_Safe_Rule"),
+            InlineKeyboardButton("𝗜𝗻𝘀𝗽𝗲𝗰𝘁𝗼𝗿 𝗥𝘂𝗹𝗲𝘀", callback_data="basic_scanner_rules"),
+            InlineKeyboardButton("𝗛𝘂𝗺𝗮𝗻 𝗥𝘂𝗹𝗲𝘀", callback_data="Girls_Safe_Rule"),
         ],
         [
-            InlineKeyboardButton("Tᴏxɪᴄ Rᴜʟᴇs", callback_data="Toxic_Boom"),
-            InlineKeyboardButton("Gʀᴏᴜᴘ Rᴜʟᴇs", callback_data="group_rules"),
+            InlineKeyboardButton("𝗧𝗼𝘅𝗶𝗰 𝗥𝘂𝗹𝗲𝘀", callback_data="Toxic_Boom"),
+            InlineKeyboardButton("𝗚𝗿𝗼𝘂𝗽 𝗥𝘂𝗹𝗲𝘀", callback_data="group_rules"),
         ],
         [
-            InlineKeyboardButton("Bᴀᴄᴋ", callback_data="Rules"),
+            InlineKeyboardButton("𝗕𝗮𝗰𝗸", callback_data="Rules"),
     ],   
 ]
