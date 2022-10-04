@@ -1,4 +1,4 @@
-from KawaiiXRobot import mdb
+from Arcane import mdb
 
 gbansdb = mdb.gban
 

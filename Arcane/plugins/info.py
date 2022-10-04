@@ -5,9 +5,9 @@ import os
 from pyrogram import filters
 from pyrogram.types import Message
 
-from KawaiiXRobot import DEVS, bot
-from KawaiiXRobot.utils.sections import section
-from KawaiiXRobot.utils.dbfunctions import is_gbanned_user
+from Arcane import DEVS, bot
+from Arcane.utils.sections import section
+from Arcane.utils.dbfunctions import is_gbanned_user
 
 COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 

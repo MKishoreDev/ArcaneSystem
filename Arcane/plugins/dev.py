@@ -1,9 +1,9 @@
 # Dev.py ©Copyright By @ProErrorDxD  Machan
 
 import time
-from KawaiiXRobot import bot as app
-from KawaiiXRobot import bot, DEVS
-from KawaiiXRobot import StartTime
+from Arcane import bot as app
+from Arcane import bot, DEVS
+from Arcane import StartTime
 from pyrogram import filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 import sys, traceback, io

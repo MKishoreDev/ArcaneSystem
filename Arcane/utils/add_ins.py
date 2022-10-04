@@ -2,7 +2,7 @@ import codecs
 import pickle
 from typing import Dict, List, Union
 
-from KawaiiXRobot import mdb
+from Arcane import mdb
 
 Inspectordb = mdb.Inspector
 

@@ -1,6 +1,6 @@
 from pyrogram import filters
 from pyrogram.types import Message
-from KawaiiXRobot import ENFORCERS, bot, DEVS
+from Arcane import ENFORCERS, bot, DEVS
 from pyrogram import filters, Client
 
 

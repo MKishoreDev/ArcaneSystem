@@ -1,6 +1,6 @@
 # __main__.py ©Copyright By @ProErrorDxD  Machan
 
-from KawaiiXRobot import bot, DEVS
+from Arcane import bot, DEVS
 import logging
 import glob
 import asyncio
@@ -9,19 +9,19 @@ import sys
 from pathlib import Path
 
 def load_plugins(plugin_name):
-    punda = "KawaiiXRobot/plugins/*.py"
+    punda = "Arcane/plugins/*.py"
     devu = f"{len(glob.glob(punda))}"
-    path = Path(f"KawaiiXRobot/plugins/{plugin_name}.py")
-    name = "KawaiiXRobot.plugins.{}".format(plugin_name)
+    path = Path(f"Arcane/plugins/{plugin_name}.py")
+    name = "Arcane.plugins.{}".format(plugin_name)
     spec = importlib.util.spec_from_file_location(name, path)
     load = importlib.util.module_from_spec(spec)
     load.logger = logging.getLogger(plugin_name)
     spec.loader.exec_module(load)
-    sys.modules["KawaiiXRobot.plugins." + plugin_name] = load
+    sys.modules["Arcane.plugins." + plugin_name] = load
     print("Total Plugins -->" + devu)
     print("Imported --> " + plugin_name)
 
-path = "KawaiiXRobot/plugins/*.py"
+path = "Arcane/plugins/*.py"
 files = glob.glob(path)
 for name in files:
     with open(name) as a:

@@ -1,4 +1,4 @@
-from KawaiiXRobot import proofsdb, bot
+from Arcane import proofsdb, bot
 from typing import Dict, List, Union
 
 

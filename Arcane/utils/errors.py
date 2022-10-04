@@ -4,7 +4,7 @@ from functools import wraps
 
 from pyrogram.errors.exceptions.forbidden_403 import ChatWriteForbidden
 
-from KawaiiXRobot import bot
+from Arcane import bot
 
 LOG_GROUP_ID = -1001436797335
 

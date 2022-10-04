@@ -3,12 +3,12 @@
 import time
 import pytz
 import datetime
-from KawaiiXRobot import bot, KAWAII_LOGS, DEVS, Inspector, Enforcer, KAWAII_CHANNEL, ubot
+from Arcane import bot, KAWAII_LOGS, DEVS, Inspector, Enforcer, KAWAII_CHANNEL, ubot
 from pyrogram import filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client
 from pyrogram.types import Message
-from KawaiiXRobot.utils.dbfunctions import (
+from Arcane.utils.dbfunctions import (
     add_gban_user, remove_gban_user
 )
 

@@ -1,7 +1,7 @@
 # status.py ©Copyright By @HMF_Owner_1 
 
 import asyncio
-from KawaiiXRobot import bot, db
+from Arcane import bot, db
 from pyrogram import filters
 from config import DEVS, Inspector, Enforcer 
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup

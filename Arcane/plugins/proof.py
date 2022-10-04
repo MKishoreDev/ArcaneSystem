@@ -1,13 +1,13 @@
-from KawaiiXRobot import bot, DEVS
+from Arcane import bot, DEVS
 from pyrogram import filters
-from KawaiiXRobot.utils.filtersdb import (
+from Arcane.utils.filtersdb import (
     remove_proof,
     get_proof,
     get_proof_names,
     save_proof,
 )
 import re
-from KawaiiXRobot.utils.button import get_keyboard
+from Arcane.utils.button import get_keyboard
 from datetime import datetime, date, time 
 
 def parse_com(com, key):

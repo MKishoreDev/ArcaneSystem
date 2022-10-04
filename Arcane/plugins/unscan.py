@@ -3,15 +3,15 @@
 import time
 import pytz
 import datetime
-from KawaiiXRobot import bot, ubot, KAWAII_LOGS, DEVS, Inspector, KAWAII_CHANNEL, Enforcer
+from Arcane import bot, ubot, KAWAII_LOGS, DEVS, Inspector, KAWAII_CHANNEL, Enforcer
 from pyrogram import filters
 from pyrogram import Client
 from pyrogram.types import Message
-from KawaiiXRobot.utils.dbfunctions import (
+from Arcane.utils.dbfunctions import (
     add_gban_user,
     remove_gban_user,
 )
-from KawaiiXRobot.utils import dbfunctions as x
+from Arcane.utils import dbfunctions as x
 
 COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 

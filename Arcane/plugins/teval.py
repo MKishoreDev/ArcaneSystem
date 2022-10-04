@@ -4,8 +4,8 @@ import traceback
 
 from telethon.sync import events
 
-from KawaiiXRobot import tbot as client
-from KawaiiXRobot import DEVS
+from Arcane import tbot as client
+from Arcane import DEVS
 # telethon eval
 
 

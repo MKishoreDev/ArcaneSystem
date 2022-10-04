@@ -3,7 +3,7 @@ import time
 from pyrogram import Client
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
-from KawaiiXRobot.utils.db import DATABASE
+from Arcane.utils.db import DATABASE
 
 from telethon import TelegramClient
 from telethon.sessions import MemorySession
