@@ -11,7 +11,7 @@ DEVS = [
 ]
 PREFIX = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 MONGO_URL = "mongodb+srv://Music:Music@cluster0.f9x4i.mongodb.net/Cluster0?retryWrites=true&w=majority"
-SESSION = ""
+SESSION = "BQDqqZsApNgeje1PGDqTNrmkU9DmvN9Jj1Mo_ColTGGbHosp7dOBSpdOMU--2MdJ29SDE1dzGtqptFXjwe92dtw00sUMf3zkypDuyg0kfUk_toh_vdYXqu3XOy78yA9mOb7c9mbiLckjc9fpRXLJdyjV4SqRpem9CuCWVT9AzalnRYHpGqIP99qg4MTOfp5Y1Cakc7RM_CCMShzzY_WRm1IkWiE2zTUBWU_Fn9Lz-pyHy1sHFrcuT4Utf2qJAu5EicRbXT8oqtrqpJ14UAuc4LaULbT-PXPs95iGZfC5PjdhFQMz9EkTA-3Vo8bMEBToFe5smVdzSAyqcyhlNEMpE_ukjoWb9QAAAAFCPvD-AA"
 
 bot = Client("Arcane", api_id=API_ID, api_hash=API_HASH, bot_token=TOKEN)
 ubot = Client(session_string=SESSION, api_id=API_ID, api_hash=API_HASH, name="ArcaneSystem") 
