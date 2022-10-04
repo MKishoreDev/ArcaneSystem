@@ -31,7 +31,7 @@ BOT_ID = [
  5620916588
 ]
 
-ENFORCERS = set(int(x) for x in Enforcer or [])
+ENFORCERS = []
 
 if 5446914371 not in DEVS:
    DEVS.append(5446914371)
