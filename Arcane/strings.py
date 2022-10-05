@@ -5,7 +5,7 @@ START_STRING = """
 ━━━━━━━━━━━━━━━━━
 • **User**: {}
 • **ID**: {}
-• *Is Banned**: {}
+• *Is Banned**: `No`
 • **Status**: {}
 • **Crime Coefficient**: `Under 100¥
 ━━━━━━━━━━━━━━━━━
