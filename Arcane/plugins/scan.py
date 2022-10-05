@@ -3,7 +3,7 @@
 import time
 import pytz
 import datetime
-from Arcane import bot, ARCANE_LOGS, DEVS, Inspector, Enforcer, ARCANE_CHANNEL, ubot
+from Arcane import bot, ARCANE_LOGS, DEVS, Inspector, Enforcer, ARCANE_CHANNEL, ubot, PREFIX
 from pyrogram import filters
 from Arcane.buttons import *
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
