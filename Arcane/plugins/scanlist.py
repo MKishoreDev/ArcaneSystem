@@ -1,7 +1,7 @@
 # Sacnlist.py ©Copyright By @ProErrorDxD Machan
 
 from pyrogram import filters, Client
-from Arcane import bot
+from Arcane import bot, PREFIX
 from Arcane.utils.dbfunctions import gbansdb
 
 COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
