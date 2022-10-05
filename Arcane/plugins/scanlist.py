@@ -6,7 +6,7 @@ from Arcane.utils.dbfunctions import gbansdb
 
 COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 
-@bot.on_message(filters.command("scanlist", COMMANDS))
+@bot.on_message(filters.command("scanlist", PREFIX))
 async def list(client, message):
    total_num = len([i async for i in gbansdb.find({"user_id": {"$gt": 0}})])
    total_id = ([i['user_id'] async for i in gbansdb.find({"user_id": {"$gt": 0}})])
