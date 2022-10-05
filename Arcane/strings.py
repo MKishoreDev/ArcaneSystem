@@ -5,9 +5,9 @@ START_STRING = """
 ━━━━━━━━━━━━━━━━━
 • **User**: {}
 • **ID**: {}
-• *Is Banned**: `No`
+• **Is Banned**: `No`
 • **Status**: {}
-• **Crime Coefficient**: `Under 100¥
+• **Crime Coefficient**: `Under 100`
 ━━━━━━━━━━━━━━━━━
 **Click The Below Help Button To Know About All My Commands Or Tap On Rules Button To Read Rules**
 """
