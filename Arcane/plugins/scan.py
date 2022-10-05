@@ -5,7 +5,7 @@ import pytz
 import datetime
 from Arcane import bot, ARCANE_LOGS, DEVS, Inspector, Enforcer, ARCANE_CHANNEL, ubot
 from pyrogram import filters
-from Arcane import config *
+from Arcane.config import *
 from Arcane.buttons import *
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client
