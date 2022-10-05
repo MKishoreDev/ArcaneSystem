@@ -6,7 +6,7 @@ from pyrogram.types import (
     InlineKeyboardMarkup,
 )
 from pyrogram import filters
-from Arcane import bot, PREFIX
+from Arcane import bot, PREFIX, DEVS
 from Arcane.strings import *
 from Arcane.media import *
 from Arcane.buttons import *
