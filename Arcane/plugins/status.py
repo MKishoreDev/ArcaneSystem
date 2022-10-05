@@ -5,7 +5,7 @@ from Arcane import bot, db
 from Arcane.media import *
 from Arcane.buttons import *
 from pyrogram import filters
-from config import DEVS, Inspector, Enforcer, PREFIX
+from Arcane import DEVS, Inspector, Enforcer, PREFIX
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 
 HMF = DEVS + Inspector + Enforcer 
