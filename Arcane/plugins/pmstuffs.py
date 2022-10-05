@@ -13,6 +13,10 @@ from Arcane.buttons import *
 
 async def get_status(user_id):
     if user_id in DEVS:
+       return "Developer"
+    elif user_id in Inspector:
+       return "Inspector"
+    elif user_id in Enforcer:
        return "Approved User"
     else:
        return "Civilian"
