@@ -87,3 +87,10 @@ RULES_BUTTON2 = [
 UNSCAN_BUTTON = [[ InlineKeyboardButton(text="revert", callback_data="bunscan")]]
 
 RESCAN_BUTTON = [[ InlineKeyboardButton(text="Scan", callback_data="bscan")]]
+
+STATUS_BUTTON = [
+    [
+        InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ", url="https://t.me/HangOverXD"),
+        InlineKeyboardButton("Sᴘᴀᴍ ʀᴇᴘᴏʀᴛ", url="https://t.me/HangOverXD"),   
+    ],
+]
