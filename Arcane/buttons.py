@@ -83,3 +83,7 @@ RULES_BUTTON2 = [
             InlineKeyboardButton("𝗕𝗮𝗰𝗸", callback_data="Rules"),
     ],   
 ]
+
+UNSCAN_BUTTON = [[ InlineKeyboardButton(text="revert", callback_data="bunscan")]]
+
+RESCAN_BUTTON = [[ InlineKeyboardButton(text="Scan", callback_data="bscan")]]
