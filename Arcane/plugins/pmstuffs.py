@@ -8,8 +8,8 @@ from pyrogram.types import (
 from pyrogram import filters
 from Arcane import bot, PREFIX
 from Arcane.strings import *
-from Arcane.media import ANIMATION_MEDIA, START_MEDIA, HELP_MEDIA, RULES_MEDIA
-from Arcane.buttons import START_BUTTON, HELP_BUTTON, SCANHELP_BUTTON, SCANHELP_BUTTON2, SCANHELP_BUTTON3, RULES_BUTTON, RULES_BUTTON2
+from Arcane.media import *
+from Arcane.buttons import *
 
 @bot.on_message(filters.command(["start"], PREFIX))
 async def start(_, m: Message):
