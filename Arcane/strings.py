@@ -3,13 +3,12 @@ START_STRING = """
 ━━━━━━━━━━━━━━━━━
 • `I'm` `Arcane` `The Judgement Enforcing System, Made For Protecting Yourself From Spammer/Scammers`
 ━━━━━━━━━━━━━━━━━
-
-ᴀʀᴄᴀɴᴇ Aɴᴀʟʏsɪs Rᴇᴘᴏʀᴛ :-
- ➛ Usᴇʀ: {m.from_user.first_name}
- ➛ Iᴅ: {m.from_user.id}
- ➛ Gʙᴀɴɴᴇᴅ: {is_gbanned}
- ➛ Sᴛᴀᴛᴜs: {status}
-
+• **User**: {}
+• **ID**: {}
+• *Is Banned**: {}
+• **Status**: {}
+• **Crime Coefficient**: `Under 100¥
+━━━━━━━━━━━━━━━━━
 **Click The Below Help Button To Know About All My Commands Or Tap On Rules Button To Read Rules**
 """
 
