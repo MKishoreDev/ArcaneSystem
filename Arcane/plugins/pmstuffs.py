@@ -11,6 +11,12 @@ from Arcane.strings import *
 from Arcane.media import *
 from Arcane.buttons import *
 
+async def get_status(user_id):
+    if user_id in DEVS:
+       return "Approved User"
+    else:
+       return "Civilian"
+
 @bot.on_message(filters.command(["start"], PREFIX))
 async def start(_, m: Message):
     kk = await m.reply_video(ANIMATION_MEDIA, caption=ANI0)
@@ -27,11 +33,12 @@ async def start(_, m: Message):
     await asyncio.sleep(2)
     await kk.edit_caption(ANI6)
     await asyncio.sleep(1)
-    await kk.delete()     
+    await kk.delete() 
+    data = await get_status(m.from_user.id)   
     await m.reply_video(
         START_MEDIA,
         caption=START_STRING.format(
-            m.from_user.mention
+            m.from_user.mention, m.from_user.id, data
         ),
         reply_markup=InlineKeyboardMarkup(START_BUTTON),
     )
@@ -91,10 +98,7 @@ async def basicgrouprules(_, query: CallbackQuery):
     await query.edit_message_caption(GROUP_RULES,
         reply_markup=InlineKeyboardMarkup(RULES_BUTTON2))
         
-
 @bot.on_callback_query(filters.regex("Toxic_Boom"))
 async def basictoxirules(_, query: CallbackQuery):
     await query.edit_message_caption(TOXIC_RULES,
         reply_markup=InlineKeyboardMarkup(RULES_BUTTON2))
-
-        
