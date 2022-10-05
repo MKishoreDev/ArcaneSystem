@@ -1,5 +1,5 @@
 START_STRING = """
-**Welcome** {} ××
+**Welcome** Mr/Mrs ××
 ━━━━━━━━━━━━━━━━━
 • `I'm` `Arcane` `The Judgement Enforcing System, Made For Protecting Yourself From Spammer/Scammers`
 ━━━━━━━━━━━━━━━━━
