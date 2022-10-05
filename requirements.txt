@@ -2,6 +2,7 @@ dnspython
 motor
 aiohttp
 pymongo
+pytz
 pyrogram
 requests
 tgcrypto
