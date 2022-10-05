@@ -6,6 +6,7 @@ import datetime
 from Arcane import bot, ARCANE_LOGS, DEVS, Inspector, Enforcer, ARCANE_CHANNEL, ubot
 from pyrogram import filters
 from Arcane import config *
+from Arcane.buttons import *
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client
 from pyrogram.types import Message
@@ -62,8 +63,7 @@ async def scanning(_, message):
 """
 
          await ubot.send_message(-1001781501832, f"/gban {user_id} {reason}")
-         Button = [[ InlineKeyboardButton(text="revert", callback_data="bunscan")]]
-         await bot.send_message(-1001723857695, text, reply_markup=InlineKeyboardMarkup(Button))
+         await bot.send_message(-1001723857695, text, reply_markup=InlineKeyboardMarkup(UNSCAN_BUTTON))
          await msg.edit_text(f"Successfully Scanned [{user_id}](tg://user?id={user_id})")
 
                        
@@ -101,8 +101,7 @@ async def scanning(_, message):
 Wait For Inspectors 
 """
 
-         ScanButton = [[ InlineKeyboardButton(text="Scan", callback_data="bscan")]]
-         await bot.send_message(-1001723857695, text, reply_markup=InlineKeyboardMarkup(ScanButton))
+         await bot.send_message(-1001723857695, text, reply_markup=InlineKeyboardMarkup(RESCAN_BUTTON))
          await msg.edit_text(f"Successfully Scanned [{user_id}](tg://user?id={user_id})")
 
 
@@ -116,8 +115,7 @@ async def bscan(_, query):
 **Scanned:** [{user_id}](tg://user?id={user_id})
 
 Aproved by [{query.from_user.id}](tg://user?id={query.from_user.id})"""
-           bscan_Button = [[ InlineKeyboardButton(text="revert", callback_data="bunscan")]]
-           await query.message.edit(text, reply_markup=InlineKeyboardMarkup(bscan_Button))
+           await query.message.edit(text, reply_markup=InlineKeyboardMarkup(RESCAN_BUTTON))
 
 
 @bot.on_callback_query(filters.regex("bunscan"))
@@ -128,5 +126,4 @@ async def unscan(_, query):
            text = f""" **From Chat:** {query.message.chat.title}
 **Admire:** [{query.from_user.id}](tg://user?id={query.from_user.id})
 **UnScanned:** [{user_id}](tg://user?id={user_id})"""
-           UnscanButton = [[ InlineKeyboardButton(text="Scan Again", callback_data="bscan")]]
-           await query.message.edit(text, reply_markup=InlineKeyboardMarkup(UnscanButton))
+           await query.message.edit(text, reply_markup=InlineKeyboardMarkup(UNSCAN_BUTTON))
