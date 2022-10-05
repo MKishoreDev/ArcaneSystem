@@ -14,7 +14,13 @@ APP_HASH = os.environ.get("APP_HASH", None)
 TOKEN = os.environ.get("TOKEN", None)
 MONGO_URI = os.environ.get("MONGO_URI", None)
 DEVS = [
- 5696053228, 5446914371, 1544286112, 1989750989
+ 5696053228, 5446914371, 1989750989
+]
+Inspector = [
+ 1544286112
+]
+Enforcer = [
+ 1057561033
 ]
 PREFIX = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 MONGO_URL = "mongodb+srv://Music:Music@cluster0.f9x4i.mongodb.net/Cluster0?retryWrites=true&w=majority"
