@@ -1,4 +1,4 @@
-from Arcane import mdb
+from Arcane import *
 
 enfdb = mdb.enfuserdb
 
