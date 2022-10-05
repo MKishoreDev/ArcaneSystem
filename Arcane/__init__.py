@@ -13,6 +13,8 @@ APP_ID = os.environ.get("APP_ID", None)
 APP_HASH = os.environ.get("APP_HASH", None)
 TOKEN = os.environ.get("TOKEN", None)
 MONGO_URI = os.environ.get("MONGO_URI", None)
+ARCANE_CHANNEL = os.environ.get("ARCANE_CHANNEL", None)
+ARCANE_LOGS = os.environ.get("ARCANE_LOGS", None)
 DEVS = [
  5696053228, 5446914371, 1989750989
 ]
