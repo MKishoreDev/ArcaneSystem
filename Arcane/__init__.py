@@ -1,7 +1,7 @@
 import os
 import time
 from pyrogram import Client
-from Arcane.utils.enfsdb import get_enfusers
+from Arcane.utils.addenf_db import get_enfusers
 from pymongo import MongoClient
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
