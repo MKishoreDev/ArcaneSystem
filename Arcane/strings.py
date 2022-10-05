@@ -4,9 +4,9 @@ START_STRING = """
 • `I'm` `Arcane` `The Judgement Enforcing System, Made For Protecting Yourself From Spammer/Scammers`
 ━━━━━━━━━━━━━━━━━
 • **User**: {}
-• **ID**: {}
+• **ID**: `{}`
 • **Is Banned**: `No`
-• **Status**: {}
+• **Status**: `{}`
 • **Crime Coefficient**: `Under 100`
 ━━━━━━━━━━━━━━━━━
 **Click The Below Help Button To Know About All My Commands Or Tap On Rules Button To Read Rules**
