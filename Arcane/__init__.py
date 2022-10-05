@@ -27,9 +27,9 @@ Enforcer = [
 ]
 PREFIX = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 MONGO_URL = "mongodb+srv://Music:Music@cluster0.f9x4i.mongodb.net/Cluster0?retryWrites=true&w=majority"
+mongo_client = MongoClient("mongodb+srv://Music:Music@cluster0.f9x4i.mongodb.net/Cluster0?retryWrites=true&w=majority")
 mdb = mongo_client.gof
 db = DATABASE(MONGO_URI)
-mongo_client = MongoClient("mongodb+srv://Music:Music@cluster0.f9x4i.mongodb.net/Cluster0?retryWrites=true&w=majority")
 bot = Client("Arcane", api_id=APP_ID, api_hash=APP_HASH, bot_token=TOKEN)
 ubot = Client(session_string=SESSION, api_id=API_ID, api_hash=API_HASH, name="ArcaneSystem") 
 StartTime = time.time()
