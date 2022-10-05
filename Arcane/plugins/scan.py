@@ -3,8 +3,9 @@
 import time
 import pytz
 import datetime
-from Arcane import bot, KAWAII_LOGS, DEVS, Inspector, Enforcer, KAWAII_CHANNEL, ubot
+from Arcane import bot, ARCANE_LOGS, DEVS, Inspector, Enforcer, ARCANE_CHANNEL, ubot
 from pyrogram import filters
+from Arcane import config *
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram import Client
 from pyrogram.types import Message
@@ -20,7 +21,7 @@ COMMANDS = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 india_Date_Time = datetime.datetime.now(tz=pytz.timezone("Asia/Calcutta"))
 Current_Date_Time = india_Date_Time.strftime("%Y-%m-%dT%H:%M")
 
-@bot.on_message(filters.command("scan", COMMANDS))
+@bot.on_message(filters.command("scan", PREFIX))
 async def scanning(_, message):
          global user_id
          if message.from_user.id not in OWO:
@@ -51,7 +52,7 @@ async def scanning(_, message):
              )
              return
                        
-         msg = await message.reply_text("**Connecting to Cringe System...**")
+         msg = await message.reply_text("**Connecting to Arcane System...**")
          await add_gban_user(user_id)
          text = f""" **From Chat:** {message.chat.title}
 **Admire:** [{admire}](tg://user?id={admire})
@@ -78,7 +79,7 @@ async def unscan(_, query):
 
 # Enforcer Scan 
 
-@bot.on_message(filters.command("escan"))
+@bot.on_message(filters.command("escan", PREFIX))
 async def scanning(_, message):
          global user_id
          if message.from_user.id not in HMF:
@@ -90,7 +91,7 @@ async def scanning(_, message):
                 user_id = message.reply_to_message.from_user.id
                 admire = message.from_user.id
                 reason = message.text.replace("/escan", "")
-         msg = await message.reply_text("**Connecting to Cringe System...**")
+         msg = await message.reply_text("**Connecting to Arcane System...**")
          text = f""" **From Chat:** {message.chat.title}
 **Enforcer:** [{admire}](tg://user?id={admire})
 **Scanned:** [{user_id}](tg://user?id={user_id})
