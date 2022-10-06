@@ -2,7 +2,7 @@ from pyrogram import filters
 from Arcane import bot
 from Arcane.utils.dbfunctions import (
 add_enforcers as add_rank, remove_enforcers as add_rank)
-from Arcane.rank import Enforcers as RANK_USERS
+from Arcane.ranks import Enforcers as RANK_USERS
 
 RANK_ADDED_TEXT = """
 new enforcer arrived on bot
