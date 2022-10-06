@@ -1,7 +1,7 @@
 from Arcane import mdb
 
 gbansdb = mdb.gban
-ranksdb = mdb.rankuserdb
+enforcersdb = mdb.enforcersdb
 
 async def is_gbanned_user(user_id: int) -> bool:
     user = await gbansdb.find_one({"user_id": user_id})
@@ -38,22 +38,22 @@ async def get_gbans_data() -> int:
 
 
 
-async def get_rankusers() -> list:
-    rank_users = await ranksdb.find_one({"user_id": "user_id"})
-    if not rank_users:
+async def get_enforcers() -> list:
+    enforcers = await enforcersdb.find_one({"user_id": "user_id"})
+    if not enforcers:
         return []
-    return rank_users["rank_users"]
+    return enforcers["enforcers"]
 
-async def add_rank(user_id: int):
-      rank_users = await get_rankusers()
-      rank_users.append(user_id)
-      await ranksdb.update_one(
-        {"user_id": "user_id"}, {"$set": {"rank_users": rank_users}}, upsert=True)
+async def add_enforcers(user_id: int):
+      enforcers = await get_enforcers()
+      enforcers.append(user_id)
+      await enforcersdb.update_one(
+        {"user_id": "user_id"}, {"$set": {"enforcers": enforcers}}, upsert=True)
       return True  
 
-async def remove_rank(user_id: int):
-       rank_users = await get_rankusers()
-       rank_users.remove(user_id)
-       await ranksdb.update_one(
-        {"user_id": "user_id"}, {"$set": {"rank_users": rank_users}}, upsert=True)
+async def remove_enforcers(user_id: int):
+       enforcers = await get_enforcers()
+       enforcers.remove(user_id)
+       await enforcersdb.update_one(
+        {"user_id": "user_id"}, {"$set": {"enforcers": enforcers}}, upsert=True)
        return True
