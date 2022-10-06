@@ -12,7 +12,7 @@ from pyrogram.types import Message
 from Arcane.utils.dbfunctions import (
     add_gban_user, remove_gban_user
 )
-
+from Arcane.ranks import Enforcers
 
 OWO = DEVS + Inspector 
 HMF = Enforcer
@@ -81,7 +81,7 @@ async def unscan(_, query):
 @bot.on_message(filters.command("escan", PREFIX))
 async def scanning(_, message):
          global user_id
-         if message.from_user.id not in HMF:
+         if message.from_user.id not in (await Enforcers ()):
               return await message.reply_text("Sorry bitch your not my own user") 
          if len(message.command) <2:
                   await message.reply("*Any reason to scanning?")
