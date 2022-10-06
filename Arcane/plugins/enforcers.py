@@ -1,7 +1,7 @@
 from pyrogram import filters
 from Arcane import bot
 from Arcane.utils.dbfunctions import (
-add_enforcers as add_rank, remove_enforcers as add_rank, get_enforcers as get_rankusers)
+add_enforcers as add_rank, remove_enforcers as remove_rank, get_enforcers as get_rankusers)
 from Arcane.ranks import Enforcers as RANK_USERS
 
 RANK_ADDED_TEXT = """
