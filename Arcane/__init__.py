@@ -1,7 +1,6 @@
 import os
 import time
 from pyrogram import Client
-from Arcane.utils.addenf_db import get_enfusers
 from pymongo import MongoClient
 from aiohttp import ClientSession
 from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
@@ -28,9 +27,6 @@ Enforcer = [
  1057561033
 ]
 
-async def Enforcer():
-     list = (await get_enfusers())
-     return list
 
 PREFIX = ["/", ".", "?", "#", "@", "₹", "+", ":", "!", "^", "|"]
 MONGO_URL = "mongodb+srv://Music:Music@cluster0.f9x4i.mongodb.net/Cluster0?retryWrites=true&w=majority"
