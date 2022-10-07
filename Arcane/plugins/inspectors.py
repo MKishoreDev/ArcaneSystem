@@ -15,13 +15,13 @@ it's {}
 
 @bot.on_message(filters.command("addins"))
 async def addInspector(_, message):
-         global user_id
-         if message.from_user.id not in DEVS:
-              return await message.reply_text("Sorry bitch your not my own user")
-               reply = message.reply_to_message
-               chat_id = message.chat.id
-               msg = await message.reply_text("processing adding..")
+      global user_id
+      if message.from_user.id not in DEVS:
+           return await message.reply_text("Sorry bitch your not my own user")
       if not message.from_user.id in (await Inspectors_list()):
+           reply = message.reply_to_message
+           chat_id = message.chat.id
+           msg = await message.reply_text("processing adding...")
            await msg.edit_text("my rank user can add another rank user!")
       elif not reply:
          try:
