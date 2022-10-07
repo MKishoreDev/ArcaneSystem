@@ -13,7 +13,7 @@ the enforcer remove on bot
 it's {}
 """
 
-@bot.on_message(filters.command("addenforcers"))
+@bot.on_message(filters.command("addenf"))
 async def addenforcers(_, message):
       reply = message.reply_to_message
       chat_id = message.chat.id
@@ -44,7 +44,7 @@ async def addenforcers(_, message):
             except Exception as e:
                   await msg.edit_text(str(e))
 
-@bot.on_message(filters.command("removeenfocers"))
+@bot.on_message(filters.command("rmenf"))
 async def removeenforcers(_, message):
       reply = message.reply_to_message
       chat_id = message.chat.id
