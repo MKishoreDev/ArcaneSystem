@@ -5,7 +5,7 @@ async def Enforcers():
      list = (await get_enforcers())
      return list
 
-async def Inspector():
+async def Inspectors_list():
      list = (await get_Inspector())
      return list
 
