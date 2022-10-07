@@ -1,5 +1,5 @@
 from pyrogram import filters
-from Arcane import bot
+from Arcane import bot, DEVS
 from Arcane.utils.dbfunctions import (
 add_Inspector, remove_Inspector, get_Inspector)
 from Arcane.ranks import Inspectors_list
@@ -15,9 +15,12 @@ it's {}
 
 @bot.on_message(filters.command("addins"))
 async def addInspector(_, message):
-      reply = message.reply_to_message
-      chat_id = message.chat.id
-      msg = await message.reply_text("processing adding..")
+         global user_id
+         if message.from_user.id not in DEVS:
+              return await message.reply_text("Sorry bitch your not my own user")
+               reply = message.reply_to_message
+               chat_id = message.chat.id
+               msg = await message.reply_text("processing adding..")
       if not message.from_user.id in (await Inspectors_list()):
            await msg.edit_text("my rank user can add another rank user!")
       elif not reply:
@@ -49,7 +52,7 @@ async def removeInspector(_, message):
       reply = message.reply_to_message
       chat_id = message.chat.id
       msg = await message.reply_text("processing removeing..")
-      if not message.from_user.id in (await Inspectors_list()):
+      if not message.from_user.id in DEVS:
            await msg.edit_text("my rank user can remove another rank user!")
       elif not reply:
          try:
