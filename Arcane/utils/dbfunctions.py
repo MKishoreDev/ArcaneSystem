@@ -62,22 +62,22 @@ async def remove_enforcers(user_id: int):
 # Inspector 
 
 async def get_Inspector() -> list:
-    Inspector = await Inspectordb.find_one({"user_id": "user_id"})
-    if not Inspector:
+    Inspectors_list = await Inspectordb.find_one({"user_id": "user_id"})
+    if not Inspectors_list:
         return []
-    return Inspector["Inspector"]
+    return Inspectors_list["Inspectors_list"]
 
 async def add_Inspector(user_id: int):
-      Inspector = await get_Inspector()
-      Inspector.append(user_id)
+      Inspectors_list = await get_Inspector()
+      Inspectors_list.append(user_id)
       await Inspectordb.update_one(
-        {"user_id": "user_id"}, {"$set": {"Inspector": Inspector}}, upsert=True)
+        {"user_id": "user_id"}, {"$set": {"Inspectors_list": Inspectors_list}}, upsert=True)
       return True  
 
 async def remove_Inspector(user_id: int):
-       Inspector = await get_Inspector()
-       Inspector.remove(user_id)
+       Inspectors_list = await get_Inspector()
+       Inspectors_list.remove(user_id)
        await Inspectordb.update_one(
-        {"user_id": "user_id"}, {"$set": {"Inspector": Inspector}}, upsert=True)
+        {"user_id": "user_id"}, {"$set": {"Inspectors_list": Inspectors_list}}, upsert=True)
        return True
 
