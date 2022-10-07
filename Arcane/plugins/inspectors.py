@@ -1,7 +1,7 @@
 from pyrogram import filters
 from Arcane import bot
 from Arcane.utils.dbfunctions import (
-add_Inspector, remove_Inspector, get_Inspector
+add_Inspector, remove_Inspector, get_Inspector)
 from Arcane.ranks import Inspectors_list
 
 RANK_ADDED_TEXT = """
