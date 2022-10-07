@@ -13,6 +13,7 @@ from Arcane.utils.dbfunctions import (
     add_gban_user, remove_gban_user
 )
 from Arcane.ranks import Enforcers
+from Arcane.ranks import Inspectors_list
 
 OWO = DEVS + Inspector 
 HMF = Enforcer
@@ -24,7 +25,7 @@ Current_Date_Time = india_Date_Time.strftime("%Y-%m-%dT%H:%M")
 @bot.on_message(filters.command("scan", PREFIX))
 async def scanning(_, message):
          global user_id
-         if message.from_user.id not in OWO:
+         if message.from_user.id not in (await Inspectors_list ()):
               return await message.reply_text("Sorry bitch your not my own user") 
          if len(message.command) <2:
                   await message.reply("*Any reason to scanning?")
@@ -68,7 +69,7 @@ async def scanning(_, message):
                        
 @bot.on_callback_query(filters.regex("unscan"))
 async def unscan(_, query):
-       if query.from_user.id in OWO:
+       if query.from_user.id in (await Inspectors_list ()):
            await remove_gban_user(user_id)
            await ubot.send_message(-1001781501832, f"/ungban {user_id}")
            text = f""" **From Chat:** {query.message.chat.title}
@@ -106,7 +107,7 @@ Wait For Inspectors
 
 @bot.on_callback_query(filters.regex("bscan"))
 async def bscan(_, query):
-       if query.from_user.id in OWO:
+       if query.from_user.id in (await Inspectors_list ()):
            await add_gban_user(user_id)
            await ubot.send_message(-1001781501832, f"/gban {user_id}")
            text = f""" **From Chat:** {query.message.chat.title}
@@ -119,7 +120,7 @@ Aproved by [{query.from_user.id}](tg://user?id={query.from_user.id})"""
 
 @bot.on_callback_query(filters.regex("bunscan"))
 async def unscan(_, query):
-       if query.from_user.id in OWO:
+       if query.from_user.id in (await Inspectors_list ()):
            await remove_gban_user(user_id)
            await ubot.send_message(-1001781501832, f"/ungban {user_id}")
            text = f""" **From Chat:** {query.message.chat.title}
