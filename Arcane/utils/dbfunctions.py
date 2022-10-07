@@ -1,6 +1,7 @@
 from Arcane import mdb
 
 gbansdb = mdb.gban
+Inspectordb = mdb.Inspectordb
 enforcersdb = mdb.enforcersdb
 
 async def is_gbanned_user(user_id: int) -> bool:
@@ -36,7 +37,7 @@ async def get_gbans_data() -> int:
 
 
 
-
+# Enforcer
 
 async def get_enforcers() -> list:
     enforcers = await enforcersdb.find_one({"user_id": "user_id"})
@@ -57,3 +58,26 @@ async def remove_enforcers(user_id: int):
        await enforcersdb.update_one(
         {"user_id": "user_id"}, {"$set": {"enforcers": enforcers}}, upsert=True)
        return True
+
+# Inspector 
+
+async def get_Inspector() -> list:
+    Inspector = await Inspectordb.find_one({"user_id": "user_id"})
+    if not Inspector:
+        return []
+    return Inspector["Inspector"]
+
+async def add_Inspector(user_id: int):
+      Inspector = await get_Inspector()
+      Inspector.append(user_id)
+      await Inspectordb.update_one(
+        {"user_id": "user_id"}, {"$set": {"Inspector": Inspector}}, upsert=True)
+      return True  
+
+async def remove_Inspector(user_id: int):
+       Inspector = await get_Inspector()
+       Inspector.remove(user_id)
+       await Inspectordb.update_one(
+        {"user_id": "user_id"}, {"$set": {"Inspector": Inspector}}, upsert=True)
+       return True
+
