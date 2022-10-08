@@ -21,7 +21,7 @@ async def start(_, m: Message):
               reply_markup=InlineKeyboardMarkup(ADD_BUTTON),
            )
 
-@bot.on_callback_query(filters.regex("addinss"))
+@bot.on_callback_query(filters.regex("ADDINS"))
 async def addinss(_, query):
       if query.from_user.id in DEVS
       user_id = message.reply_to_message.from_user.id
