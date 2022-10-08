@@ -19,7 +19,7 @@ async def start(_, m: Message):
          if m.reply_to_message:
                 user_id = m.reply_to_message.from_user.id
                 admin = m.from_user.id
-                await m.reply_video(ADD_MEDIA,
+                await m.reply_photo(ADD_MEDIA,
                 caption=ADD_STRIMG.format(
                 m.from_user.mention
                ),
