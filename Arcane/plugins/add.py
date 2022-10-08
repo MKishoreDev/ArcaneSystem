@@ -1,4 +1,7 @@
 from pyrogram import filters
+from Arcane.strings import *
+from Arcane.media import *
+from Arcane.buttons import *
 from Arcane import bot, DEVS, PREFIX
 from Arcane.utils.dbfunctions import (
 add_enforcers, remove_enforcers, get_enforcers)
