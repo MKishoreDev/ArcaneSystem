@@ -94,3 +94,15 @@ STATUS_BUTTON = [
         InlineKeyboardButton("Sᴘᴀᴍ ʀᴇᴘᴏʀᴛ", url="https://t.me/HangOverXD"),   
     ],
 ]
+
+ADD_BUTTON = [
+    [
+        InlineKeyboardButton("Promote To INS", callback_data="ADDINS"),
+        InlineKeyboardButton("Demote INS To ENF", callback_data="ADDENF"),
+    ],
+    [
+        InlineKeyboardButton("Demote To Civilian", callback_data="DEMOTE"),
+        InlineKeyboardButton("Close", callback_data="delete"),      
+    ],   
+]
+
