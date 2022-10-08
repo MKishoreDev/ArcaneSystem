@@ -119,8 +119,8 @@ EXTRA_DEMOTE = [
             InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Iɴs Tᴏ Eɴғ", callback_data="I_TO_E"),
         ],
         [
-            InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Eɴғᴏʀᴄᴇʀ", callback_data="E_TO_I"),
-            InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Iɴsᴘᴇᴄᴛᴏʀ", callback_data="I_TO_E"),
+            InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Eɴғᴏʀᴄᴇʀ", callback_data="RMENF"),
+            InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Iɴsᴘᴇᴄᴛᴏʀ", callback_data="RMINS"),
         ],
         [
             InlineKeyboardButton("︿", callback_data="ADD_BUTTON"),
