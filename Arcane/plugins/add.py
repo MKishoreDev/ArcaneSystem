@@ -31,14 +31,24 @@ async def addinss(_, query):
        if query.from_user.id in DEVS:
                await add_Inspector(user_id)
                ADDIND_TEXT = f"""[{query.from_user.id}](tg://user?id={query.from_user.id}) Promoted [{user_id}](tg://user?id={user_id}) Into Inspector"""
-               await query.edit_message_caption(ADDIND_TEXT, reply_markup=InlineKeyboardMarkup(INSED_BUTTON))
+               await query.edit_message_caption(ADDIND_TEXT, reply_markup=InlineKeyboardMarkup(CIVED_BUTTON))
 
 @bot.on_callback_query(filters.regex("ADDENF"))
 async def addinss(_, query):
        if query.from_user.id in DEVS:
                await remove_Inspector(user_id)
-               await add_Inspector(user_id)
-               ADDENF_TEXT = f"""[{query.from_user.id}](tg://user?id={query.from_user.id}) Promoted [{user_id}](tg://user?id={user_id}) Into Enforcer"""
+               await add_enforcers(user_id)
+               ADDENF_TEXT = f"""[{query.from_user.id}](tg://user?id={query.from_user.id}) Successful Demoted [{user_id}](tg://user?id={user_id}) Into Enforcer"""
                await query.edit_message_caption(ADDENF_TEXT, reply_markup=InlineKeyboardMarkup(ENFED_BUTTON))
 
+@bot.on_callback_query(filters.regex("DEMOTE"))
+async def addinss(_, query):
+       if query.from_user.id in DEVS:
+               await remove_Inspector(user_id)
+               await remove_enforcers(user_id)
+               DECIV_TEXT = f"""[{query.from_user.id}](tg://user?id={query.from_user.id}) Promoted [{user_id}](tg://user?id={user_id}) Into civilian"""
+               await query.edit_message_caption(DECIV_TEXT, reply_markup=InlineKeyboardMarkup(CIVED_BUTTON))
 
+@bot.on_callback_query(filters.regex("delete"))
+async def delete(_, query):
+    await query.message.delete()
