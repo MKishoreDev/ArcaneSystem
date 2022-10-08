@@ -17,6 +17,8 @@ async def start(_, m: Message):
          if m.from_user.id not in DEVS:
               return await message.reply_text("WTF! You'er My Developer") 
          if m.reply_to_message:
+                user_id = m.reply_to_message.from_user.id
+                admin = m.from_user.id
                 await m.reply_video(ADD_MEDIA,
                 caption=ADD_STRIMG.format(
                 m.from_user.mention
@@ -25,9 +27,7 @@ async def start(_, m: Message):
            )
 
 @bot.on_callback_query(filters.regex("ADDINS"))
-async def addinss(_, query, m: Message):
-       user_id = m.reply_to_message.from_user.id
-       admin = m.from_user.id
+async def addinss(_, query):
        if query.from_user.id in DEVS:
                await add_Inspector(user_id)
                text = f"""  [{admin}](tg://user?id={admin}) Promoted [{query.from_user.id}](tg://user?id={query.from_user.id}) Into Inspector"""
