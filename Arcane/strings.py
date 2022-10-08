@@ -84,3 +84,5 @@ Use command /scan + flags checkout flags button.
 👉🏻 2nd case if scanning the user via "message link/username/user id"
 Use command /scan -id + flags checkout flags button.
 `E.g /scan -id 1234560914 -r threat -p https://telegra.ph/media`"""
+
+ADD_STRIMG = """{} targeted User """
