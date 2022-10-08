@@ -11,9 +11,9 @@ from Arcane.ranks import Inspectors_list
 @bot.on_message(filters.command("add", PREFIX))
 async def start(_, m: Message):
          global user_id
-         if message.from_user.id not in DEVS:
+         if m.from_user.id not in DEVS:
               return await message.reply_text("WTF! You'er My Developer") 
-         if message.reply_to_message:
+         if m.reply_to_message:
                 await m.reply_video(ADD_MEDIA,
                 caption=ADD_STRIMG.format(
                 m.from_user.mention
