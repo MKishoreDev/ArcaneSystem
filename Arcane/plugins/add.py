@@ -31,7 +31,7 @@ async def addinss(_, query):
        if query.from_user.id in DEVS:
                await add_Inspector(user_id)
                ADDIND_TEXT = f"""[{query.from_user.id}](tg://user?id={query.from_user.id}) Promoted [{user_id}](tg://user?id={user_id}) Into Inspector"""
-               await query.edit_message_caption(ADDIND_TEXT, reply_markup=InlineKeyboardMarkup(CIVED_BUTTON))
+               await query.edit_message_caption(ADDIND_TEXT, reply_markup=InlineKeyboardMarkup(INSED_BUTTON))
 
 @bot.on_callback_query(filters.regex("ADDENF"))
 async def addenfs(_, query):
