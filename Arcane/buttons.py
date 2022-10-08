@@ -106,6 +106,7 @@ ADD_BUTTON = [
         ],
         [
             InlineKeyboardButton("﹀", callback_data="EXTRA_DEMOTEE"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
     ],   
 ]
 
@@ -141,6 +142,7 @@ INSED_BUTTON = [
         ],
         [
             InlineKeyboardButton("﹀", callback_data="EXTRA_DEMOTEE"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
     ],   
 ]
 
@@ -155,6 +157,7 @@ ENFED_BUTTON = [
         ],
         [
             InlineKeyboardButton("﹀", callback_data="EXTRA_DEMOTEE"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
     ],   
 ]
 
@@ -169,6 +172,7 @@ I_TO_E_BUTTON = [
         ],
         [
             InlineKeyboardButton("﹀", callback_data="EXTRA_DEMOTEE"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
     ],   
 ]
 
@@ -183,6 +187,7 @@ E_TO_I_BUTTON = [
         ],
         [
             InlineKeyboardButton("﹀", callback_data="EXTRA_DEMOTEE"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
     ],   
 ]
 
