@@ -3,7 +3,7 @@ from Arcane import bot, DEVS, PREFIX
 from Arcane.utils.dbfunctions import (
 add_enforcers, remove_enforcers, get_enforcers)
 from Arcane.ranks import Enforcers 
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup
 from Arcane.utils.dbfunctions import (
 add_Inspector, remove_Inspector, get_Inspector)
 from Arcane.ranks import Inspectors_list
