@@ -26,6 +26,22 @@ async def start(_, m: Message):
               reply_markup=InlineKeyboardMarkup(ADD_BUTTON),
            )
 
+@bot.on_callback_query(filters.regex("I_TO_E"))
+async def ITE(_, query):
+       if query.from_user.id in DEVS:
+               await remove_Inspector(user_id)
+               await add_enforcers(user_id)
+               I_TO_E_TEXT = f"""Successfully Inspector [{user_id}](tg://user?id={user_id}) Demoted Into Enforcer"""
+               await query.edit_message_caption(I_TO_E_TEXT, reply_markup=InlineKeyboardMarkup(I_TO_E_BUTTON))
+
+@bot.on_callback_query(filters.regex("E_TO_I"))
+async def ETI(_, query):
+       if query.from_user.id in DEVS:
+               await remove_enforcers(user_id)
+               await add_Inspector(user_id)
+               E_TO_I_TEXT = f"""Successfully Enforcer [{user_id}](tg://user?id={user_id}) Promoted Into Inspector"""
+               await query.edit_message_caption(E_TO_I_TEXT, reply_markup=InlineKeyboardMarkup(E_TO_I_BUTTON))
+
 @bot.on_callback_query(filters.regex("ADDINS"))
 async def addinss(_, query):
        if query.from_user.id in DEVS:
