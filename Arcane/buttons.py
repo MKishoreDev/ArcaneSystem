@@ -105,7 +105,7 @@ ADD_BUTTON = [
             InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Iɴs Tᴏ Eɴғ", callback_data="I_TO_E"),
         ],
         [
-            InlineKeyboardButton("﹀", callback_data="EXTRA_DEMOTE"),
+            InlineKeyboardButton("﹀", callback_data="EXTRA_DEMOTEE"),
     ],   
 ]
 
@@ -123,7 +123,7 @@ EXTRA_DEMOTE = [
             InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Iɴsᴘᴇᴄᴛᴏʀ", callback_data="RMINS"),
         ],
         [
-            InlineKeyboardButton("︿", callback_data="ADD_BUTTON"),
+            InlineKeyboardButton("︿", callback_data="ADDD_BUTTON"),
             InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
     ],   
 ]
