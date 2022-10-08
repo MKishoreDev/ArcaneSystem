@@ -33,4 +33,12 @@ async def addinss(_, query):
                ADDIND_TEXT = f"""[{query.from_user.id}](tg://user?id={query.from_user.id}) Promoted [{user_id}](tg://user?id={user_id}) Into Inspector"""
                await query.edit_message_caption(ADDIND_TEXT, reply_markup=InlineKeyboardMarkup(INSED_BUTTON))
 
+@bot.on_callback_query(filters.regex("ADDENF"))
+async def addinss(_, query):
+       if query.from_user.id in DEVS:
+               await remove_Inspector(user_id)
+               await add_Inspector(user_id)
+               ADDENF_TEXT = f"""[{query.from_user.id}](tg://user?id={query.from_user.id}) Promoted [{user_id}](tg://user?id={user_id}) Into Enforcer"""
+               await query.edit_message_caption(ADDENF_TEXT, reply_markup=InlineKeyboardMarkup(ENFED_BUTTON))
+
 
