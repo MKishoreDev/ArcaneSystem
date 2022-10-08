@@ -84,4 +84,5 @@ async def rmenf(_, query):
 
 @bot.on_callback_query(filters.regex("deletee"))
 async def delete(_, query):
-    await query.message.delete()
+       if query.from_user.id in DEVS:
+               await query.message.delete()
