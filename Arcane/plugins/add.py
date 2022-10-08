@@ -82,6 +82,6 @@ async def rmenf(_, query):
                LOW_TEXT = f"""Welcome To Arcane System"""
                await query.edit_message_caption(LOW_TEXT, reply_markup=InlineKeyboardMarkup(ADD_BUTTON))
 
-@bot.on_callback_query(filters.regex("delete"))
+@bot.on_callback_query(filters.regex("deletee"))
 async def delete(_, query):
     await query.message.delete()
