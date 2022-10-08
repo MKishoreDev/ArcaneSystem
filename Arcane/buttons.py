@@ -185,3 +185,42 @@ E_TO_I_BUTTON = [
             InlineKeyboardButton("﹀", callback_data="EXTRA_DEMOTE"),
     ],   
 ]
+
+RMENFED_BUTTON = [
+        [
+            InlineKeyboardButton("Pʀᴏᴍᴏᴛᴇ Tᴏ Eɴғ", callback_data="ADDENF"),
+            InlineKeyboardButton("Pʀᴏᴍᴏᴛᴇ Tᴏ Iɴs", callback_data="ADDINS"),
+        ],
+        [
+            InlineKeyboardButton("Pʀᴏᴍᴏᴛᴇ Eɴғ Tᴏ Iɴs", callback_data="E_TO_I"),
+            InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Iɴs Tᴏ Eɴғ", callback_data="I_TO_E"),
+        ],
+        [
+            InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Eɴғᴏʀᴄᴇʀ 🔘", callback_data="RMENF"),
+            InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Iɴsᴘᴇᴄᴛᴏʀ", callback_data="RMINS"),
+        ],
+        [
+            InlineKeyboardButton("︿", callback_data="ADD_BUTTON"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
+    ],   
+]
+
+RMINSED_BUTTON = [
+        [
+            InlineKeyboardButton("Pʀᴏᴍᴏᴛᴇ Tᴏ Eɴғ", callback_data="ADDENF"),
+            InlineKeyboardButton("Pʀᴏᴍᴏᴛᴇ Tᴏ Iɴs", callback_data="ADDINS"),
+        ],
+        [
+            InlineKeyboardButton("Pʀᴏᴍᴏᴛᴇ Eɴғ Tᴏ Iɴs", callback_data="E_TO_I"),
+            InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Iɴs Tᴏ Eɴғ", callback_data="I_TO_E"),
+        ],
+        [
+            InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Eɴғᴏʀᴄᴇʀ", callback_data="RMENF"),
+            InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Iɴsᴘᴇᴄᴛᴏʀ 🔘", callback_data="RMINS"),
+        ],
+        [
+            InlineKeyboardButton("︿", callback_data="ADD_BUTTON"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
+    ],   
+]
+
