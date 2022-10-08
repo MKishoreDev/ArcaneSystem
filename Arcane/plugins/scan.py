@@ -115,7 +115,7 @@ async def bscan(_, query):
 **Scanned:** [{user_id}](tg://user?id={user_id})
 
 Aproved by [{query.from_user.id}](tg://user?id={query.from_user.id})"""
-           await query.message.edit(text, reply_markup=InlineKeyboardMarkup(RESCAN_BUTTON))
+           await query.message.edit(text, reply_markup=InlineKeyboardMarkup(UNSCAN_BUTTON))
 
 
 @bot.on_callback_query(filters.regex("bunscan"))
