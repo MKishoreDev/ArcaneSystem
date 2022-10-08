@@ -34,7 +34,7 @@ async def addinss(_, query):
                await query.edit_message_caption(ADDIND_TEXT, reply_markup=InlineKeyboardMarkup(CIVED_BUTTON))
 
 @bot.on_callback_query(filters.regex("ADDENF"))
-async def addinss(_, query):
+async def addenfs(_, query):
        if query.from_user.id in DEVS:
                await remove_Inspector(user_id)
                await add_enforcers(user_id)
@@ -42,7 +42,7 @@ async def addinss(_, query):
                await query.edit_message_caption(ADDENF_TEXT, reply_markup=InlineKeyboardMarkup(ENFED_BUTTON))
 
 @bot.on_callback_query(filters.regex("DEMOTE"))
-async def addinss(_, query):
+async def demotee(_, query):
        if query.from_user.id in DEVS:
                await remove_Inspector(user_id)
                await remove_enforcers(user_id)
