@@ -27,7 +27,7 @@ async def start(_, m: Message):
            )
 
 @bot.on_callback_query(filters.regex("ADDINS"))
-async def addinss(_, query: CallbackQuery: Message):
+async def addinss(_, query: CallbackQuery, Message):
        user_id = message.reply_to_message.from_user.id
        admin = message.from_user.id
        if query.from_user.id in DEVS:
