@@ -106,7 +106,7 @@ ADD_BUTTON = [
         ],
         [
             InlineKeyboardButton("﹀", callback_data="EXTRA_DEMOTEE"),
-            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="deletee"),
     ],   
 ]
 
@@ -125,7 +125,7 @@ EXTRA_DEMOTE = [
         ],
         [
             InlineKeyboardButton("︿", callback_data="ADDD_BUTTON"),
-            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="deletee"),
     ],   
 ]
 
@@ -142,7 +142,7 @@ INSED_BUTTON = [
         ],
         [
             InlineKeyboardButton("﹀", callback_data="EXTRA_DEMOTEE"),
-            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="deletee"),
     ],   
 ]
 
@@ -157,7 +157,7 @@ ENFED_BUTTON = [
         ],
         [
             InlineKeyboardButton("﹀", callback_data="EXTRA_DEMOTEE"),
-            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="deletee"),
     ],   
 ]
 
@@ -172,7 +172,7 @@ I_TO_E_BUTTON = [
         ],
         [
             InlineKeyboardButton("﹀", callback_data="EXTRA_DEMOTEE"),
-            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="deletee"),
     ],   
 ]
 
@@ -187,7 +187,7 @@ E_TO_I_BUTTON = [
         ],
         [
             InlineKeyboardButton("﹀", callback_data="EXTRA_DEMOTEE"),
-            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="deletee"),
     ],   
 ]
 
@@ -206,7 +206,7 @@ RMENFED_BUTTON = [
         ],
         [
             InlineKeyboardButton("︿", callback_data="ADDD_BUTTON"),
-            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="deletee"),
     ],   
 ]
 
@@ -225,7 +225,7 @@ RMINSED_BUTTON = [
         ],
         [
             InlineKeyboardButton("︿", callback_data="ADDD_BUTTON"),
-            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="deletee"),
     ],   
 ]
 
