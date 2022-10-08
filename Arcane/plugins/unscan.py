@@ -23,7 +23,7 @@ Current_Date_Time = india_Date_Time.strftime("%Y-%m-%dT%H:%M")
 @bot.on_message(filters.command("revert", COMMANDS))
 async def revert(_, message):
          global user_id
-         if message.from_user.id not in OWO:
+         if message.from_user.id not in (await Inspectors_list ()):
               return await message.reply_text("Sorry bitch your not my own user") 
          elif message.reply_to_message:
                 user_id = message.reply_to_message.from_user.id
@@ -35,13 +35,13 @@ async def revert(_, message):
              )
              return
 
-         if int(user_id) in Inspector:
+         if int(user_id) in (await Inspectors_list ()):
              await message.reply_text(
                  "Inspector's Can't Be UnBan 😑"
              )
              return
 
-         if int(user_id) in Enforcer:
+         if int(user_id) in (await Enforcers ()):
              await message.reply_text(
                  "Enforcer's Can't Be UnBan 😑. If You Want Ban Or Remove Enforcer Ask Dev With Correct Reason 👍"
              )
