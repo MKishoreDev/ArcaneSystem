@@ -51,8 +51,8 @@ async def rmins(_, query):
 async def rmenf(_, query):
        if query.from_user.id in DEVS:
                await remove_enforcers(user_id)
-               RMINS_TEXT = f"""[{query.from_user.id}](tg://user?id={query.from_user.id}) Successfully [{user_id}](tg://user?id={user_id}) Into civilian"""
-               await query.edit_message_caption(RMINS_TEXT, reply_markup=InlineKeyboardMarkup(CIVED_BUTTON))
+               RMENF_TEXT = f"""[{query.from_user.id}](tg://user?id={query.from_user.id}) Successfully [{user_id}](tg://user?id={user_id}) Into civilian"""
+               await query.edit_message_caption(RMENF_TEXT, reply_markup=InlineKeyboardMarkup(CIVED_BUTTON))
 
 @bot.on_callback_query(filters.regex("delete"))
 async def delete(_, query):
