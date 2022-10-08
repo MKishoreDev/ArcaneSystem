@@ -70,6 +70,18 @@ async def rmenf(_, query):
                RMENF_TEXT = f"""[{query.from_user.id}](tg://user?id={query.from_user.id}) Successfully [{user_id}](tg://user?id={user_id}) Into civilian"""
                await query.edit_message_caption(RMENF_TEXT, reply_markup=InlineKeyboardMarkup(RMENFED_BUTTON))
 
+@bot.on_callback_query(filters.regex("EXTRA_DEMOTEE"))
+async def rmenf(_, query):
+       if query.from_user.id in DEVS:
+               EXTRA_TEXT = f"""Welcome To Arcane System"""
+               await query.edit_message_caption(EXTRA_TEXT, reply_markup=InlineKeyboardMarkup(EXTRA_DEMOTE))
+
+@bot.on_callback_query(filters.regex("ADDD_BUTTON"))
+async def rmenf(_, query):
+       if query.from_user.id in DEVS:
+               LOW_TEXT = f"""Welcome To Arcane System"""
+               await query.edit_message_caption(LOW_TEXT, reply_markup=InlineKeyboardMarkup(ADD_BUTTON))
+
 @bot.on_callback_query(filters.regex("delete"))
 async def delete(_, query):
     await query.message.delete()
