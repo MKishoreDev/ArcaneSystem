@@ -28,6 +28,8 @@ async def start(_, m: Message):
 
 @bot.on_callback_query(filters.regex("ADDINS"))
 async def addinss(_, query: CallbackQuery):
+       user_id = message.reply_to_message.from_user.id
+       admin = message.from_user.id
        if query.from_user.id in DEVS:
                await add_Inspector(user_id)
                ADDIND_TEXT = f"""  [{admin}](tg://user?id={admin}) Promoted [{query.from_user.id}](tg://user?id={query.from_user.id}) Into Inspector"""
