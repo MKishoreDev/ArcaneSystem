@@ -94,3 +94,36 @@ STATUS_BUTTON = [
         InlineKeyboardButton("Sᴘᴀᴍ ʀᴇᴘᴏʀᴛ", url="https://t.me/HangOverXD"),   
     ],
 ]
+
+ADD_BUTTON = [
+        [
+            InlineKeyboardButton("Pʀᴏᴍᴏᴛᴇ Tᴏ Iɴs", callback_data="ADDINS"),
+            InlineKeyboardButton("Pʀᴏᴍᴏᴛᴇ Tᴏ Eɴғ", callback_data="ADDENF"),
+        ],
+        [
+            InlineKeyboardButton("Pʀᴏᴍᴏᴛᴇ Eɴғ Tᴏ Iɴs", callback_data="E_TO_I"),
+            InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Iɴs Tᴏ Eɴғ", callback_data="I_TO_E"),
+        ],
+        [
+            InlineKeyboardButton("﹀", callback_data="EXTRA_DEMOTE"),
+    ],   
+]
+
+EXTRA_DEMOTE = [
+        [
+            InlineKeyboardButton("Pʀᴏᴍᴏᴛᴇ Tᴏ Eɴғ", callback_data="ADDENF"),
+            InlineKeyboardButton("Pʀᴏᴍᴏᴛᴇ Tᴏ Iɴs", callback_data="ADDINS"),
+        ],
+        [
+            InlineKeyboardButton("Pʀᴏᴍᴏᴛᴇ Eɴғ Tᴏ Iɴs", callback_data="E_TO_I"),
+            InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Iɴs Tᴏ Eɴғ", callback_data="I_TO_E"),
+        ],
+        [
+            InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Eɴғᴏʀᴄᴇʀ", callback_data="E_TO_I"),
+            InlineKeyboardButton("Dᴇᴍᴏᴛᴇ Iɴsᴘᴇᴄᴛᴏʀ", callback_data="I_TO_E"),
+        ],
+        [
+            InlineKeyboardButton("︿", callback_data="ADD_BUTTON"),
+            InlineKeyboardButton("Cʟᴏsᴇ", callback_data="Delete"),
+    ],   
+]
