@@ -32,8 +32,7 @@ async def info_func(_, message: Message):
         return await m.edit(info_caption, disable_web_page_preview=True)
     photo = await bot.download_media(photo_id)
 
-    await message.reply_photo(photo, caption=info_caption, quote=False),
-              reply_markup=InlineKeyboardMarkup(ADD_BUTTON),
+    await message.reply_photo(photo, caption=info_caption, quote=False, reply_markup=InlineKeyboardMarkup(ADD_BUTTON),
            )
 
 @bot.on_callback_query(filters.regex("I_TO_E"))
