@@ -8,21 +8,31 @@ add_enforcers, remove_enforcers, get_enforcers)
 from Arcane.utils.dbfunctions import (
 add_Inspector, remove_Inspector, get_Inspector)
 from Arcane.ranks import Enforcers 
+from Arcane.plugins.info import *
 from Arcane.ranks import Inspectors_list
 from pyrogram.types import Message, CallbackQuery, InlineKeyboardButton, InlineKeyboardMarkup
 
 @bot.on_message(filters.command("add", PREFIX))
-async def start(_, m: Message):
-         global user_id
-         if m.from_user.id not in DEVS:
-              return await message.reply_text("WTF! You'er My Developer") 
-         if m.reply_to_message:
-                user_id = m.reply_to_message.from_user.id
-                admin = m.from_user.id
-                await m.reply_photo(ADD_MEDIA,
-                caption=ADD_STRIMG.format(
-                m.from_user.mention
-               ),
+async def info_func(_, message: Message):
+    if message.reply_to_message:
+        user = message.reply_to_message.from_user.id
+    elif not message.reply_to_message and len(message.command) == 1:
+        user = message.from_user.id
+    elif not message.reply_to_message and len(message.command) != 1:
+        user = message.text.split(None, 1)[1]
+
+    m = await message.reply_text("Processing")
+
+    try:
+        info_caption, photo_id = await get_user_info(user)
+    except Exception as e:
+        return await m.edit(str(e))
+
+    if not photo_id:
+        return await m.edit(info_caption, disable_web_page_preview=True)
+    photo = await bot.download_media(photo_id)
+
+    await message.reply_photo(photo, caption=info_caption, quote=False),
               reply_markup=InlineKeyboardMarkup(ADD_BUTTON),
            )
 
