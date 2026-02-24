@@ -1,7 +1,5 @@
-
-
-# Kawaii X Robot 
-An Telegram Antispam Based Bot 
+# ArcaneXSystem
+An Telegram Antispam Based Bot [No Longer Maintance]
 
 ## A Pyogram Bot to make banned, report easy 
 
@@ -19,16 +17,10 @@ An Telegram Antispam Based Bot
     [-] KAWAII_CHANNEL: Log Channel Id
 ```
 
-# Scanner Repo
-<a href="https://github.com/Thiruselvan999/KawaiiXSystem"><img src="https://img.shields.io/badge/ScannerRepo-red.svg?logo=Github"></a>
+## Deploy 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/ThiruXD/ArcaneXSystem.git)
 
-# Deploy 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Thiruselvan999/KawaiiXSystem.git)
+## Support & Channel
+<a href="https://t.me/ThiruSupport"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a> <a href="https://t.me/ThiruEmpire"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
 
-# Support
-<a href="https://t.me/playBoysDXD"><img src="https://img.shields.io/badge/Join-Telegram%20Channel-red.svg?logo=Telegram"></a>
-
-# Channel
-<a href="https://t.me/Kawaii_Network"><img src="https://img.shields.io/badge/Join-Telegram%20Group-blue.svg?logo=telegram"></a>
-
-## © Copyright - AASF & HMF
+### © Copyright - [AASF](https://github.com/K4isszDev) & [ThiruXD](https://github.com/THiruXD)
