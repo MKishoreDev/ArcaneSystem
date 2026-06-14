@@ -1,6 +1,10 @@
 # Arcane System
 
 <p align="center">
+  <img src="https://graph.org/file/7100024f523ebb13dc75a.mp4" width="100%">
+</p>
+
+<p align="center">
   <b>Telegram's Community Intelligence & Enforcement System</b>
   <br>
   Built for large communities, moderation teams, and public groups.
