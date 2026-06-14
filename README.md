@@ -238,8 +238,8 @@ Founder • Lead Developer
 </td>
 
 <td align="center">
-<a href="https://github.com/nandhxd">
-<img src="https://github.com/nandhxd.png" width="120px">
+<a href="https://github.com/nandhaxd">
+<img src="https://github.com/nandhaxd.png" width="120px">
 <br>
 <b>nandhxd</b>
 </a>
